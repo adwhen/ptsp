@@ -39,6 +39,7 @@ class Berita extends CI_Controller {
 		$this->form_validation->set_rules('kat_berita', 'Kategori Berita', 'required');
 
 		if($this->form_validation->run()===false){
+			$this->db->delete('tb_file',array('ket_file'=>"sementara"));
 			if(!empty($id_berita)){
 				$decode= $this->encryption->decrypt($id_berita);
 				$berita=$this->db->get_where('tb_berita',array('id_berita'=>$decode))->result_array();
@@ -73,6 +74,7 @@ class Berita extends CI_Controller {
 					'kat_berita'=>$this->input->post('kat_berita'),
 				);
 				$this->db->insert('tb_berita',$data);
+				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
 				redirect('admin/berita/form');
 			}else{
 				$data=array(
@@ -82,6 +84,7 @@ class Berita extends CI_Controller {
 					'kat_berita'=>$this->input->post('kat_berita'),
 				);
 				$this->db->update('tb_berita',$data,$where);
+				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
 				redirect('admin/berita/form');
 			}
 		}
@@ -110,7 +113,7 @@ class Berita extends CI_Controller {
             	'url_file'  => $basePath,
             	'nama_file' => $nama,
             	'kat_file'  => $this->input->post('kat_file'),
-            	'ket_file'	=> $decode
+            	'ket_file'	=> "sementara"
             );
 
             $this->db->insert('tb_file',$simpan); 

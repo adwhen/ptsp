@@ -34,7 +34,7 @@ class Berita extends CI_Controller {
 
 		$this->form_validation->set_rules('id_berita', 'id_berita', 'required');
 		$this->form_validation->set_rules('judul_berita', 'judul_berita', 'required');
-		$this->form_validation->set_rules('isi_berita', 'isi_berita',);
+		$this->form_validation->set_rules('isi_berita', 'isi_berita','required');
 		$this->form_validation->set_rules('tgl_publish', 'tgl_publish', 'required');
 		$this->form_validation->set_rules('kat_berita', 'Kategori Berita', 'required');
 

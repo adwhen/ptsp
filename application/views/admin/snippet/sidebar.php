@@ -37,6 +37,21 @@
             <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Visi-Misi</span>
           </a>
         </li>
+        <li style="font-size: 16px;">
+          <a href="<?php echo base_url('admin/kejari');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Kejaksaan Tinggi Negeri</span>
+          </a>
+        </li>
+        <li style="font-size: 16px;">
+          <a href="<?php echo base_url('admin/peraturan');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Peraturan Pemerintah</span>
+          </a>
+        </li>
+        <li style="font-size: 16px;">
+          <a href="<?php echo base_url('admin/perintah');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Perintah Harian Jaksa Agung</span>
+          </a>
+        </li>        
       </ul>
     </section>
     <!-- /.sidebar -->

@@ -38,6 +38,7 @@
               <th>No.</th>
               <th>nama File</th>
               <th>Kateogori</th>
+              <th>Url</th>
               <th>Aksi</th>
             </thead>
             <tbody id="showdata">
@@ -46,6 +47,7 @@
                 <td><?php echo ++$no;?></td>
                 <td><?php echo $dt['nama_file'];?></td>
                 <td><?php echo $dt['kat_file'];?></td>
+                <td><?php echo $dt['url_file']?></td>
                 <td>
                   <center>
                     <div class="tooltip-demo">

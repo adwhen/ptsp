@@ -36,7 +36,7 @@ $this->load->view('admin/snippet/sidebar');?>
       </div> <br>
       <div class="row">
         <div class="col-xs-12 table-responsive">
-          <table id="table6" class="table table-bordered table-striped">
+          <table id="example1" class="table table-bordered table-striped">
             <thead>
               <th>No.</th>
               <th>nama File</th>

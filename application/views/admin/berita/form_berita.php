@@ -56,15 +56,16 @@
                     </div>
 
                     <div class="container">
-                      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                      <img id="expandedImg" style="width:100%">
+                      <span id="gambar" style="display: none;" onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                      <img id="expandedImg" style="width: 100%;">
 
                       <div id="imgtext"></div>
                       
                     </div>
-                  <div id="preview"></div>
+                  <div id="preview" class="col-md-3"></div>
                     <script>
                     function myFunction(imgs) {
+                      $('#gambar').show();
                       var expandImg = document.getElementById("expandedImg");
                       var imgText = document.getElementById("imgtext");
                       expandImg.src = imgs.src;
@@ -86,7 +87,7 @@
               <input type="hidden" name="id_berita" value="<?php echo $id ?>">
               <input type="hidden" name="kat_file" name="kat_berita" id="kat_berita2" value="<?php echo $data[0]['judul_berita'] ?>">
               <input name="judul_berita" id="judul_berita2" value="<?php echo $data[0]['judul_berita'] ?>" required class="form-control" type="hidden">
-              <input disabled type="file" name="file" id="image" required />
+              <input <?php if(count($data)==0){echo "disabled";}?> type="file" name="file" id="image" required />
             </form>
             <p class="loading"></p>
         </div>

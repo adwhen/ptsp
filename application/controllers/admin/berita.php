@@ -16,6 +16,7 @@ class Berita extends CI_Controller {
 
 	public function index()
 	{
+		$this->db->delete('tb_file',array('ket_file'=>"sementara"));
 		$data=array(
 			'isi'=>'admin/berita/data',
 			'data' =>$this->db->get('tb_berita')->result_array()
@@ -23,15 +24,7 @@ class Berita extends CI_Controller {
 		$this->load->view('admin/snippet/template',$data);
 	}
 	public function form($id_berita=null){
-		$berita=$this->db->query('select * from tb_berita order by id_berita DESC limit 1')->result_array();
-		if(count($berita)==0){
-			$id=0;
-			$encrypt_id=$this->encryption->encrypt($id);
-		}else{
-			$id=$berita[0]['id_berita']+1;
-			$encrypt_id=$this->encryption->encrypt($id);
-		}
-
+		
 		$this->form_validation->set_rules('id_berita', 'id_berita', 'required');
 		$this->form_validation->set_rules('judul_berita', 'judul_berita', 'required');
 		$this->form_validation->set_rules('isi_berita', 'isi_berita','required');
@@ -39,9 +32,16 @@ class Berita extends CI_Controller {
 		$this->form_validation->set_rules('kat_berita', 'Kategori Berita', 'required');
 
 		if($this->form_validation->run()===false){
-			$this->db->delete('tb_file',array('ket_file'=>"sementara"));
+			$berita=$this->db->query('select * from tb_berita order by id_berita DESC limit 1')->result_array();
+			if(count($berita)==0){
+				$id=0;
+				$encrypt_id=$this->encryption->encrypt($id);
+			}else{
+				$id=$berita[0]['id_berita']+1;
+				$encrypt_id=$this->encryption->encrypt($id);
+			}
 			if(!empty($id_berita)){
-				$decode= $this->encryption->decrypt($id_berita);
+				$decode= $this->Mcrypt->decrypt($id_berita);
 				$berita=$this->db->get_where('tb_berita',array('id_berita'=>$decode))->result_array();
 				
 				$file=$this->db->get_where('tb_file',array('ket_file'=>$decode))->result_array();
@@ -58,10 +58,10 @@ class Berita extends CI_Controller {
 					'id'	=>$encrypt_id
 				);
 			}
-			
+			$this->db->delete('tb_file',array('ket_file'=>"sementara"));
 			$this->load->view('admin/snippet/template',$data);
 		}else{
-			$decode= $this->encryption->decrypt($this->input->post('id_berita'));
+			$decode= $this->Mcrypt->decrypt($id_berita);
 			$where = array('id_berita'=>$decode);
 			$berita= $this->db->get_where('tb_berita',$where)->result_array();
 			if(count($berita)==0){
@@ -75,7 +75,7 @@ class Berita extends CI_Controller {
 				);
 				$this->db->insert('tb_berita',$data);
 				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
-				redirect('admin/berita/form');
+				redirect('admin/berita/');
 			}else{
 				$data=array(
 					'judul_berita'=>$this->input->post('judul_berita'),
@@ -85,7 +85,7 @@ class Berita extends CI_Controller {
 				);
 				$this->db->update('tb_berita',$data,$where);
 				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
-				redirect('admin/berita/form');
+				redirect('admin/berita/');
 			}
 		}
 		
@@ -126,11 +126,19 @@ class Berita extends CI_Controller {
             echo json_encode($data);
         }
 	}
-	public function coba(){
-		$data=4;
-		$encrypt = $this->encryption->encrypt($data);
-		echo $encrypt;
-		$decode = $this->encryption->decrypt($encrypt);
-		echo "<br>".$decode;
+	public function hapus(){
+		//$decode=$this->Mcrypt->decrypt($this->input->post('id_berita'));
+		$decode=$this->Mcrypt->decrypt($this->input->post('id_berita'));
+		$this->db->delete('tb_berita',array('id_berita'=>$decode));
+		#proses Hapus File
+		$where['ket_file']=$id_berita;
+		$query=$this->db->get_where('tb_file',$where)->result_array();
+		foreach($query as $dt){
+			$str=explode("/",$dt['url_file']);
+			unlink('asset/gambar/foto/'.$str[7]);
+		}
+		$this->db->delete('tb_file',$where);
+		redirect('admin/berita/');
 	}
+
 }

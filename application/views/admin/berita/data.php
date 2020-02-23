@@ -32,7 +32,7 @@
       </div> <br>
       <div class="row">
         <div class="col-xs-12 table-responsive">
-          <table id="table6" class="table table-bordered table-striped">
+          <table id="example1" class="table table-bordered table-striped">
             <thead>
               <th>No.</th>
               <th>Judul</th>
@@ -52,14 +52,11 @@
                 <td>
                   <center>
                     <div class="tooltip-demo">
-                      <a href="<?php echo base_url('ba8/form/'.$this->uri->segment(3).'/'.$dt['id_berita']);?>">
+                      <?php $string=str_replace("/","kejati",$this->encryption->encrypt($dt['id_berita'])); ?>
+                      <a href="<?php echo base_url('admin/berita/form/'.$this->Mcrypt->encrypt($dt['id_berita']));?>">
                         <button data-balloon="Ubah" data-balloon-pos="up" data-toggle="modal" data-target="#edit-data" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
                       </a>
-                      <a href="<?php echo base_url('ba8/hapus/'.$this->uri->segment(3).'/'.$dt['id_berita']);?>">
-                        <button data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-data" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
-                      </a>
-                      <a href="<?php echo base_url('ba8/cetak/'.$this->uri->segment(3).'/'.$dt['id_berita']);?>" target="_blank">
-                        <button data-balloon="Lihat IS" data-balloon-pos="up" class="btn btn-default" title="Lihat Isi" target="_blank"><i class="fa  fa-sticky-note-o" aria-hidden="true"></i></button>
+                      <button onclick="modal_hapus('<?php echo $no; ?>','<?php echo $this->Mcrypt->encrypt($dt['id_berita']) ?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-berita" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
                       </a>
                     </div>
                   </center>
@@ -75,3 +72,34 @@
     <!-- /.content -->
     <div class="clearfix"></div>
 </div>
+<div class="modal modal-danger fade" id="hapus-berita">
+  <?php  echo form_open_multipart('admin/berita/hapus/',array('class'=>"form-horizontal",'method'=>'POST','id'=>'hapusPeraturan')); ?>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Hapus Peraturan</h4>
+              </div>
+              <div class="modal-body">
+               <input type="hidden" name="id_berita" id="id_berita2"> 
+              <div class="modal-body form" id="noticeBerita">
+                  
+              </div> 
+              </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
+                <button type="submit" id="button_hapus" class="btn btn-primary">Simpan Perubahan</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+  </form>          <!-- /.modal-dialog -->
+</div>
+<script type="text/javascript">
+  function modal_hapus(no,id_berita) {
+    $('#id_berita2').val(id_berita);
+    $("#noticeBerita").html("apakah anda ingin hapus berita ini pada nomor "+no+" ?")
+  }
+</script>

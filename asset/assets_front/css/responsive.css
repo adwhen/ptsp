@@ -1,0 +1,127 @@
+/*Login*/
+
+#containerLogin {
+	width:50%;
+}
+
+.logoLogin {
+	width:15%
+}
+
+@media only screen and (max-width: 600px) {
+	#containerLogin {
+		width: 100%;
+	}
+
+	.logoLogin {
+		width: 40%;
+	}
+}
+
+/*Login*/
+
+/*Awal*/
+
+#containerMenuAtas{
+	width:50%;
+}
+
+.beritaAwal1 {
+	width:60%;
+	float:left;
+}
+
+.beritaAwal2 {
+	width:40%;
+	float:left;
+}
+
+.slide-wrapper {
+    position: relative;
+}
+
+#iconButton{
+	font-size:70px;
+	color:#fff;
+	margin-bottom:5px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#petaFooter {
+		width:100%;
+	}
+
+	.slide-wrapper {
+		
+	}
+
+	.beritaAwal1 {
+		width:100%;
+	}
+
+	.beritaAwal2 {
+		width:100%;
+	}
+
+	#carouselAtas{
+		display: none;
+	}
+
+	#logoMenuAtas{
+		display: none;
+	}
+
+	#divButton {
+		background-color: rgba(255, 255, 255, 1);
+		height: 1000px;
+	}
+
+	#containerMenuAtas{
+		width:100%;
+	}
+
+	#iconButton{
+		font-size: 20px;
+	}
+
+	#banner1 {
+		margin-top: 650px;
+	}
+
+	#menuAtas {
+		margin-top: 50px;
+	}
+
+}
+
+/*Awal*/
+
+/* Visi Misi */
+
+.logoVisi {
+	width:20%;
+	float:left;
+}
+
+.tulisanVisi {
+	width:80%;
+	float:left;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#petaFooter {
+		width:100%;
+	}
+
+	.logoVisi {
+		width:100%;
+	}
+
+	.tulisanVisi {
+		width:100%;
+	}
+}
+
+/* Visi Misi */

@@ -1,0 +1,570 @@
+/*edit sendiri*/
+@font-face {
+	font-family: 'Genuine';
+	src: local('Genuine'),
+		url('../../assets_front/fonts/downloads/Genuine.ttf') format("truetype");
+}
+
+#myNav {
+	width: 100%;
+	margin-bottom: 5px;
+	background-color: #0b7817;
+	color: white;
+	padding: 0px;
+	opacity: 1;
+}
+
+a.menuNav {
+	font-size: 20px;
+	color: white;
+}
+
+.dividermenu {
+	border-left: 5px solid green;
+	margin-top: 5px;
+	height: 35px;
+}
+
+#loginBody {
+	/*background: url(../../assets_front/img/kajatigedung.png);*/
+	background-color: #afb5ae;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#banner1 {
+	background: url('../../assets_front/img/banner1.png');
+	padding: 0px;
+	border-radius: 0px
+}
+
+#zonaintegritas {
+	padding: 0px;
+}
+
+#banner2 {
+	width: 100%;
+	background: url(../../assets_front/img/banner2.png);
+	padding: 0px;
+	border-radius: 0px
+}
+
+#banner4 {
+	width: 90%;
+	background: #fff;
+	padding: 0px;
+	border-radius: 0px
+}
+
+#banner6 {
+	width: 100%;
+	background: url(../../assets_front/img/banner1.png);
+	padding: 0px;
+	border-radius: 0px
+}
+
+.cardKu {
+	background: url(../../assets_front/img/kajatigedung.png);
+}
+
+#carouselEdit {
+	height: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.carousel,
+.item,
+.active {
+	height: 100%;
+	/*slider height*/
+}
+
+.carousel-inner {
+	height: 100%;
+}
+
+
+.red {
+	margin-right: 0;
+	margin-left: 0;
+	height: 100%;
+}
+
+.red-content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(48, 48, 46, 0.6);
+	margin: 0;
+	top: 0;
+	left: 0;
+}
+
+@media (min-width: 768px) {
+	.carousel-caption {
+		text-align: center;
+		padding-right: 300px;
+	}
+
+	.red {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.red-content {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(48, 48, 46, 0.6);
+		margin: 0;
+		top: 0;
+		left: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.red {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.red {
+		width: 100%;
+	}
+}
+
+.logoKajati:hover {
+	transform: scale(1.2);
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+
+.kolomSearch {
+	opacity: 0.6;
+}
+
+.kolomSearch:hover {
+	opacity: 1;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+.buttonSearch:hover {
+	transform: scale(1.3);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+.buttonUtama {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+	padding: 15px 25px;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 5px #666;
+}
+
+.buttonUtama:hover {
+	text-decoration: none;
+	background-color: #3e8e41;
+	transform: translateY(-8px);
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+
+.buttonUtama:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(8px);
+}
+
+/*
+.buttonUtama::before {
+  border-left: 5px solid transparent;
+  border-top: 5px solid #ffe4b5;
+  border-right: 5px solid transparent;
+  height: 0px;
+  width: 0px;
+  top: -2px;
+  left: 6px;
+}
+
+.buttonUtama::after {
+  content: attr(data-tooltip);
+  background: #ffe4b5;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: black;
+  background-color: #e7ede6;
+  opacity: 0.7;
+}
+
+.buttonUtama::after, a::before {
+  position: relative;
+  top:-70px;
+  display: none;
+}
+
+.buttonUtama:hover::after, .buttonUtama:hover::before {
+  display: block;
+}*/
+
+.buttonLihat:hover {
+	transform: scale(1.3);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+div.kumpulanFoto {
+	width: 100%;
+}
+
+div.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	width: 20%;
+	display: inline-block;
+}
+
+div.gallery:hover {
+	border: 1px solid #0b7817;
+	transform: scale(1.1);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+	box-shadow: 0 3px #0b7817;
+}
+
+div.gallery img {
+	width: 100%;
+	height: auto;
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+hr.garisJudul {
+	border: 2px solid green;
+	float: center;
+	width: 82%;
+}
+
+hr.garisNav {
+	border: 1.5px solid green;
+	margin-top: 0px;
+	float: center;
+	width: 58%;
+}
+
+/*tri krama*/
+
+.cardTriKrama:hover {
+	transform: translateY(-25px);
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	transition: all .4s;
+}
+
+/*tri krama*/
+
+/*jaksa agung*/
+
+.cardJaksa:hover {
+	transform: scale(1.1);
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	transition: all .4s;
+}
+
+/*jaksa agung*/
+
+/*berita*/
+
+#berita1 {
+	width: 100%;
+	background: url(../../assets_front/img/navbar.png);
+}
+
+#navbarBerita {
+	width: 100%;
+	background-color: #ffffff;
+	color: black;
+	padding: 0px;
+}
+
+.zoomBerita:hover {
+	transform: scale(1.1);
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	transition: all .4s;
+}
+
+/*berita*/
+
+/*galeri*/
+
+.galeriImgDiv {
+	position: relative;
+	width: 100%;
+}
+
+.galeriImg {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.galeriImgBut {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.galeriImgDiv:hover .galeriImg {
+	opacity: 0.3;
+}
+
+.galeriImgDiv:hover .galeriImgBut {
+	opacity: 1;
+}
+
+.galeriImgTxt {
+	background-color: #4CAF50;
+	color: white;
+	font-size: 16px;
+	padding: 4px 8px;
+	border-radius: 24px;
+}
+
+#myImgGaleri {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#myImgGaleri:hover {
+	opacity: 0.7;
+}
+
+/*galeri*/
+
+/*struktural*/
+
+
+.strukturImg {
+	border: 2px solid #198235;
+}
+
+.strukturJabatan {
+	background-color: #198235;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	padding: 8px 16px;
+}
+
+.strukturNama {
+	background-color: #ffffff;
+	color: black;
+	font-size: 12px;
+	padding: 8px 16px;
+	text-align: center;
+	border: 2px solid #198235;
+}
+
+/*struktural*/
+
+
+
+/*sarana*/
+
+
+.saranaImgDiv {
+	position: relative;
+	width: 100%;
+}
+
+.saranaImg {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.saranaImgBut {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.saranaImgDiv:hover .saranaImg {
+	opacity: 0.3;
+}
+
+.saranaImgDiv:hover .saranaImgBut {
+	opacity: 1;
+}
+
+.saranaImgTxt {
+	background-color: #4CAF50;
+	color: white;
+	font-size: 16px;
+	padding: 4px 8px;
+	border-radius: 24px;
+}
+
+/*sarana*/
+
+
+/*modal foto*/
+
+/* The Modal (background) */
+.modalFoto {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9);
+	/* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+
+.modal-content-foto {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 70%;
+}
+
+/* Caption of Modal Image */
+#captionFoto {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+/* Add Animation */
+.modal-content-foto,
+#captionFoto {
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+	from {
+		-webkit-transform: scale(0)
+	}
+
+	to {
+		-webkit-transform: scale(1)
+	}
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0)
+	}
+
+	to {
+		transform: scale(1)
+	}
+}
+
+/* The Close Button */
+.closeFoto {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.closeFoto:hover,
+.closeFoto:focus {
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+	.modal-content-foto {
+		width: 100%;
+	}
+}
+
+/*modal foto*/
+
+/*edit sendiri*/

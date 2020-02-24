@@ -14,6 +14,11 @@
     </div>
 </div>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <!-- The Modal -->
 <div id="modalGaleri" class="modalFoto">

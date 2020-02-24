@@ -1,11 +1,11 @@
 /*Login*/
 
 #containerLogin {
-	width:50%;
+	width: 50%;
 }
 
 .logoLogin {
-	width:15%
+	width: 15%
 }
 
 @media only screen and (max-width: 600px) {
@@ -22,53 +22,49 @@
 
 /*Awal*/
 
-#containerMenuAtas{
-	width:50%;
+#containerMenuAtas {
+	width: 50%;
 }
 
 .beritaAwal1 {
-	width:60%;
-	float:left;
+	width: 60%;
+	float: left;
 }
 
 .beritaAwal2 {
-	width:40%;
-	float:left;
+	width: 40%;
+	float: left;
 }
 
 .slide-wrapper {
-    position: relative;
+	position: relative;
 }
 
-#iconButton{
-	font-size:70px;
-	color:#fff;
-	margin-bottom:5px;
+#iconButton {
+	font-size: 70px;
+	color: #fff;
+	margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 600px) {
 
 	#petaFooter {
-		width:100%;
-	}
-
-	.slide-wrapper {
-		
+		width: 100%;
 	}
 
 	.beritaAwal1 {
-		width:100%;
+		width: 100%;
 	}
 
 	.beritaAwal2 {
-		width:100%;
+		width: 100%;
 	}
 
-	#carouselAtas{
+	#carouselAtas {
 		display: none;
 	}
 
-	#logoMenuAtas{
+	#logoMenuAtas {
 		display: none;
 	}
 
@@ -77,11 +73,11 @@
 		height: 1000px;
 	}
 
-	#containerMenuAtas{
-		width:100%;
+	#containerMenuAtas {
+		width: 100%;
 	}
 
-	#iconButton{
+	#iconButton {
 		font-size: 20px;
 	}
 
@@ -100,27 +96,27 @@
 /* Visi Misi */
 
 .logoVisi {
-	width:20%;
-	float:left;
+	width: 20%;
+	float: left;
 }
 
 .tulisanVisi {
-	width:80%;
-	float:left;
+	width: 80%;
+	float: left;
 }
 
 @media only screen and (max-width: 600px) {
 
 	#petaFooter {
-		width:100%;
+		width: 100%;
 	}
 
 	.logoVisi {
-		width:100%;
+		width: 100%;
 	}
 
 	.tulisanVisi {
-		width:100%;
+		width: 100%;
 	}
 }
 

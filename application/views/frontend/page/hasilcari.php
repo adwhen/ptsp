@@ -1,12 +1,11 @@
 <div class="container-fluid" style="text-align:center;width:85%">
-    <h3 class="text-center text-dark">AGENDA</h3>
-    <hr class="garisJudul">
+    <h3 class="text-left text-dark">Hasil Pencarian : '<?php if(!empty($keyword)){echo $keyword;} ?>'</h3>
 </div>
 <br>
 <div class="container-fluid" style="text-align:center;width:70%">
     <div class="list-group">
-        <?php foreach($data as $dt){?>
-        <a href="<?php echo base_url('frontend/agenda/agendaDetail/').$dt['id_berita'];?>" class="list-group-item list-group-item-action flex-column align-items-start zoomBerita">
+        <?php if(!empty($result)){foreach($result as $dt){?>
+        <a href="<?php echo base_url('frontend/berita/beritaDetail/').$dt['id_berita'];?>" class="list-group-item list-group-item-action flex-column align-items-start zoomBerita">
             <div class="row">
                 <div class="col-3">
                     <img src="<?php echo $dt['cover_berita']?>" class="img-fluid" style="width:100%;" alt="Responsive image">
@@ -24,6 +23,17 @@
                 </div>
             </div>
         </a>
+        <br>
+        <?php }
+        }else{ ?>
+        <br>
+        <br>
+        <br>
+        <h4>Tidak Ada Hasil</h4>
+        <br>
+        <br>    
+        <br>
+        <br>
         <br>
         <?php } ?>
     </div>

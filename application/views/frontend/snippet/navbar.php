@@ -34,6 +34,9 @@
                 <li class="nav-item" style="margin-right:20px">
                     <a class="nav-link menuNav" href="<?php echo base_url('frontend/peraturan');?>">Peraturan</a>
                 </li>
+                <li class="nav-item" style="margin-right:20px">
+                    <a class="nav-link menuNav" href="<?php echo base_url('frontend/kejari');?>">Kejari</a>
+                </li>
                 <li class="nav-item dropdown" style="margin-right:20px">
                     <a class="nav-link dropdown-toggle menuNav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Informasi

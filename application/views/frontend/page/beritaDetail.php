@@ -7,7 +7,7 @@
     <br>
 </div>
 <div class="container-fluid" style="text-align:center;width:95%">
-    <img src="<?php echo base_url('/asset/assets_front') ?>/img/berita.jpeg" class="img-fluid" style="text-align:center" alt="Responsive image">
+    <img src="<?php echo $data[0]['cover_berita']?>" class="img-fluid" style="text-align:center" alt="Responsive image">
 </div>
 <br>
 <div class="container-fluid text-justify" style="text-align:center;width:80%">
@@ -15,21 +15,29 @@
 </div>
 <br>
 <div class="container-fluid" style="width:80%">
+    <center>
     <h5 style="font-size: 25px;">Berita Terkait</h5>
     <br>
-    <div class="card-deck">
-        <?php foreach($terkait as $trk){?>
-        <div class="card">
-            <img class="card-img-top" src="<?php echo base_url('/asset/assets_front') ?>/img/berita.jpeg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title text-justify"><?php echo $trk['judul_berita'];?></h5>
-                <?php echo $trk['isi_berita'];?>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted"><?php echo tgl_indo($trk['tgl_update']);?></small>
-            </div>
-        </div>
-        <?php }?>
-    </div>
+    <table class="table" style="width:60%;">
+        <tbody>
+            <tr>
+                <?php foreach($terkait as $trk){?>
+                <td>
+                    <div class="card" style="width: 15rem;">
+                        <img class="card-img-top" src="<?php echo $trk['cover_berita']?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-justify"><?php echo $trk['judul_berita'];?></h5>
+                            <?php echo substr($trk['isi_berita'],0,80).' [. . .]';?>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted"><?php echo tgl_indo($trk['tgl_update']);?></small>
+                        </div>
+                    </div>
+                </td>
+                <?php }?>
+            </tr>
+        </tbody>
+    </table>
+    </center>
 </div>
 <br>

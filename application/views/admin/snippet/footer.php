@@ -20,7 +20,7 @@
                 <div class="form-group">
                   <label class="control-label col-md-2">Nama Foto</label>
                     <div class="col-md-9">
-                      <input name="nama_file" id="nama_file" value="" required placeholder="Nama Foto" class="form-control" type="text">
+                      <input name="nama_file" id="nama_file" required="" value="" required placeholder="Nama Foto" class="form-control" type="text">
                     </div>
                 </div>              
                  <div class="form-group">
@@ -29,6 +29,7 @@
                      <select class="form-control" name="kat_file" id="kat_file" required="">
                         <option value="">Pilih</option>
                         <option value="sarana">Sarana</option>
+                        <option value="galeri">Galeri</option>
                       </select>
                     </div>
                 </div>  
@@ -73,7 +74,7 @@
                      <select class="form-control" name="kat_file" id="kat_file2">
                         <option value="">Pilih</option>
                         <option id="sarana" value="sarana">Sarana</option>
-                        <option id="umum" value="umum">Umum</option>
+                        <option id="galeri" value="galeri">Galeri</option>
                       </select>
                     </div>
                 </div>  
@@ -127,7 +128,7 @@
                      <select  readonly class="form-control" name="kat_file" id="kat_file3" required="">
                         <option value="">Pilih</option>
                        <option id="sarana3" value="sarana">Sarana</option>
-                        <option id="umum3" value="umum">Umum</option>
+                        <option id="galeri3" value="galeri">Galeri</option>
                       </select>
                     </div>
                 </div> 

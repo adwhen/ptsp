@@ -49,9 +49,43 @@
         </li>
         <li style="font-size: 16px;">
           <a href="<?php echo base_url('admin/perintah');?>">
-            <i class="fa fa-database" aria-hidden="true"></i><span>Perintah Harian Jaksa Agung</span>
+            <i class="fa fa-database" aria-hidden="true"></i><span>Perintah Jaksa Agung</span>
           </a>
-        </li>        
+        </li> 
+        <li style="font-size: 16px;">
+          <a href="<?php echo base_url('admin/document');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Document</span>
+          </a>
+        </li> 
+        <li style="font-size: 16px;">
+          <a href="<?php echo base_url('admin/agenda');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Agenda</span>
+          </a>
+        </li>     
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Informasi</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url('admin/pembinaan');?>"><i class="fa fa-circle-o"></i> Pembinaan</a></li>
+            <li><a href="<?php echo base_url('admin/renja');?>"><i class="fa fa-circle-o"></i> Rencana Kerja</a></li>
+            <li><a href="<?php echo base_url('admin/intelijen');?>"><i class="fa fa-circle-o"></i> Intelijen</a></li>
+            <li><a href="<?php echo base_url('admin/pidum');?>"><i class="fa fa-circle-o"></i> Pidana Umum</a></li>
+            <li><a href="<?php echo base_url('admin/pidsus');?>"><i class="fa fa-circle-o"></i> Pidana Khusus</a></li>
+            <li><a href="<?php echo base_url('admin/datun');?>"><i class="fa fa-circle-o"></i> Perdata dan Tata Usaha Negara</a></li>
+            <li><a href="<?php echo base_url('admin/pengawasan');?>"><i class="fa fa-circle-o"></i> Pengawasan</a></li>
+            <li><a href="<?php echo base_url('admin/pengadaan');?>"><i class="fa fa-circle-o"></i> Pengadaan</a></li>
+          </ul>
+        </li>
+        <li style="font-size: 16px;">
+          <a href="<?php echo base_url('admin/struktural');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Struktural</span>
+          </a>
+        </li>              
       </ul>
     </section>
     <!-- /.sidebar -->

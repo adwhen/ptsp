@@ -38,7 +38,7 @@ class kejari extends CI_Controller {
     }
     public function ubah(){
              
-            $decode['id_kejari'] =  $this->encryption->decrypt($this->input->post('id_kejari'));
+            $decode['id_kejari'] =  $this->Mcrypt->decrypt($this->input->post('id_kejari'));
             $simpan = array(
                 'nama_kejari'  => $this->input->post('nama_kejari'),
                 'alamat_kejari' => $this->input->post('alamat_kejari'),
@@ -55,7 +55,7 @@ class kejari extends CI_Controller {
     }
     public function hapus(){
 
-            $decode['id_kejari'] =  $this->encryption->decrypt($this->input->post('id_kejari'));
+            $decode['id_kejari'] =  $this->Mcrypt->decrypt($this->input->post('id_kejari'));
 
             $this->db->delete('tb_kejari',$decode); 
             $data = array(

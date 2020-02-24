@@ -55,10 +55,10 @@ $this->load->view('admin/snippet/sidebar');?>
                   <center>
                     <div class="tooltip-demo">
                       
-                        <button onclick="form_kejari('3','<?php echo $this->encryption->encrypt($dt['id_kejari']);?>','<?php echo $dt['nama_kejari'];?>','<?php echo $dt['alamat_kejari'];?>','<?php echo $dt['ketua_kejari'];?>','<?php echo $dt['url_kejari']; ?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
+                        <button onclick="form_kejari('3','<?php echo $this->Mcrypt->encrypt($dt['id_kejari']);?>','<?php echo $dt['nama_kejari'];?>','<?php echo $dt['alamat_kejari'];?>','<?php echo $dt['ketua_kejari'];?>','<?php echo $dt['url_kejari']; ?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
 
  
-                        <button onclick="form_kejari('4','<?php echo $this->encryption->encrypt($dt['id_kejari']);?>','<?php echo $dt['nama_kejari'];?>','<?php echo $dt['alamat_kejari'];?>','<?php echo $dt['ketua_kejari'];?>','<?php echo $dt['url_kejari']; ?>')"  class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
+                        <button onclick="form_kejari('4','<?php echo $this->Mcrypt->encrypt($dt['id_kejari']);?>','<?php echo $dt['nama_kejari'];?>','<?php echo $dt['alamat_kejari'];?>','<?php echo $dt['ketua_kejari'];?>','<?php echo $dt['url_kejari']; ?>')"  class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
 
                     </div>
                   </center>

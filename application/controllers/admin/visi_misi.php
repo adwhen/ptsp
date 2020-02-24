@@ -24,7 +24,7 @@ class Visi_misi extends CI_Controller {
             );
     		$this->load->view('admin/visi_misi/data',$data);
         }else{
-            $where['id_visimisi']=$this->encryption->decrypt($this->input->post('id_visi'));
+            $where['id_visimisi']=$this->Mcrypt->decrypt($this->input->post('id_visi'));
             $visi=$this->db->get_where('tb_visimisi',$where)->result_array();
             $data=array(
                     'isi_visimisi' => $this->input->post('visi'),

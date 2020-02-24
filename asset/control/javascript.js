@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  //galeri
           var input = $('#button_tambah');
           var form = $('#tambahData');
           $(input).click(function(){
@@ -52,9 +53,9 @@ $(document).ready(function(){
 
               //div preview kita kosongkan lagi
               var hasil=JSON.parse(data);
-              
               $(form).trigger('reset');
-
+              $("#showdata").html('');
+              $("#showdata").html(hasil.baris);
               //mulai memproses respon dari upload.php
               if(data.error){
                   $('.loading').html(data.error)
@@ -89,7 +90,6 @@ $(document).ready(function(){
               var hasil=JSON.parse(data);
               $("#ubahData").trigger('reset');
               galeri=hasil.galeri;
-
               $("#showdata").html("");
 
            

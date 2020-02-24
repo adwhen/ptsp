@@ -16,9 +16,8 @@ $this->load->view('admin/snippet/sidebar');?>
                 <div class="form-group">
                 	<div style="background-color: #00a65a;color: white;margin-bottom: 10px;" class="col-md-12"><center><H2><label class="control-label" for="inputSuccess">VISI</label></H2></center></div>
                     <div class="col-md-12">
-                      <input type="hidden" name="id_visi" value="<?php echo $this->encryption->encrypt($visi[0]['id_visimisi']); ?>">
-                      <textarea id="editor1" name="visi" rows="10" cols="80" required>
-                        <?php echo $visi[0]['isi_visimisi']; ?>
+                      <input type="hidden" name="id_visi" value="<?php echo $this->Mcrypt->encrypt($visi[0]['id_visimisi']); ?>">
+                      <textarea style="width: 100%;" name="visi" rows="10" cols="80" required><?php echo $visi[0]['isi_visimisi']; ?>
                       </textarea>
                     </div>
                 </div>

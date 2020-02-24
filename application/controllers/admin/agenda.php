@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Berita extends CI_Controller {
+class Agenda extends CI_Controller {
 
 	function __construct()
 	{
@@ -18,10 +18,9 @@ class Berita extends CI_Controller {
 	{
 		$this->db->delete('tb_file',array('ket_file'=>"sementara"));
 		$data=array(
-			'isi'=>'admin/berita/data',
-			'data' =>$this->db->get_where('tb_berita',array('kat_berita !='=>'agenda'))->result_array()
+			'data' =>$this->db->get_where('tb_berita',array('kat_berita'=>'agenda'))->result_array()
 		);
-		$this->load->view('admin/snippet/template',$data);
+		$this->load->view('admin/agenda/data',$data);
 	}
 	public function form($id_berita=null){
 		
@@ -47,14 +46,14 @@ class Berita extends CI_Controller {
 				$file=$this->db->get_where('tb_file',array('ket_file'=>$decode))->result_array();
 				$encrypt_id=$this->encryption->encrypt($id_berita);
 				$data=array(
-					'isi'	=>'admin/berita/form_berita',
+					'isi'	=>'admin/agenda/form',
 					'id'	=>$encrypt_id,
 					'data'	=>$berita,
 					'foto'	=>$file
 				);
 			}else{
 				$data=array(
-					'isi'	=>'admin/berita/form_berita',
+					'isi'	=>'admin/agenda/form',
 					'id'	=>$encrypt_id
 				);
 			}
@@ -73,12 +72,11 @@ class Berita extends CI_Controller {
 					'tgl_publish'=>$this->input->post('tgl_publish'),
 					'tgl_update'=>$this->input->post('tgl_publish'),
 					'kat_berita'=>$this->input->post('kat_berita'),
-					'cover_berita' => $this->input->post('cover_berita'),
-					'video_url' => $this->input->post('video_url')
+					'cover_berita' => $this->input->post('cover_berita')
 				);
 				$this->db->insert('tb_berita',$data);
 				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
-				redirect('admin/berita/');
+				redirect('admin/agenda/');
 			}else{
 				$decode= $this->Mcrypt->decrypt($id_berita);
 				$data=array(
@@ -86,12 +84,11 @@ class Berita extends CI_Controller {
 					'isi_berita'=>$this->input->post('isi_berita'),
 					'tgl_update'=>$this->input->post('tgl_publish'),
 					'kat_berita'=>$this->input->post('kat_berita'),
-					'cover_berita' => $this->input->post('cover_berita'),
-					'video_url' => $this->input->post('video_url')
+					'cover_berita' => $this->input->post('cover_berita')
 				);
 				$this->db->update('tb_berita',$data,$where);
 				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
-				redirect('admin/berita/');
+				redirect('admin/agenda/');
 			}
 		}
 		

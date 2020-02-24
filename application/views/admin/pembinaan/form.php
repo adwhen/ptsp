@@ -8,7 +8,7 @@
           <div class="row invoice-info">
             <?php echo validation_errors(); ?>
 
-            <?php  echo form_open_multipart('admin/berita/form/'.$this->uri->segment(4),array('class'=>"form-horizontal",'method'=>'POST')); ?>
+            <?php  echo form_open_multipart('admin/pembinaan/form/',array('class'=>"form-horizontal",'method'=>'POST')); ?>
               <div class="modal-body form">
                 <input type="hidden" name="id_berita" value="<?php echo $id ?>">
                 <div class="form-group">
@@ -87,23 +87,7 @@
           <!-- /.row -->
         </section>
     </div>
-    <div class="col-md-3">
-        <section class="invoice">
-          <!-- info row -->
-          <div style="text-align:center">
-            <h2>Tabbed Image Gallery</h2>
-            <p>Click on the images below:</p>
-            <?php  echo form_open_multipart('admin/berita/upload',array('class'=>"form-horizontal",'method'=>'POST','id'=>'image-upload')); ?>
-              <input type="hidden" name="id_berita" value="<?php echo $id ?>">
-              <input type="hidden" name="kat_file" name="kat_berita" id="kat_berita2" value="<?php echo $data[0]['judul_berita'] ?>">
-              <input name="judul_berita" id="judul_berita2" value="<?php echo $data[0]['judul_berita'] ?>" required class="form-control" type="hidden">
-              <input <?php if(count($data)==0){echo "disabled";}?> type="file" name="file" id="image" required />
-            </form>
-            <p class="loading"></p>
-        </div>
-          <!-- /.row -->
-        </section>
-    </div>
+
     <!-- /.content -->
     <div class="clearfix"></div>
 </div>

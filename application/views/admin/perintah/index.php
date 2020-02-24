@@ -14,7 +14,7 @@ $this->load->view('admin/snippet/sidebar');?>
             <?php  echo form_open_multipart('admin/perintah/',array('class'=>"form-horizontal",'method'=>'POST')); ?>
               <div class="modal-body form">
                <div class="form-group">
-                <input type="hidden" name="id_perintah" value="<?php echo $this->encryption->encrypt($visi[0]['id_visimisi']); ?>">
+                <input type="hidden" name="id_perintah" value="<?php echo $this->Mcrypt->encrypt($visi[0]['id_visimisi']); ?>">
                   <div style="background-color: #00a65a;color: white;margin-bottom: 10px;" class="col-md-12"><center><H2><label class="control-label" for="inputSuccess">Perintah Jaksa</label></H2></center></div>
                     <div class="col-md-6">
                       <label class="control-label">Nama Perintah</label>

@@ -8,8 +8,8 @@ class Majax extends CI_Model {
                 $dt=$this->db->get('tb_kejari')->result_array();
                 $no=1;
                 foreach ($dt as $data) {
-                        $onclick="'3','".$this->encryption->encrypt($data['id_kejari'])."','".$data['nama_kejari']."','".$data['alamat_kejari']."','".$data['ketua_kejari']."','".$data['url_kejari']."'";
-                        $onclick2="'4','".$this->encryption->encrypt($data['id_kejari'])."','".$data['nama_kejari']."','".$data['alamat_kejari']."','".$data['ketua_kejari']."','".$data['url_kejari']."'";
+                        $onclick="'3','".$this->Mcrypt->encrypt($data['id_kejari'])."','".$data['nama_kejari']."','".$data['alamat_kejari']."','".$data['ketua_kejari']."','".$data['url_kejari']."'";
+                        $onclick2="'4','".$this->Mcrypt->encrypt($data['id_kejari'])."','".$data['nama_kejari']."','".$data['alamat_kejari']."','".$data['ketua_kejari']."','".$data['url_kejari']."'";
                 $baris.='<tr>'.
                                         '<td>'.$no++.'</td>'.
                                         '<td>'.$data['nama_kejari'].'</td>'.

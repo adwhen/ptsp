@@ -52,10 +52,10 @@
                   <center>
                     <div class="tooltip-demo">
                       
-                        <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#modal_ubah" onclick="modal_ubah('<?php echo $this->encryption->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
+                        <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#modal_ubah" onclick="modal_ubah('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
 
  
-                        <button onclick="modal_hapus('<?php echo $this->encryption->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-data" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
+                        <button onclick="modal_hapus('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-data" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
 
                     </div>
                   </center>
@@ -77,13 +77,13 @@
     $('#nama_file2').val(nama_file);
     if(kat_file=='sarana'){
       $('#sarana').attr('selected',"true");
-      $('#umum').removeAttr('selected');
-    }else if(kat_file=='umum'){
-      $('#umum').attr('selected',"true");
+      $('#galeri').removeAttr('selected');
+    }else if(kat_file=='galeri'){
+      $('#galeri').attr('selected',"true");
       $('#sarana').removeAttr('selected');
     }else{
       $('#sarana').removeAttr('selected');
-      $('#umum').removeAttr('selected');
+      $('#galeri').removeAttr('selected');
     }
     $('#preview').html('');
     var img = $('<img height="100">'); 

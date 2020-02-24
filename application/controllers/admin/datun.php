@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Galeri extends CI_Controller {
+class Datun extends CI_Controller {
 
 	function __construct()
 	{
@@ -16,10 +16,9 @@ class Galeri extends CI_Controller {
 
 	public function index()
 	{      
-        $query=$this->db->query('SELECT * from tb_file where url_file like "%.jpg%" or url_file like "%.png%" or url_file like "%.jpeg%"')->result_array();
         $data=array(
-			'isi'=>'admin/galeri/data',
-			'data' => $query
+			'isi'=>'admin/datun/data',
+			'data' => $this->db->get_where('tb_file',array('kat_file'=>'perdata dan tata usaha negara'))->result_array()
 		);
 		$this->load->view('admin/snippet/template',$data);
 	}
@@ -41,19 +40,20 @@ class Galeri extends CI_Controller {
             	'url_file'  => $basePath,
             	'nama_file' => $this->input->post('nama_file'),
             	'kat_file'  => $this->input->post('kat_file'),
+            	'tgl_file'	=> $this->input->post('tgl_file'),
             );
 
             $this->db->insert('tb_file',$simpan); 
             $data = array(
                     'message'   => 'Data Berhasil Di Tambahkan',
                     'image'         => $basePath,
-                    'baris'     =>$this->Mgaleri->ajaxtampil()
+                    'baris'     =>$this->Mgaleri->datun()
             );
             echo json_encode($data);  
         }else{
             $data = array(
                 'error' => "error",
-                'baris'     =>$this->Mgaleri->ajaxtampil()
+                'baris'     =>$this->Mgaleri->datun()
                 );
 
             echo json_encode($data);
@@ -110,15 +110,16 @@ class Galeri extends CI_Controller {
                         echo json_encode($data);
                     }  
         }else{
-        	$decode['id_file'] = $this->Mcrypt->decrypt($this->input->post('id_file'));
+        	
              $simpan = array(
             	'nama_file' => $this->input->post('nama_file'),
             	'kat_file'  => $this->input->post('kat_file'),
+            	'tgl_file'	=> $this->input->post('tgl_file'),
             );
 
             $this->db->update('tb_file',$simpan,$decode);
 
-            $baris=$this->Mgaleri->ajaxtampil();
+            $baris=$this->Mgaleri->datun();
 
             $data = array(
                     'message'   => 'Data Berhasil Di Ubah',
@@ -136,7 +137,7 @@ class Galeri extends CI_Controller {
             unlink('asset/gambar/foto/'.$str[7]);
         }
 		$this->db->delete('tb_file',$decode);
-		$galeri=$this->Mgaleri->ajaxtampil();
+		$galeri=$this->Mgaleri->datun();
 		$data= array(
 			'message' => 'Data Berhasil di Hapus',
 			'baris'	  => $galeri

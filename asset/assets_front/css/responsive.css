@@ -121,3 +121,65 @@
 }
 
 /* Visi Misi */
+
+/* struktural */
+
+hr.garisBaganVer1 {
+	width: 4%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+}
+
+hr.garisBaganVer2 {
+	width: 4%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+}
+
+hr.garisBaganHor1 {
+	width: 40%;
+	border: 2px solid green;
+	margin-top: 28px;
+}
+
+hr.garisBaganVer3 {
+	width: 100%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+	margin-left: -2px;
+}
+
+hr.garisBaganVer4 {
+	width: 100%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+	margin-top: 34px;
+	margin-left: -2px;
+}
+
+hr.garisBaganVer5 {
+	width: 4%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+}
+
+hr.garisBaganHor2 {
+	width: 60%;
+	border: 2px solid green;
+	margin-top: 28px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	hr.garisBaganVer1,
+	hr.garisBaganVer2,
+	hr.garisBaganHor1,
+	hr.garisBaganVer3,
+	hr.garisBaganVer4,
+	hr.garisBaganVer5,
+	hr.garisBaganHor2 {
+		display: none;
+	}
+}
+
+/* struktural */

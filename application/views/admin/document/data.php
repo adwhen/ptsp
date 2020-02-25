@@ -24,11 +24,13 @@ $this->load->view('admin/snippet/sidebar');
         </div>
         <!-- /.col -->
         <div class="col-sm-6 invoice-col" style="text-align: right;">   
-          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tambah-dokumen">
+          <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah-dokumen">
                 Tambah Data
-          </button>
+          </button> -->
         </div>
+        <center>
         <p class="loading"></p>
+        </center>
         <!-- /.col -->
       </div>
       <!-- /.row -->
@@ -56,11 +58,14 @@ $this->load->view('admin/snippet/sidebar');
                 <td>
                   <center>
                     <div class="tooltip-demo">
-                      
-                        <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#ubah-dokumen" onclick="modal_ubah('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
+                        
+                        <a target="_blank" href="<?php echo $dt['url_file'] ?>">
+                            <button data-balloon="Edit" class="btn btn-default" title="Ubah"><i class="fa fa-file"></i></button>
+                        </a>
+                       <!--  <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#ubah-dokumen" onclick="modal_ubah('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
 
  
-                        <button onclick="modal_hapus('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-dokumen" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
+                        <button onclick="modal_hapus('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-dokumen" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button> -->
 
                     </div>
                   </center>

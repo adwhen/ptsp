@@ -31,6 +31,7 @@ class Peraturan extends CI_Controller {
         			'kat_peraturan' =>$this->input->post('kat_peraturan'),
         		);
         		$this->db->insert('tb_peraturan',$data);
+                $this->session->set_flashdata('msg','Data Berhasil Ditambahkan!!');
         	}else{
         		$data=array(
         			'nama_peraturan' =>$this->input->post('nama_peraturan'),
@@ -38,6 +39,7 @@ class Peraturan extends CI_Controller {
         			'kat_peraturan' =>$this->input->post('kat_peraturan'),
         		);
         		$this->db->update('tb_peraturan',$data,$decrypt);
+                $this->session->set_flashdata('msg','Data Berhasil Diubah!!');
         	}
         	redirect('admin/peraturan');
         }
@@ -53,6 +55,7 @@ class Peraturan extends CI_Controller {
     public function hapus(){
     	$decrypt['id_peraturan']=$this->encryption->decrypt($this->input->post('id_peraturan'));
     	$this->db->delete('tb_peraturan',$decrypt);
+        $this->session->set_flashdata('msg','Data Berhasil Dihapus!!');
     	redirect('admin/peraturan');
     }
 }

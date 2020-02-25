@@ -19,11 +19,13 @@
         </div>
         <!-- /.col -->
         <div class="col-sm-6 invoice-col" style="text-align: right;">   
-          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tambah_datun">
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah_datun">
                 Tambah Data
           </button>
         </div>
+        <center>
         <p class="loading"></p>
+        </center>
         <!-- /.col -->
       </div>
       <!-- /.row -->

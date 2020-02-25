@@ -23,11 +23,13 @@ $this->load->view('admin/snippet/sidebar');?>
         </div>
         <!-- /.col -->
         <div class="col-sm-6 invoice-col" style="text-align: right;">   
-          <button onclick="form_peraturan('1')" type="button" class="btn btn-default" data-toggle="modal">
+          <button onclick="form_peraturan('1')" type="button" class="btn btn-success" data-toggle="modal">
                 Tambah Data
           </button>
         </div>
-        <p class="loading"></p>
+        <center>
+        <p class="loading"></p><?php echo $this->session->flashdata('msg'); ?>
+        </center>
         <!-- /.col -->
       </div>
       <!-- /.row -->

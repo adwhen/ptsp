@@ -59,6 +59,7 @@ class Intelijen extends CI_Controller {
                     'kat_informasi'=>'intelijen',
                 );
                 $this->db->update('tb_informasi',$sInformasi,$idf);
+                $this->session->set_flashdata('msg','Data Berhasil Diubah!!');
                 $id = $idf['id_informasi'];
             }else{
                 $sInformasi=array(
@@ -67,6 +68,7 @@ class Intelijen extends CI_Controller {
                     'kat_informasi'=>'intelijen',
                 );
                 $this->db->insert('tb_informasi',$sInformasi);
+                $this->session->set_flashdata('msg','Data Berhasil Ditambah!!');
                 $id = $this->db->insert_id();
             }
                 $nmfile="pdf".time();
@@ -121,6 +123,7 @@ class Intelijen extends CI_Controller {
             unlink('asset/file/'.$str[7]);
         }
         $this->db->delete('tb_file',$where);
+        $this->session->set_flashdata('msg','Data Berhasil Dihapus!!');
         redirect('admin/intelijen/');
     }
 }

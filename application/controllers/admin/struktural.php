@@ -19,7 +19,7 @@ class Struktural extends CI_Controller {
 			'isi'=>'admin/struktural/data',
 			'data' => $query
 		);
-		$this->load->view('admin/snippet/template',$data);
+		$this->load->view('admin/struktural/data',$data);
 	}
 	public function tambah(){
 		$simpanStruktural=array(

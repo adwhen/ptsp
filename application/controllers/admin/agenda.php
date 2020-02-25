@@ -74,9 +74,12 @@ class Agenda extends CI_Controller {
 				);
 				$this->db->insert('tb_berita',$data);
 				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
+				$this->session->set_flashdata('msg','Data Berhasil Ditambah!!');
 				redirect('admin/agenda/');
 			}else{
+
 				$decode= $this->Mcrypt->decrypt($id_berita);
+				$where = array('id_berita'=>$decode);
 				$data=array(
 					'judul_berita'=>$this->input->post('judul_berita'),
 					'isi_berita'=>$this->input->post('isi_berita'),
@@ -86,6 +89,7 @@ class Agenda extends CI_Controller {
 				);
 				$this->db->update('tb_berita',$data,$where);
 				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
+				$this->session->set_flashdata('msg','Data Berhasil Diubah!!');
 				redirect('admin/agenda/');
 			}
 		}
@@ -139,6 +143,7 @@ class Agenda extends CI_Controller {
 			unlink('asset/gambar/foto/'.$str[7]);
 		}
 		$this->db->delete('tb_file',$where);
+		$this->session->set_flashdata('msg','Data Berhasil Dihapus!!');
 		redirect('admin/berita/');
 	}
 

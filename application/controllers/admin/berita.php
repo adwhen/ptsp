@@ -46,7 +46,7 @@ class Berita extends CI_Controller {
 				$encrypt_id=$this->encryption->encrypt($id_berita);
 				$data=array(
 					'isi'	=>'admin/berita/form_berita',
-					'id'	=>$encrypt_id,
+					'id'	=>$id_berita,
 					'data'	=>$berita,
 					'foto'	=>$file
 				);
@@ -76,9 +76,12 @@ class Berita extends CI_Controller {
 				);
 				$this->db->insert('tb_berita',$data);
 				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
+				$this->session->set_flashdata('msg', 'Berita Berhasil Ditambahkan!!');
 				redirect('admin/berita/');
 			}else{
+
 				$decode= $this->Mcrypt->decrypt($id_berita);
+				$where = array('id_berita'=>$decode);
 				$data=array(
 					'judul_berita'=>$this->input->post('judul_berita'),
 					'isi_berita'=>$this->input->post('isi_berita'),
@@ -89,6 +92,7 @@ class Berita extends CI_Controller {
 				);
 				$this->db->update('tb_berita',$data,$where);
 				$this->db->update('tb_file',array('ket_file'=>$decode),array('ket_file'=>"sementara"));
+				$this->session->set_flashdata('msg', 'Berita Berhasil DiUbah!!');
 				redirect('admin/berita/');
 			}
 		}
@@ -142,6 +146,7 @@ class Berita extends CI_Controller {
 			unlink('asset/gambar/foto/'.$str[7]);
 		}
 		$this->db->delete('tb_file',$where);
+		$this->session->set_flashdata('msg', 'Berita Berhasil Dihapuskan!!');
 		redirect('admin/berita/');
 	}
 

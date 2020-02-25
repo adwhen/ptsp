@@ -125,7 +125,7 @@
         </div>
         <form class="form-horizontal" action="#" method="post" enctype="multipart/form-data" role="form">
         <div class="modal-footer">
-            <a href="<?php echo base_url('admin/logout')?>" class="btn btn-danger" style="width: 70px;"> Ya&nbsp;</a>
+            <a href="<?php echo base_url('login/logout')?>" class="btn btn-danger" style="width: 70px;"> Ya&nbsp;</a>
             <button type="button" class="btn btn-success" data-dismiss="modal" style="width: 70px;" selected> Tidak</button>
         </div>
         </form>

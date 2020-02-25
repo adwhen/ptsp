@@ -181,7 +181,7 @@
             <p class="loading"></p>
             <div class="row" id="image-place">
                         <?php foreach($foto as $key){ ?>
-                        <img src="<?php echo $key['url_file'] ?>" style="height:100px;" onclick="coba(this);">
+                        <img src="<?php echo $key['url_file'] ?>" style="height:100px;" onclick="gmbr(this);">
                         <br>
                         <?php } ?>
                       
@@ -207,7 +207,7 @@
                       imgText.innerHTML = '<input class="form-control" readonly value="'+imgs.src+'" id="myvalue"><button class="btn btn-default"  onclick="copyToClipboard()"><i class="fa fa-file">Copy text</i></button>';
                       expandImg.parentElement.style .display = "block";
                     }
-                    function coba(imgs){
+                    function gmbr(imgs){
                       var modal = document.getElementById("myModal");
 
                       // Get the image and insert it inside the modal - use its "alt" text as a caption

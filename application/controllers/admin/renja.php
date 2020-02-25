@@ -61,6 +61,7 @@ class Renja extends CI_Controller {
                 );
                 $this->db->update('tb_informasi',$sInformasi,$idf);
                 $id = $idf['id_informasi'];
+                $this->session->set_flashdata('msg','Data Berhasil Diubah!!');
             }else{
                 $sInformasi=array(
                     'judul_informasi'=>$this->input->post('judul_informasi'),
@@ -69,6 +70,7 @@ class Renja extends CI_Controller {
                 );
                 $this->db->insert('tb_informasi',$sInformasi);
                 $id = $this->db->insert_id();
+                $this->session->set_flashdata('msg','Data Berhasil Ditambah!!');
             }
                 $nmfile="pdf".time();
                 $config['upload_path']          = 'asset/file/';
@@ -121,6 +123,7 @@ class Renja extends CI_Controller {
             unlink('asset/file/'.$str[7]);
         }
         $this->db->delete('tb_file',$where);
+        $this->session->set_flashdata('msg','Data Berhasil Dihapus!!');
         redirect('admin/renja/');
     }
 }

@@ -32,6 +32,7 @@ class Login extends CI_Controller {
 			);
 			$check=$this->db->get_where('tb_user',$akun)->result_array();
 			if(count($check)==0){
+				$this->session->set_flashdata('msg', 'Username atau Password Salah');
 				redirect('login');
 			}else{
 				$session=array(
@@ -42,5 +43,9 @@ class Login extends CI_Controller {
 				redirect('admin/beranda');
 			}
 		}
+	}
+	public function logout(){
+		$this->session->sess_destroy();
+		redirect('frontend/beranda');
 	}
 }

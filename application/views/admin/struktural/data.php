@@ -1,3 +1,7 @@
+<?php
+$this->load->view('admin/snippet/header');
+$this->load->view('admin/snippet/sidebar');
+ ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -108,7 +112,7 @@ function struktural_hapus(id_struktural,id_file,no) {
                 <div class="form-group">
                   <label class="control-label col-md-2">Nama</label>
                     <div class="col-md-9">
-                      <input name="nama_struktural" id="nama_struktural" required="" value="" required placeholder="Nama Foto" class="form-control" type="text">
+                      <input name="nama_struktural" id="nama_struktural" required="" value="" required placeholder="Nama" class="form-control" type="text">
                     </div>
                 </div>              
                  <div class="form-group">
@@ -120,13 +124,25 @@ function struktural_hapus(id_struktural,id_file,no) {
                 <div class="form-group">
                       <label class="control-label col-md-2">Jabatan</label>
                       <div class="col-md-9">
-                       <input  name="jabatan_struktural" id="jabatan_struktural" type="text" class="form-control" required>
+                       <select name="jabatan_struktural" id="jabatan_struktural" type="text" class="form-control" required>
+                        <option value="">Pilih</option>
+                        <option>Ketua</option>
+                        <option>Wakil</option>
+                        <option>Tata Usaha</option>
+                        <option>Asisten Pembinaan</option>
+                        <option>Asisten Intelijen</option>
+                        <option>Asisten Tindak Pidana Umum</option>
+                        <option>Asisten Tindak Pidana Khusus</option>
+                        <option>Asisten Perdata dan Tata Usaha Negara</option>
+                        <option>Asisten Pengawas</option>
+                        <option>Koordinator</option>     
+                       </select>
                       </div>
                 </div>  
                 <div class="form-group">
                       <label class="control-label col-md-2">File</label>
                       <div class="col-md-9">
-                       <input  type="file" name="file" id="file" required>
+                       <input  type="file" name="file"  required>
                       </div>
                 </div>  
               </div>
@@ -217,3 +233,6 @@ function struktural_hapus(id_struktural,id_file,no) {
           </div>
   </form>          <!-- /.modal-dialog -->
 </div>
+<?php
+$this->load->view('admin/snippet/footer');
+?>

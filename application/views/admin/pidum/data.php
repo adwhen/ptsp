@@ -28,6 +28,7 @@ $this->load->view('admin/snippet/sidebar');?>
         </div>
         <!-- /.col -->
       </div>
+      <center><?php echo $this->session->flashdata('msg'); ?></center>
       <!-- /.row -->
       <br>
       <div style="width: 100%;background-color: #edf2f0;color: white;height: 25px;text-align: center;vertical-align: center;">

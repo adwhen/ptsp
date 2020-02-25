@@ -28,6 +28,9 @@ $this->load->view('admin/snippet/sidebar');?>
         </div>
         <!-- /.col -->
       </div>
+      <center>
+        <?php echo $this->session->flashdata('msg'); ?>
+      </center>
       <!-- /.row -->
       <br>
       <div style="width: 100%;background-color: #edf2f0;color: white;height: 25px;text-align: center;vertical-align: center;">
@@ -56,7 +59,7 @@ $this->load->view('admin/snippet/sidebar');?>
                   <center>
                     <div class="tooltip-demo">
                       <?php $string=str_replace("/","kejati",$this->encryption->encrypt($dt['id_berita'])); ?>
-                      <a href="<?php echo base_url('admin/berita/form/'.$this->Mcrypt->encrypt($dt['id_berita']));?>">
+                      <a href="<?php echo base_url('admin/agenda/form/'.$this->Mcrypt->encrypt($dt['id_berita']));?>">
                         <button data-balloon="Ubah" data-balloon-pos="up" data-toggle="modal" data-target="#edit-data" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
                       </a>
                       <button onclick="modal_hapus('<?php echo $no; ?>','<?php echo $this->Mcrypt->encrypt($dt['id_berita']) ?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-berita" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>

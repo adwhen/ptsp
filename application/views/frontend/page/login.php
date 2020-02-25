@@ -32,7 +32,7 @@
                         </div>
                         <div class="card-body">
                             <?php echo validation_errors(); ?>
-
+                            <?php echo $this->session->flashdata('msg'); ?>
                             <?php  echo form_open_multipart('login/',array('class'=>"form-horizontal",'method'=>'POST')); ?>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Username</label>

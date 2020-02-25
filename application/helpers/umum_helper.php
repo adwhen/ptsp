@@ -1,17 +1,98 @@
 <?php 
     
     function jenisInformasi($jenis){
-		if ($jenis=='pidum'){
-            return 'Pidana Umum';
+		if ($jenis=='renja'){
+            $specs = array (
+                'jenis' => 'rencana kerja',
+                'tipe' => 'pdf'
+            );
+            return $specs;
+        }elseif ($jenis=='pembinaan'){
+            $specs = array (
+                'jenis' => 'pembinaan',
+                'tipe' => 'img'
+            );
+            return $specs;
+        }elseif ($jenis=='intelijen'){
+            $specs = array (
+                'jenis' => 'intelijen',
+                'tipe' => 'pdf'
+            );
+            return $specs;
+        }elseif ($jenis=='pidum'){
+            $specs = array (
+                'jenis' => 'pidana umum',
+                'tipe' => 'pdf'
+            );
+            return $specs;
         }elseif($jenis=='pidsus'){
-            return 'Pidana Khusus';
+            $specs = array (
+                'jenis' => 'pidana khusus',
+                'tipe' => 'img'
+            );
+            return $specs;
         }elseif($jenis=='ptun'){
-            return 'Perdata dan Tata Usaha Negara';
-        }elseif($jenis=='ptun'){
-            return 'Perdata dan Tata Usaha Negara';
-        }else{
-            return $jenis;
+            $specs = array (
+                'jenis' => 'perdata dan tata usaha negara',
+                'tipe' => 'img'
+            );
+            return $specs;
+        }elseif($jenis=='pengawasan'){
+            $specs = array (
+                'jenis' => 'pengawasan',
+                'tipe' => 'img'
+            );
+            return $specs;
+        }elseif($jenis=='pengadaan'){
+            $specs = array (
+                'jenis' => 'pengadaan',
+                'tipe' => 'img'
+            );
+            return $specs;
         }
+    }
+    
+    function judulInformasi($jenis){
+        $CI =& get_instance();
+
+		$CI->db->select('judul_informasi,kat_informasi');
+		$CI->db->from('tb_informasi');
+        $CI->db->where('kat_informasi',$jenis);
+        $CI->db->group_by('judul_informasi');
+		$query  = $CI->db->get();
+        $array  = $query->result_array();
+        
+        return $array;
+    }
+    
+    function subJudulInformasi($jenis,$judul){
+        $CI =& get_instance();
+
+		$CI->db->select('sub_informasi,kat_informasi');
+		$CI->db->from('tb_informasi');
+        $CI->db->where('kat_informasi',$jenis);
+        $CI->db->where('judul_informasi',$judul);
+        $CI->db->group_by('sub_informasi');
+		$query  = $CI->db->get();
+        $array  = $query->result_array();
+        
+        return $array;
+    }
+    
+    function dataFile($jenis,$judul,$subjudul){
+        $CI =& get_instance();
+
+        $CI->db->select('nama_file,url_file');
+		$CI->db->from('tb_file');
+		$CI->db->join('tb_informasi','ket_file = id_informasi');
+        $CI->db->where('kat_informasi',$jenis);
+        $CI->db->where('judul_informasi',$judul);
+        $CI->db->where('sub_informasi',$subjudul);
+		$query  = $CI->db->get();
+        $array  = $query->result_array();
+        
+        return $array;
+
     }
     
     function tgl_indo($tanggal){
@@ -45,6 +126,19 @@
 		$config['per_page'] = $jlh;
     
         return $config;
+    }
+
+    function struktural($jabatan){
+        $CI =& get_instance();
+
+        $CI->db->select('*');
+		$CI->db->from('tb_struktural');
+		$CI->db->join('tb_file','ket_file = id_struktural');
+        $CI->db->where('jabatan_struktural',$jabatan);
+		$query  = $CI->db->get();
+        $array  = $query->result_array();
+    
+        return $array;
     }
 
 ?>

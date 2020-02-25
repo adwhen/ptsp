@@ -36,20 +36,22 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo base_url('frontend/agenda');?>">Agenda</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pembinaan');?>">Pembinaan</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/intelijen');?>">Intelijen</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pidum');?>">Pidana Umum</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pidsus');?>">Pidana Khusus</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/ptun');?>">Perdata dan Tata Usaha Negara</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pengawasan');?>">Pengawasan</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pengadaan');?>">Pengadaan</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/renja');?>">Rencana Kerja</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pembinaan');?>">Pembinaan</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/intelijen');?>">Intelijen</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pidum');?>">Pidana Umum</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pidsus');?>">Pidana Khusus</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/ptun');?>">Perdata dan Tata Usaha Negara</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pengawasan');?>">Pengawasan</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pengadaan');?>">Pengadaan</a>
                 </div>
             </li>
             <li class="nav-item">

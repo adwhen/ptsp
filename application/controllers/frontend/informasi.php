@@ -4,12 +4,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Informasi extends CI_Controller {
 	public function index($jenis)
 	{
-        $data_file = $this->db->get_where('tb_file',array('kat_file' =>  $jenis));
-        $jenis = jenisInformasi($jenis);
+		$specs = jenisInformasi($jenis);
+		$array = judulInformasi($specs['jenis']);
+		$x=0;$y=0;
+		foreach($array as $jdl){
+			$array[$x]['subJudul'] = subJudulInformasi($specs['jenis'],$jdl['judul_informasi']);
+			foreach($array[$x]['subJudul'] as $sub){
+				$array[$x][$y]['file'] = dataFile($specs['jenis'],$jdl['judul_informasi'],$sub['sub_informasi']);
+				$y++;
+			}
+			$x++;
+		}
 		$data=array(
-            'jenis' => $jenis,
+            'jenis' => $specs['jenis'],
 			'isi'=>'frontend/page/informasi',
-			'data' => $data_file->result_array()
+			'tipe'=> $specs['tipe'],
+			'data' => $array
 		);
 		$this->load->view('frontend/snippet/template',$data);
 	}

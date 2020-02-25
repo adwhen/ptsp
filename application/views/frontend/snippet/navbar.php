@@ -44,6 +44,8 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?php echo base_url('frontend/agenda');?>">Agenda</a>
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/renja');?>">Rencana Kerja</a>
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/pembinaan');?>">Pembinaan</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?php echo base_url('frontend/informasi/index/intelijen');?>">Intelijen</a>

@@ -139,28 +139,16 @@
                 <div class="card-body">
                     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <?php $x=0;foreach($struktural as $str){?>
+                            <div class="carousel-item <?php if($x==0){echo 'active';}?>">
                                 <a href="www.facebook.com"><img class="d-block w-100"
-                                        src="<?php echo base_url('/asset/assets_front') ?>/img/jaksa.jpg" alt="First slide"></a>
+                                        src="<?php echo $str['url_file']?>" alt="First slide"></a>
                                 <br>
-                                <h5 style="font-size:14px">Kepala Kejaksaan Tinggi Bengkulu</h5>
-                                <p>Namanya</p>
-                                <a href="">Lihat Struktural</a>
+                                <h5 style="font-size:14px"><?php echo $str['jabatan_struktural']?></h5>
+                                <p><?php echo $str['nama_struktural']?></p>
+                                <a href="<?php echo base_url('frontend/struktural');?>">Lihat Struktural</a>
                             </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/jaksa.jpg" alt="Second slide">
-                                <br>
-                                <h5 style="font-size:14px">Wakil Kepala Kejaksaan Tinggi Bengkulu</h5>
-                                <p>Namanya</p>
-                                <a href="">Lihat Struktural</a>
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/jaksa.jpg" alt="Third slide">
-                                <br>
-                                <h5 style="font-size:14px">Asisten Pembinaan</h5>
-                                <p>Namanya</p>
-                                <a href="">Lihat Struktural</a>
-                            </div>
+                            <?php $x++; } ?>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button"
                             data-slide="prev">

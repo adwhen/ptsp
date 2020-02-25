@@ -14,6 +14,14 @@
     <?php echo $data[0]['isi_berita'];?>
 </div>
 <br>
+<?php if(!empty($data[0]['video_url'])){?>
+<div class="container-fluid" style="width:60%">
+    <center>
+    <iframe style="width:100%;height:400px" src="<?php echo $data[0]['video_url']?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </center>
+</div>
+<?php } ?>
+<br>
 <div class="container-fluid" style="width:80%">
     <center>
     <h5 style="font-size: 25px;">Berita Terkait</h5>

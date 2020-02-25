@@ -47,7 +47,7 @@
                             id="iconButton" class="fa fa-globe"></i><br>APLIKASI LAIN 2</button>
                     <a href="<?php echo base_url('frontend/galeri');?>" class="btn btn-success text-white buttonUtama"><i id="iconButton" class="fa fa-images"></i><br>GALERI</a>
                     <a href="<?php echo base_url('frontend/berita');?>" class="btn btn-secondary text-white buttonUtama"><i id="iconButton" class="fa fa-newspaper"></i><br>BERITA</a>
-                    <a href="login.html" class="btn btn-success text-white buttonUtama"
+                    <a href="<?php echo base_url('login') ?>" class="btn btn-success text-white buttonUtama"
                         data-tooltip='Button 7'><i id="iconButton" class="fa fa-power-off"></i><br>LOGIN</a>
                     <a href="<?php echo base_url('frontend/struktural');?>" class="btn btn-warning text-white buttonUtama"><i id="iconButton" class="fa fa-id-card"></i><br>STRUKTURAL</a>
                     <button class="btn btn-danger text-white buttonUtama" data-tooltip='Button 9'><i

@@ -4,15 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Peraturan extends CI_Controller {
 
 	function __construct()
-	{
-		 parent::__construct();
-	        //  if($this->session->userdata('login')==0){
-	        //     redirect('welcome');
-	        //  }elseif($this->session->userdata('login')==2){
-	        //     redirect('users');
-	        // }
-		 	error_reporting(0);
-	}
+    {
+         parent::__construct();
+             if($this->session->userdata('logged_in')!=TRUE){
+                redirect('welcome');
+             }
+            error_reporting(0);
+    }
     public function index(){
     	$this->form_validation->set_rules('id_peraturan', 'id_peraturan');
 		$this->form_validation->set_rules('nama_peraturan', 'nama_peraturan', 'required');

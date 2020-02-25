@@ -316,7 +316,7 @@ $(document).ready(function(){
                   $('.loading').html(data.error)
               }else{
                   $('.loading').html(hasil.message)
-                  var img = $('<div class="column"><img src="'+hasil.image +'"style="width:100%" onclick="myFunction(this);"></div>'); 
+                  var img = $('<div class="column"><img src="'+hasil.image +'"style="height:100px" onclick="myFunction(this);"></div>'); 
                   img.appendTo('#image-place');
               }     
             },error : function(data){

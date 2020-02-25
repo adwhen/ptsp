@@ -7,53 +7,61 @@
     <section class="content">
       
       <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>1</h3>
+<div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-newspaper-o"></i></span>
 
-              <p>Jumlah Pengaduan Masuk</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Berita</span>
+              <span class="info-box-number">1,410</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-commenting" aria-hidden="true"></i>
-            </div>
-            <a href="<?php echo base_url('admin/pengaduan');?>" class="small-box-footer" data-balloon="Lihat Info Selengkapnya" data-balloon-pos="down">Info Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>1</h3>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-flag-o"></i></span>
 
-              <p>Jumlah Pengaduan Selesai</p>
+            <div class="info-box-content">
+              <span class="info-box-text">Bookmarks</span>
+              <span class="info-box-number">410</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-check-square-o" aria-hidden="true"></i>
-            </div>
-            <a href="<?php echo base_url('admin/pengaduan');?>" class="small-box-footer" data-balloon="Lihat Info Selengkapnya" data-balloon-pos="down">Info Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>1</h3>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
 
-              <p>Jumlah Pengaduan Dalam Proses</p>
+            <div class="info-box-content">
+              <span class="info-box-text">File/Pdf</span>
+              <span class="info-box-number">13,648</span>
             </div>
-            <div class="icon">
-              <i class="fa fa-hourglass-half" aria-hidden="true"></i>
-            </div>
-            <a href="#" class="small-box-footer" data-balloon="Lihat Info Selengkapnya" data-balloon-pos="down">Info Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- /.info-box-content -->
           </div>
+          <!-- /.info-box -->
         </div>
-        <!-- ./col -->
-      </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Likes</span>
+              <span class="info-box-number">93,139</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+</div>
+
       <!-- /.row -->
 
     </section>

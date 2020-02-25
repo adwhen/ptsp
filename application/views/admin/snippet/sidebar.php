@@ -16,48 +16,44 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li style="margin-top: 15px;"><center><img src="<?php echo base_url('asset/gambar/icon/kajatilogo.png')?>" width="80px" height="80px"></center></li>
-        <li style="font-size: 16px;margin-top: 10px;color: gray;" class="header"><center>Kejaksaan Tinggi<br>Bengkulu</center></li>
-        <li style="font-size: 16px;">
+        <li style="font-size: 12px;margin-top: 12px;color: gray;" class="header"><center>Kejaksaan Tinggi<br>Bengkulu</center></li>
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/beranda');?>">
             <i class="fa fa-home" aria-hidden="true"></i><span>Beranda</span>
           </a>
         </li>
-        <li style="font-size: 16px;">
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/berita');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Berita</span>
           </a>
         </li>
-        <li style="font-size: 16px;">
-          <a href="<?php echo base_url('admin/galeri');?>">
-            <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Galeri</span>
-          </a>
-        </li>
-        <li style="font-size: 16px;">
+
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/visi_misi');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Visi-Misi</span>
           </a>
         </li>
-        <li style="font-size: 16px;">
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/kejari');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Kejaksaan Tinggi Negeri</span>
           </a>
         </li>
-        <li style="font-size: 16px;">
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/peraturan');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Peraturan Pemerintah</span>
           </a>
         </li>
-        <li style="font-size: 16px;">
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/perintah');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Perintah Jaksa Agung</span>
           </a>
         </li> 
-        <li style="font-size: 16px;">
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/document');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Document</span>
           </a>
         </li> 
-        <li style="font-size: 16px;">
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/agenda');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Agenda</span>
           </a>
@@ -70,8 +66,8 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('admin/pembinaan');?>"><i class="fa fa-circle-o"></i> Pembinaan</a></li>
+          <ul  class="treeview-menu">
+            <li ><a href="<?php echo base_url('admin/pembinaan');?>"><i class="fa fa-circle-o"></i> Pembinaan</a></li>
             <li><a href="<?php echo base_url('admin/renja');?>"><i class="fa fa-circle-o"></i> Rencana Kerja</a></li>
             <li><a href="<?php echo base_url('admin/intelijen');?>"><i class="fa fa-circle-o"></i> Intelijen</a></li>
             <li><a href="<?php echo base_url('admin/pidum');?>"><i class="fa fa-circle-o"></i> Pidana Umum</a></li>
@@ -81,9 +77,14 @@
             <li><a href="<?php echo base_url('admin/pengadaan');?>"><i class="fa fa-circle-o"></i> Pengadaan</a></li>
           </ul>
         </li>
-        <li style="font-size: 16px;">
+        <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/struktural');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Struktural</span>
+          </a>
+        </li>
+        <li style="font-size: 12px;">
+          <a href="<?php echo base_url('admin/galeri');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Galeri</span>
           </a>
         </li>              
       </ul>

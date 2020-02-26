@@ -14,7 +14,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Berita</span>
-              <span class="info-box-number">1,410</span>
+              <span class="info-box-number"><?php echo $berita; ?></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -26,8 +26,8 @@
             <span class="info-box-icon bg-green"><i class="fa fa-flag-o"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Bookmarks</span>
-              <span class="info-box-number">410</span>
+              <span class="info-box-text">Galeri</span>
+              <span class="info-box-number"><?php echo $galeri; ?></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -40,7 +40,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">File/Pdf</span>
-              <span class="info-box-number">13,648</span>
+              <span class="info-box-number"><?php echo $pdf; ?></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -52,8 +52,8 @@
             <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Likes</span>
-              <span class="info-box-number">93,139</span>
+              <span class="info-box-text">Survey</span>
+              <span class="info-box-number"><?php echo $survey; ?></span>
             </div>
             <!-- /.info-box-content -->
           </div>

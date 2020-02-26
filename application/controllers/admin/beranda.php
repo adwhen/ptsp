@@ -12,8 +12,17 @@ class Beranda extends CI_Controller {
 	}
 	public function index()
 	{
+		$this->db->like('url_file','pdf');
+		$pdf=$this->db->get('tb_file')->result_array();
+		$this->db->not_like('url_file','pdf');
+		$galeri=$this->db->get('tb_file')->result_array();
+		$survey=$this->db->get('tb_survey')->result_array();
 		$data=array(
-			'isi'=>'admin/beranda'
+			'isi'=>'admin/beranda',
+			'berita'=> count($this->db->get('tb_berita')->result_array()),
+			'pdf'=>count($pdf),
+			'galeri' =>count($galeri),
+			'survey' =>count($survey)
 		);
 		$this->load->view('admin/snippet/template',$data);
 	}

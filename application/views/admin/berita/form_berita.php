@@ -146,7 +146,7 @@
                     </div>
                 </div>                     
                 <div class="modal-footer">
-                  <center><button type="submit" class="btn btn-primary btn-lg" data-balloon="Simpan Data" data-balloon-pos="up" title="Simpan">Simpan</button></center>
+                  <center><button type="submit" onclick="return confirm('Lihat Kembali sebelum melakukan penyimpanan');" class="btn btn-primary btn-lg" data-balloon="Simpan Data" data-balloon-pos="up" title="Simpan">Simpan</button></center>
                 </div>
                 
             </form>

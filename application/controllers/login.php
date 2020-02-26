@@ -20,6 +20,10 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{	
+		if($this->session->userdata('logged_in')==TRUE){
+                redirect('admin/beranda');
+        }
+            error_reporting(0);
 		$this->form_validation->set_rules('username','username','required');
 		$this->form_validation->set_rules('password','password','required');
 		

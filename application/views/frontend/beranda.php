@@ -41,8 +41,8 @@
                             id="iconButton" class="fa fa-edit"></i><br>REGISTRASI USER</button>
                     <button class="btn btn-danger text-white buttonUtama" data-tooltip='Button 2'><i
                             id="iconButton" class="fa fa-paper-plane"></i><br>SILAPTIPIKOR</button>
-                    <button class="btn btn-warning text-white buttonUtama" data-tooltip='Button 3'><i
-                            id="iconButton" class="fa fa-at"></i><br>APLIKASI LAIN 1</button>
+                    <a href="<?php echo base_url('frontend/survey');?>"><button class="btn btn-warning text-white buttonUtama" data-tooltip='Button 3'><i
+                            id="iconButton" class="fa fa-at"></i><br>SURVEY</button></a>
                     <button class="btn btn-info text-white buttonUtama" data-tooltip='Button 4'><i
                             id="iconButton" class="fa fa-globe"></i><br>APLIKASI LAIN 2</button>
                     <a href="<?php echo base_url('frontend/galeri');?>" class="btn btn-success text-white buttonUtama"><i id="iconButton" class="fa fa-images"></i><br>GALERI</a>

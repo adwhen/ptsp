@@ -22,7 +22,13 @@ $this->load->view('admin/snippet/sidebar');?>
                     </div>
                 </div>
                  <div class="form-group">
-                 	<div style="background-color: #00a65a;color: white;margin-bottom: 10px;" class="col-md-12"><a class="btn btn-success btn-sm" href="#" type="input" style="color: black;" onclick="tambah_misi()">+</a><center><H2><label class="control-label" for="inputSuccess">MISI</label></H2></center></div>
+                 	<div style="background-color: #00a65a;color: white;margin-bottom: 10px;" class="col-md-12">
+                    <div class="row">
+                      <div style="margin-top: 25px" class="col-md-2"><a class="btn btn-default btn-sm" href="#" type="input" style="color: black;" onclick="tambah_misi()">Tambah</a></div>
+                      <div class="col-md-8"><center><H2><label class="control-label" for="inputSuccess">MISI</label></H2></center></div>
+                      
+                    </div>
+                  </div>
                     <div class="col-md-12" id="show_misi">
                       <?php $a=0; foreach($misi as $key){ ?>
                         <?php if($a==0){ ?>

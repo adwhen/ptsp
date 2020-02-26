@@ -86,7 +86,12 @@
           <a href="<?php echo base_url('admin/galeri');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Galeri</span>
           </a>
-        </li>              
+        </li>
+        <li style="font-size: 12px;">
+          <a href="<?php echo base_url('admin/survey');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Survey</span>
+          </a>
+        </li>               
       </ul>
     </section>
     <!-- /.sidebar -->

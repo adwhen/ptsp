@@ -158,19 +158,19 @@ $this->load->view('admin/snippet/sidebar');?>
                 <div class="form-group">
                   <label class="control-label col-md-2">Alamat</label>
                   <div class="col-md-9">
-                    <textarea name="alamat_kejari" id="alamat_kejari1" class="form-control" placeholder="Enter ..." rows="3"></textarea>
+                    <textarea name="alamat_kejari" id="alamat_kejari1" class="form-control" placeholder="Alamat" rows="3"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-md-2">Nama Pimpinan Kejari</label>
                     <div class="col-md-9">
-                      <input name="ketua_kejari" id="ketua_kejari1" value="" required placeholder="Judul Berita" class="form-control" type="text">
+                      <input name="ketua_kejari" id="ketua_kejari1" value="" required placeholder="Nama Pimpinan Kejari" class="form-control" type="text">
                     </div>
                 </div> 
                 <div class="form-group">
                   <label class="control-label col-md-2">WEBSITE KEJARI</label>
                     <div class="col-md-9">
-                      <input name="url_kejari" id="url_kejari1" value="" required placeholder="Judul Berita" class="form-control" type="text">
+                      <input name="url_kejari" id="url_kejari1" value="" required placeholder="WEBSITE KEJARI" class="form-control" type="text">
                     </div>
                 </div> 
                      
@@ -216,19 +216,19 @@ $this->load->view('admin/snippet/sidebar');?>
                 <div class="form-group">
                   <label class="control-label col-md-2">Alamat</label>
                   <div class="col-md-9">
-                    <textarea readonly="" name="alamat_kejari" id="alamat_kejari2" class="form-control" placeholder="Enter ..." rows="3"></textarea>
+                    <textarea readonly="" name="alamat_kejari" id="alamat_kejari2" class="form-control" placeholder="Alamat" rows="3"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-md-2">Nama Pimpinan Kejari</label>
                     <div class="col-md-9">
-                      <input readonly="" name="ketua_kejari" id="ketua_kejari2" value="" required placeholder="Judul Berita" class="form-control" type="text">
+                      <input readonly="" name="ketua_kejari" id="ketua_kejari2" value="" required placeholder="Nama Pimpinan Kejari" class="form-control" type="text">
                     </div>
                 </div> 
                 <div class="form-group">
                   <label class="control-label col-md-2">WEBSITE KEJARI</label>
                     <div class="col-md-9">
-                      <input readonly="" name="url_kejari" id="url_kejari2" value="" required placeholder="Judul Berita" class="form-control" type="text">
+                      <input readonly="" name="url_kejari" id="url_kejari2" value="" required placeholder="WEBSITE KEJARI" class="form-control" type="text">
                     </div>
                 </div> 
                      

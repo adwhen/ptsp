@@ -136,7 +136,7 @@ function pembinaan_hapus(id_file,nama_file,url_file,kat_file,tgl_file) {
                       <input name="nama_file" id="nama_file" required="" value="" required placeholder="Nama Foto" class="form-control" type="text">
                     </div>
                 </div>              
-                 <div class="form-group">
+                 <div hidden="" class="form-group">
                     <label class="control-label col-md-2">Kateogri</label>
                     <div class="col-md-9">
                      <select class="form-control" name="kat_file" id="kat_file" required="">
@@ -144,7 +144,6 @@ function pembinaan_hapus(id_file,nama_file,url_file,kat_file,tgl_file) {
                       </select>
                     </div>
                 </div>  
-              </div>
               <div class="form-group">
                     <label class="control-label col-md-2">Tanggal</label>
                     <div class="col-md-9">
@@ -185,7 +184,7 @@ function pembinaan_hapus(id_file,nama_file,url_file,kat_file,tgl_file) {
                       <input name="nama_file" id="nama_file2" value="" required placeholder="Nama Foto" class="form-control" type="text">
                     </div>
                 </div>              
-                <div class="form-group">
+                <div hidden="" class="form-group">
                     <label class="control-label col-md-2">Kateogri</label>
                     <div class="col-md-9">
                      <select class="form-control" name="kat_file" id="kat_file" required="">

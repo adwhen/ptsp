@@ -57,7 +57,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Tambah Galeri Foto</h4>
+                <h4 class="modal-title">Ubah Galeri Foto</h4>
               </div>
               <div class="modal-body">
               <input type="hidden" name="id_file" id="id_file2">
@@ -111,16 +111,13 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Tambah Galeri Foto</h4>
+                <h4 class="modal-title">Hapus Galeri Foto</h4>
               </div>
               <div class="modal-body">
                <input type="hidden" name="id_file" id="id_file3"> 
               <div class="modal-body form">
-                <div class="form-group">
-                  <label class="control-label col-md-2">Nama Foto</label>
-                    <div class="col-md-9">
-                      <input readonly name="nama_file" id="nama_file3" value="" required placeholder="Nama Foto" class="form-control" type="text">
-                    </div>
+                <div class="form-group"><center>
+                  Apakah Anda Ingin Menghapus Foto ini?</center>
                 </div>              
                  <div hidden="" class="form-group">
                     <label class="control-label col-md-2">Kateogri</label>

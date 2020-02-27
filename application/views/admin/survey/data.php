@@ -48,7 +48,10 @@ $this->load->view('admin/snippet/sidebar');?>
 
                 <div class="modal-footer">
                   <center><a onclick="tampil()" class="btn btn-success btn-lg" data-balloon="Simpan Data" data-balloon-pos="up" id="edit" title="Edit">Edit</a>
-                  <button style="display: none;" type="submit" class="btn btn-primary btn-lg" data-balloon="Simpan Data" data-balloon-pos="up" title="Simpan" id="simpan">Simpan</button></center>
+                    <a onclick="kembali()" id="kmbl" style="display: none;" class="btn btn-success btn-lg" data-balloon="Simpan Data" data-balloon-pos="up"  title="Kembali">Kembali</a>
+                  <button style="display: none;" type="submit" class="btn btn-primary btn-lg" data-balloon="Simpan Data" data-balloon-pos="up" title="Simpan" id="simpan">Simpan</button>
+                  
+                  </center>
                 </div>
                 
             </form>
@@ -75,7 +78,15 @@ $this->load->view('admin/snippet/sidebar');?>
     $("#show_survey").show();
      $("#tambah_baris").show();
     $("#simpan").show();
+    $("#kmbl").show();
     $("#edit").hide();
+  }function kembali(){
+    $("#tampil_survey").show();
+    $("#show_survey").hide();
+     $("#tambah_baris").hide();
+    $("#simpan").hide();
+    $("#kmbl").hide();
+    $("#edit").show();
   }
 
 

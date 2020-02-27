@@ -67,6 +67,9 @@
                 <a class="nav-link menuNav text-white" href="<?php echo base_url('frontend/survey');?>">Survey</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link menuNav text-white" href="<?php echo base_url('frontend/pengaduan');?>">Pengaduan</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link menuNav text-white" href="<?php echo base_url('frontend/kontak');?>">Kontak</a>
             </li>
         </ul>

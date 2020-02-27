@@ -2,14 +2,16 @@
     <h3 class="text-center text-dark">SARANA</h3>
     <hr class="garisJudul">
     <br>
-    <div class="card-columns">
+    <div class="row">
         <?php foreach($data as $dt){?>
-        <div class="card saranaImgDiv">
-            <img class="card-img-top saranaImg" src="<?php echo $dt['url_file'];?>" alt="Card image cap">
-            <div class="saranaImgBut">
-                <div class="saranaImgTxt"><button type="button" onclick="getSrc('<?php echo $dt['url_file'];?>','Nama Sarana 1','Keterangan 1')" class="btn text-white" data-toggle="modal" data-target="#modalSarana">Lihat Detail</button></div>
+            <div class="col-sm col-lg-4">
+                <div class="card saranaImgDiv h-100">
+                    <img class="card-img-top saranaImg" src="<?php echo $dt['url_file'];?>" alt="Card image cap">
+                    <div class="saranaImgBut">
+                        <div class="saranaImgTxt"><button type="button" onclick="getSrc('<?php echo $dt['url_file'];?>','Nama Sarana 1','Keterangan 1')" class="btn text-white" data-toggle="modal" data-target="#modalSarana">Lihat Detail</button></div>
+                    </div>
+                </div>
             </div>
-        </div>
         <?php }?>
     </div>
 </div>

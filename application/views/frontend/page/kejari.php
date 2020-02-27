@@ -5,7 +5,7 @@
 <br>
 <div class="container-fluid" style="text-align:left;width:70%">
     <div class="row">
-        <div class="col">
+        <div class="col-sm col-lg-6">
             <div class="accordion" id="accordionExample">
                 <br>
                 <?php for($i=0;$i<count($data)/2;$i++){?>
@@ -32,7 +32,7 @@
                 <?php } ?>
             </div>
         </div>
-        <div class="col">
+        <div class="col-sm col-lg-6">
             <div class="accordion" id="accordionExample2">
                 <br>
                 <?php for($i=(count($data)/2)+1;$i<count($data);$i++){?>

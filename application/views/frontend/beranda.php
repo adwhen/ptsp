@@ -109,7 +109,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="text-center" style="margin-top:5px;">Jaksa Agung Republik Indonesia</h5>
-                        <img class="card-img cardJaksa" src="<?php echo base_url('/asset/assets_front') ?>/img/jaksa.jpg" alt="Card image">
+                        <img class="card-img cardJaksa" src="<?php echo $fotojaksa[0]['url_file']?>" alt="Card image">
                         <h5 class="text-center" style="margin-top:20px;">DR. H. ST. Burhanuddin</h5>
                     </div>
                 </div>
@@ -141,8 +141,8 @@
                         <div class="carousel-inner">
                             <?php $x=0;foreach($struktural as $str){?>
                             <div class="carousel-item <?php if($x==0){echo 'active';}?>">
-                                <a href="www.facebook.com"><img class="d-block w-100"
-                                        src="<?php echo $str['url_file']?>" alt="First slide"></a>
+                                <img class="d-block w-100"
+                                        src="<?php echo $str['url_file']?>" style="max-height:400px" alt="First slide">
                                 <br>
                                 <h5 style="font-size:14px"><?php echo $str['jabatan_struktural']?></h5>
                                 <p><?php echo $str['nama_struktural']?></p>
@@ -178,11 +178,12 @@
                                 <?php $x=0; foreach($beritautama as $utama){?>
                                 <div class="carousel-item <?php if($x==0){echo 'active';}?>">
                                     <img class="d-block w-100"
-                                            src="<?php echo $utama['cover_berita']?>" alt="First slide">
+                                            src="<?php echo $utama['cover_berita']?>" style="max-height:400px" alt="First slide">
                                     <br>
                                     <h5><?php echo $utama['judul_berita'];?></h5>
                                     <?php echo substr($utama['isi_berita'],0,50).' [. . .]';?>
-                                    <a href="<?php echo base_url('frontend/berita/beritaDetail/').$utama['id_berita'];?>">See More ...</a>
+                                    <br>
+                                    <a href="<?php echo base_url('frontend/berita/beritaDetail/').$utama['id_berita'];?>">Lihat Berita</a>
                                     <br>
                                 </div>
                                 <?php $x++; } ?>
@@ -206,7 +207,7 @@
                                 class="list-group-item list-group-item-action flex-column align-items-start zoomBerita">
                                 <div class="row">
                                     <div class="col-4">
-                                        <img src="<?php echo $smpng['cover_berita']?>" class="img-fluid"
+                                        <img style="max-height:90px" src="<?php echo $smpng['cover_berita']?>" class="img-fluid"
                                             style="text-align:center" alt="Responsive image">
                                     </div>
                                     <div class="col-8">
@@ -249,7 +250,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <center>
-                            <table class="table" style="width:60%;">
+                            <table class="table table-borderless" style="width:60%;">
                                 <tbody>
                                     <tr>
                                         <?php foreach($agenda1 as $agd1){?>

@@ -16,17 +16,17 @@
         <div class="col">
             <div class="accordion" id="accordionExample">
                 <br>
-                <?php $nomor=0; foreach($soal as $key){ ?>
+                <?php $nomor=0;$x=0; foreach($soal as $key){ ?>
                     <div class="card">
                         <div class="card-header" style="background-color:#108f32;color:white;" id="headingOne">
                             <h5 class="mb-0">
-                                <button class="btn text-left" style="color:white;width:100%;" type="button" data-toggle="collapse" data-target="#per1" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="btn text-left" style="color:white;width:100%;" type="button" data-toggle="collapse" data-target="#a<?php echo $x; ?>" aria-expanded="true" aria-controls="collapseOne">
                                     <?php echo $key['pertanyaan'] ?>
                                 </button>
                             </h5>
                         </div>
 
-                        <div id="per1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div id="a<?php echo $x; ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                             <table>
                                 <tbody>
@@ -39,23 +39,23 @@
                         </div>
                     </div>
                 <br> 
-                <?php $nomor++; } ?>   
+                <?php $nomor++;$x++; } ?>   
             </div>
         </div>
         <div class="col">
-            <div class="accordion" id="accordionExample">
+            <div class="accordion" id="accordionExample2">
                 <br>
-                <?php foreach($soal2 as $key){ ?>
+                <?php $y=0; foreach($soal2 as $key){ ?>
                     <div class="card">
                         <div class="card-header" style="background-color:#108f32;color:white;" id="headingOne">
                             <h5 class="mb-0">
-                                <button class="btn text-left" style="color:white;width:100%;" type="button" data-toggle="collapse" data-target="#per1" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="btn text-left" style="color:white;width:100%;" type="button" data-toggle="collapse" data-target="#b<?php echo $y; ?>" aria-expanded="true" aria-controls="collapseOne">
                                     <?php echo $key['pertanyaan'] ?>
                                 </button>
                             </h5>
                         </div>
 
-                        <div id="per1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div id="b<?php echo $y; ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
                             <div class="card-body">
                             <table>
                                 <tbody>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 <br> 
-                <?php $nomor++; } ?>   
+                <?php $nomor++;$y++; } ?>   
             </div>
         </div>
     </div>

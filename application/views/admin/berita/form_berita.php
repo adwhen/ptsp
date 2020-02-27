@@ -179,13 +179,15 @@
               <input <?php if(count($data)==0){echo "disabled";}?> type="file" name="file" id="image" required />
             </form>
             <p class="loading"></p>
-            <div class="row" id="image-place">
+            <div class="row" >
+              <div class="col-md-12" id="image-place">
                         <?php foreach($foto as $key){ ?>
                         <img src="<?php echo $key['url_file'] ?>" style="height:100px;" onclick="gmbr(this);">
                         <br>
                         <?php } ?>
                       
                     </div>
+              </div>
         </div>
           <!-- /.row -->
         </section>

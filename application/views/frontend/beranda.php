@@ -39,8 +39,8 @@
                 <div class="card-columns">
                     <button class="btn btn-primary text-white buttonUtama" data-tooltip='Button 1'><i
                             id="iconButton" class="fa fa-edit"></i><br>REGISTRASI USER</button>
-                    <button class="btn btn-danger text-white buttonUtama" data-tooltip='Button 2'><i
-                            id="iconButton" class="fa fa-paper-plane"></i><br>SILAPTIPIKOR</button>
+                    <a href="../../../master/silaptipikor"><button class="btn btn-danger text-white buttonUtama" data-tooltip='Button 2'><i
+                            id="iconButton" class="fa fa-paper-plane"></i><br>SILAPTIPIKOR</button></a>
                     <a href="<?php echo base_url('frontend/survey');?>"><button class="btn btn-warning text-white buttonUtama" data-tooltip='Button 3'><i
                             id="iconButton" class="fa fa-at"></i><br>SURVEY</button></a>
                     <button class="btn btn-info text-white buttonUtama" data-tooltip='Button 4'><i

@@ -126,8 +126,8 @@ function struktural_hapus(id_struktural,id_file,no) {
                       <div class="col-md-9">
                        <select name="jabatan_struktural" id="jabatan_struktural" type="text" class="form-control" required>
                         <option value="">Pilih</option>
-                        <option>Ketua</option>
-                        <option>Wakil</option>
+                        <option>Kepala Kejaksaan Tinggi</option>
+                        <option>Wakil Kepala Kejaksaan Tinggi</option>
                         <option>Tata Usaha</option>
                         <option>Asisten Pembinaan</option>
                         <option>Asisten Intelijen</option>
@@ -163,7 +163,7 @@ function struktural_hapus(id_struktural,id_file,no) {
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Tambah Galeri Foto</h4>
+                <h4 class="modal-title">Ubah Foto</h4>
               </div>
               <div class="modal-body">
               <input type="hidden" name="id_file" id="id_file1">

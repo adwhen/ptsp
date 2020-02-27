@@ -118,7 +118,8 @@ class Agenda extends CI_Controller {
             	'url_file'  => $basePath,
             	'nama_file' => $nama,
             	'ket_file'	=> "sementara",
-            	'tgl_file'	=> date('Y-m-d')
+            	'tgl_file'	=> date('Y-m-d'),
+            	'kat_file' =>'agenda'
             );
 
             $this->db->insert('tb_file',$simpan); 
@@ -136,7 +137,8 @@ class Agenda extends CI_Controller {
 		$decode=$this->Mcrypt->decrypt($this->input->post('id_berita'));
 		$this->db->delete('tb_berita',array('id_berita'=>$decode));
 		#proses Hapus File
-		$where['ket_file']=$id_berita;
+		$where['ket_file']=$decode;
+		$where['kat_file']="agenda";
 		$query=$this->db->get_where('tb_file',$where)->result_array();
 		foreach($query as $dt){
 			$str=explode("/",$dt['url_file']);
@@ -144,7 +146,7 @@ class Agenda extends CI_Controller {
 		}
 		$this->db->delete('tb_file',$where);
 		$this->session->set_flashdata('msg','Data Berhasil Dihapus!!');
-		redirect('admin/berita/');
+		redirect('admin/agenda/');
 	}
 
 }

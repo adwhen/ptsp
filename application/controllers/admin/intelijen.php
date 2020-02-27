@@ -115,7 +115,7 @@ class Intelijen extends CI_Controller {
         echo $decode=$this->Mcrypt->decrypt($this->input->post('id_informasi'));
         $this->db->delete('tb_informasi',array('id_informasi'=>$decode));
         #proses Hapus File
-        $where['ket_file']=$id_berita;
+        $where['ket_file']=$decode;
         $where['kat_file']="intelijen";
         $query=$this->db->get_where('tb_file',$where)->result_array();
         foreach($query as $dt){

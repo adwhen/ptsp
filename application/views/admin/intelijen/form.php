@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                      <label class="control-label col-md-2">File</label>
+                      <label class="control-label col-md-2">File PDF</label>
                         <div class="col-md-9">
                         <input name="file" type="file">
                         <a target="_blank" href="<?php echo $file[0]['url_file'] ?>"><?php echo $file[0]['nama_file'] ?></a>

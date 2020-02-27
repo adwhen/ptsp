@@ -91,6 +91,11 @@
           <a href="<?php echo base_url('admin/survey');?>">
             <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Survey</span>
           </a>
+        </li> 
+        <li style="font-size: 12px;">
+          <a href="<?php echo base_url('admin/pengaduan');?>">
+            <i class="fa fa-database" aria-hidden="true"></i><span>Manajemen Pengaduan</span>
+          </a>
         </li>               
       </ul>
     </section>

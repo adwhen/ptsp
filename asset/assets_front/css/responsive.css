@@ -183,3 +183,17 @@ hr.garisBaganHor2 {
 }
 
 /* struktural */
+
+/*berita*/
+.fotoBerita {
+	width: 40%;
+	display: grid;
+}
+
+#beritaFoto {
+	background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*berita*/

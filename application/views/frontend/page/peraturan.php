@@ -5,7 +5,7 @@
 <br>
 <div class="container-fluid" style="text-align:left;width:70%">
     <div class="row">
-        <div class="col">
+        <div class="col-sm col-lg-6">
             <div class="accordion" id="accordionExample">
                 <br>
                 <div class="card">
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-sm col-lg-6">
             <div class="accordion" id="accordionExample2">
                 <br>
                 <div class="card">

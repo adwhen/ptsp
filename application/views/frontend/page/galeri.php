@@ -2,14 +2,16 @@
     <h3 class="text-center text-dark">GALERI</h3>
     <hr class="garisJudul">
     <br>
-    <div class="card-columns">
+    <div class="row">
         <?php foreach($data as $dt){?>
-        <div class="card galeriImgDiv">
-            <img class="card-img-top galeriImg" src="<?php echo $dt['url_file'];?>" alt="Card image cap">
-            <div class="galeriImgBut">
-                <div class="galeriImgTxt"><button onclick="getSrc('<?php echo $dt['url_file'];?>')" class="btn text-white" data-tooltip='Button 2'><i style="font-size:20px;margin-bottom:5px;" class="fa fa-search"></i></button></div>
+            <div class="col-sm col-lg-4">
+                <div class="card galeriImgDiv h-100">
+                    <img class="card-img-top galeriImg" src="<?php echo $dt['url_file'];?>" alt="Card image cap">
+                    <div class="galeriImgBut">
+                        <div class="galeriImgTxt"><button onclick="getSrc('<?php echo $dt['url_file'];?>')" class="btn text-white" data-tooltip='Button 2'><i style="font-size:20px;margin-bottom:5px;" class="fa fa-search"></i></button></div>
+                    </div>
+                </div>
             </div>
-        </div>
         <?php }?>
     </div>
 </div>

@@ -29,20 +29,21 @@
     <table class="table" style="width:60%;">
         <tbody>
             <tr>
-                <?php foreach($terkait as $trk){?>
+                <?php foreach($terkait as $trk){
+                if($trk['id_berita']!=$data[0]['id_berita']){?>
                 <td>
-                    <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="<?php echo $trk['cover_berita']?>" alt="Card image cap">
+                    <div class="card" style="width: 15rem;height: 350px;">
+                        <img class="card-img-top img-fluid" src="<?php echo $trk['cover_berita']?>" style="max-height: 180px;" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title text-justify"><?php echo $trk['judul_berita'];?></h5>
-                            <?php echo substr($trk['isi_berita'],0,80).' [. . .]';?>
+                            <h5 class="card-title text-justify"><?php echo $trk['judul_berita'];?></h5><br>
+                            <a href="<?php echo base_url('frontend/berita/beritaDetail/').$trk['id_berita'];?>">Lihat Berita</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted"><?php echo tgl_indo($trk['tgl_update']);?></small>
                         </div>
                     </div>
                 </td>
-                <?php }?>
+                <?php }}?>
             </tr>
         </tbody>
     </table>

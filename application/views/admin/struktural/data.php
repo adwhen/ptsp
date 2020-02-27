@@ -184,7 +184,19 @@ function struktural_hapus(id_struktural,id_file,no) {
                 <div class="form-group">
                       <label class="control-label col-md-2">Jabatan</label>
                       <div class="col-md-9">
-                       <input  name="jabatan_struktural" id="jabatan_struktural1" type="text" class="form-control" required>
+                      <select name="jabatan_struktural" id="jabatan_struktural" type="text" class="form-control" required>
+                        <option value="">Pilih</option>
+                        <option>Kepala Kejaksaan Tinggi</option>
+                        <option>Wakil Kepala Kejaksaan Tinggi</option>
+                        <option>Tata Usaha</option>
+                        <option>Asisten Pembinaan</option>
+                        <option>Asisten Intelijen</option>
+                        <option>Asisten Tindak Pidana Umum</option>
+                        <option>Asisten Tindak Pidana Khusus</option>
+                        <option>Asisten Perdata dan Tata Usaha Negara</option>
+                        <option>Asisten Pengawas</option>
+                        <option>Koordinator</option>     
+                       </select>
                       </div>
                 </div>  
                 <div class="form-group">

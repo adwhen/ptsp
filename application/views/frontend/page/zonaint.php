@@ -12,7 +12,7 @@
     <div class="card-columns">
         <?php foreach($data as $dt){?>
         <div class="card">
-            <img class="card-img-top" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Card image cap">
+            <img class="card-img-top" src="<?php echo $dt['cover_berita'];?>" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $dt['judul_berita'];?></h5>
                 <?php echo substr($dt['isi_berita'],0,80).' [. . .]';?>

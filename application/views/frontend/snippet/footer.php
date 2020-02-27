@@ -14,28 +14,28 @@
         </div>
         <div class="col-md-3 text-left" style="padding-right:25px; padding-left:25px">
             <p style="font-size:20px; "><b>Hubungi Kami</b></p>
-            <a href="denpasar" target="_BLANK">
+            <a href="https://twitter.com/KejatiBengkulu" target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black;"><i
                         style="font-size:20px;width:30px;color:#1bb4e3;margin-bottom:5px;"
-                        class="fab fa-twitter"></i>@Twitter</p>
+                        class="fab fa-twitter"></i>@KejatiBengkulu</p>
             </a>
-            <a href="http://www.denpasarkota.go.id/uploads/perda/Penghapusan Kewajiban Pendaftaran Ulang Surat Ijin Usaha Perdagangan (SIUP)_193905.pdf"
+            <a href="https://instagram.com/kejatibengkulu_/"
                 target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black"><i
                         style="font-size:20px; width:30px; color:#ef4a4a"
-                        class="fab fa-instagram"></i>@Instagram</p>
+                        class="fab fa-instagram"></i>@kejatibengkulu_</p>
             </a>
-            <a href="http://www.denpasarkota.go.id/uploads/perda/Penunjukan Pejabat Pengelola Informasi dan Dokumentasi (PPID) Utama dan Pembentukan Pengelola Layanan Informasi dan Dokumentasi (PLID) di Lingkungan Pemerintah Kota Denpasar._885140.pdf"
+            <a href="https://www.youtube.com/channel/UCbgI3ryewo34Mv_GKKDNPeA"
                 target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black"><i
-                        style="font-size:20px; width:30px; color:#dd3333" class="fab fa-youtube"></i>Youtube
+                        style="font-size:20px; width:30px; color:#dd3333" class="fab fa-youtube"></i>Kejati Bengkulu
                 </p>
             </a>
-            <a href="http://www.denpasarkota.go.id/uploads/perda/Panitia Nasional Penyelenggaraan Pertemuan Open Government Partnership Tingkat Regional Asia Pasifik Tahun 2014_726034.pdf"
+            <a href="https://www.facebook.com/kejaksaantinggibengkulu/"
                 target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black"><i
                         style="font-size:20px; width:30px; color:#2161d1"
-                        class="fab fa-facebook"></i>Facebook</p>
+                        class="fab fa-facebook"></i>Kejati Bengkulu</p>
             </a>
             <br>
         </div>
@@ -43,18 +43,20 @@
             <p style="font-size:20px; "><b>Situs Terkait</b></p>
             <a href="https://www.kejaksaan.go.id/index.php?p=home" target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black"><i
-                        style="font-size:20px; width:30px; color:#fff" class="fa fa-hashtag"></i>Kejaksaan
-                    Republik Indonesia</p>
+                        style="font-size:20px; width:30px; color:#fff" class="fa fa-hashtag"></i>Kejaksaan Agung
+                    RI</p>
             </a>
-            <a href="http://kejati-sumbar.go.id/" target="_BLANK">
+            <a href="http://badiklat.kejaksaan.go.id" target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black"><i
-                        style="font-size:20px; width:30px; color:#fff" class="fa fa-hashtag"></i>Kejaksaan
-                    Tinggi Sumatera Barat</p>
+                        style="font-size:20px; width:30px; color:#fff" class="fa fa-hashtag"></i>Badan Diklat Kejaksaan RI</p>
             </a>
-            <a href="https://kejati-sumut.go.id/" target="_BLANK">
+            <a href="https://www.mahkamahagung.go.id/id" target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black"><i
-                        style="font-size:20px; width:30px; color:#fff" class="fa fa-hashtag"></i>Kejaksaan
-                    Tinggi Sumatera Utara</p>
+                        style="font-size:20px; width:30px; color:#fff" class="fa fa-hashtag"></i>Mahkamah Agung RI</p>
+            </a>
+            <a href="https://www.kpk.go.id/id/splash" target="_BLANK">
+                <p style="font-weight:300;font-size:20px;color:black"><i
+                        style="font-size:20px; width:30px; color:#fff" class="fa fa-hashtag"></i>Komisi Pemberantasan Korupsi</p>
             </a>
             <br>
         </div>

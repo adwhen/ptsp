@@ -17,7 +17,7 @@
 <?php if(!empty($data[0]['video_url'])){?>
 <div class="container-fluid" style="width:60%">
     <center>
-    <iframe style="width:100%;height:400px" src="<?php echo $data[0]['video_url']?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe style="width:100%;height:400px" src="<?php echo $data[0]['video_url'] ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </center>
 </div>
 <?php } ?>

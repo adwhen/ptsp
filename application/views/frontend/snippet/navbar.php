@@ -71,6 +71,9 @@
                     <a class="nav-link menuNav" href="<?php echo base_url('frontend/zonaint');?>">Zona Integritas</a>
                 </li>
                 <li class="nav-item" style="margin-right:20px">
+                    <a class="nav-link menuNav" href="<?php echo base_url('frontend/survey');?>">Survey</a>
+                </li>
+                <li class="nav-item" style="margin-right:20px">
                     <a class="nav-link menuNav" href="<?php echo base_url('frontend/kontak');?>">Kontak</a>
                 </li>
             </ul>

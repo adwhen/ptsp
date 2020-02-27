@@ -24,7 +24,7 @@
                             <br>
                             Alamat : <?php echo $data[$i]['alamat_kejari'] ?>
                             <br>
-                            Website : <?php echo $data[$i]['url_kejari'] ?>
+                            Website : <a href="<?php echo $data[$i]['url_kejari'] ?>" target="_blank"><?php echo $data[$i]['url_kejari'] ?></a>
                         </div>
                     </div>
                 </div>

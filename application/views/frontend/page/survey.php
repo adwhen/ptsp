@@ -36,22 +36,22 @@
             
                 <table style="border-top: 1px solid;border-bottom: 1px solid;width: 100%;" >
                     <thead>
-                        <th>Pertanyaan</th>
-                        <th>Sangat Memuaskan</th>
-                        <th>Memuaskan</th>
-                        <th>Biasa</th>
-                        <th>Kurang Memuaskan</th>
-                        <th>Sangat Kurang Memuaskan</th>
+                        <th style="width:50%;text-align:center">Pertanyaan</th>
+                        <th style="width:10%;text-align:center">Sangat Memuaskan</th>
+                        <th style="width:10%;text-align:center">Memuaskan</th>
+                        <th style="width:10%;text-align:center">Biasa</th>
+                        <th style="width:10%;text-align:center">Kurang Memuaskan</th>
+                        <th style="width:10%;text-align:center">Sangat Kurang Memuaskan</th>
                     </thead>
                     <tbody>
                     <?php $no=0; foreach($soal as $key){ ?>
                         <tr>
                             <td><?php echo $key['pertanyaan'] ?><input type="hidden" name="soal[<?php echo $no; ?>]" value="<?php echo $key['id'] ?>"></td>
-                            <td><input type="radio" name="pil[<?php echo $no; ?>]" value="5"></td>
-                            <td><input type="radio" name="pil[<?php echo $no; ?>]" value="4"></td>
-                            <td><input type="radio" name="pil[<?php echo $no; ?>]" value="3"></td>
-                            <td><input type="radio" name="pil[<?php echo $no; ?>]" value="2"></td>
-                            <td><input type="radio" name="pil[<?php echo $no; ?>]" value="1"></td>
+                            <td style="width:10%;text-align:center"><input type="radio" name="pil[<?php echo $no; ?>]" value="5"></td>
+                            <td style="width:10%;text-align:center"><input type="radio" name="pil[<?php echo $no; ?>]" value="4"></td>
+                            <td style="width:10%;text-align:center"><input type="radio" name="pil[<?php echo $no; ?>]" value="3"></td>
+                            <td style="width:10%;text-align:center"><input type="radio" name="pil[<?php echo $no; ?>]" value="2"></td>
+                            <td style="width:10%;text-align:center"><input type="radio" name="pil[<?php echo $no; ?>]" value="1"></td>
                         </tr>
                     <?php $no++; } ?>
                     </tbody>

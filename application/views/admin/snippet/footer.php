@@ -347,3 +347,33 @@ function copyToClipboard() {
     })
   })
 </script>
+<script type="text/javascript">
+  $('#btn_p').click(function(){
+      $("#pengumuman").submit(function(event) {
+                // mencegah browser mensubmit form.
+          event.preventDefault();
+          // tampilkan pesan sedang upload
+          $.ajax({
+            type: 'POST',
+            url: $("#pengumuman").attr('action'),
+            data: new FormData(this), 
+            contentType: false,
+            cache: false,             
+            processData:false,
+            success : function(data){
+
+              //div preview kita kosongkan lagi
+              var hasil=JSON.parse(data);
+              $("#isi").html(hasil.hasil);
+              
+
+              //mulai memproses respon dari upload.php
+                  $('.loading').html(hasil.pesan)  
+            },error : function(error){
+              alert("Something wrong..");
+            } 
+          });
+
+        });              
+   });
+</script>

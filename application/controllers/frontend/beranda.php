@@ -17,7 +17,8 @@ class Beranda extends CI_Controller {
 			'beritasmpng' => $this->db->limit(4)->get('tb_berita')->result_array(),
 			'agenda1' => $this->db->limit(4)->get_where('tb_berita',array('kat_berita'=>'agenda'))->result_array(),
 			'agenda2' => $this->db->limit(4,4)->get_where('tb_berita',array('kat_berita'=>'agenda'))->result_array(),
-			'beritazi' => $this->db->limit(9)->get_where('tb_berita',array('kat_berita' => 'zi'))->result_array()
+			'beritazi' => $this->db->limit(9)->get_where('tb_berita',array('kat_berita' => 'zi'))->result_array(),
+			'pengumuman' =>$this->db->get('tb_pengumuman')->result_array()
 		);
 		$this->load->view('frontend/snippet/template_home',$data);
 	}

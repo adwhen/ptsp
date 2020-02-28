@@ -25,6 +25,7 @@ class Pengaduan extends CI_Controller {
             $basePath=base_url('asset/file/'.$this->upload->file_name);
 			$data=array(
 				'nama_pengaduan'=>$this->input->post('nama'),
+				'nik_ktp' => $this->input->post('nik_ktp'),
 				'surel_pengaduan'=>$this->input->post('surel'),
 				'notelp_pengaduan'=>$this->input->post('notelp'),
 				'subjek_pengaduan'=>$this->input->post('subjek'),

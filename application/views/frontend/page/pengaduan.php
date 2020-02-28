@@ -67,6 +67,12 @@
                     </div>
                 </div>
                 <div class="form-group">
+                  <label class="control-label col-md-12">NIK KTP</label>
+                    <div class="col-md-12">
+                      <input name="nik_ktp" value="" required class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
                   <label class="control-label col-md-12">Surel Anda</label>
                     <div class="col-md-12">
                       <input name="surel"value="" required class="form-control" type="text">

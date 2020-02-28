@@ -61,6 +61,43 @@
         </div>
         <!-- /.col -->
 </div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+      <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Pengumuman</h3>
+              <center>
+              <p class="loading"></p>
+              </center>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            
+
+            <?php  echo form_open_multipart('admin/beranda/tambah/',array('class'=>"form-horizontal",'method'=>'POST','id' =>'pengumuman')); ?>
+              <div class="box-body">
+                <div class="input-group input-group-sm">
+                  
+                <input type="hidden" value="<?php echo $this->Mcrypt->encrypt($pengumuman[0]['id_pengumuman']) ?>" name="id_pengumuman">
+                <input name="isi_pengumuman" value="<?php echo $pengumuman[0]['isi_pengumuman']; ?>" class="form-control" type="text">
+                    <span class="input-group-btn">
+                      <button id="btn_p" class="btn btn-info btn-flat" type="submit">Simpan</button>
+                    </span>
+                </div>
+                <div class="input-group input-group-sm">
+                  <br>
+                <marquee id="isi"><?php echo $pengumuman[0]['isi_pengumuman']; ?></marquee>
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+              </div>
+              <!-- /.box-footer -->
+            </form>
+      </div>
+  </div>
+</div>
 
       <!-- /.row -->
 

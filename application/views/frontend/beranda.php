@@ -1,5 +1,6 @@
 <!-- Carousel -->
 <!-- <div class="lds-circle"><div></div></div> -->
+
 <div class="slide-wrapper" id="menuAtas">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -35,6 +36,9 @@
                         </span>
                     </div>
                 </form>
+                <marquee class="shadow" width="100%">
+                <h5><?php echo $pengumuman[0]['isi_pengumuman'] ?></h5>
+                </marquee>
                 <br>
                 <div class="card-columns">
 

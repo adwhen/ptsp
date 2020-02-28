@@ -148,4 +148,12 @@ $(document).ready(function(){
           });
 
         });
+
+
+       
+
+
 });
+function btn_p(){
+  alert(1);
+}

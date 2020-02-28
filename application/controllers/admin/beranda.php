@@ -22,8 +22,31 @@ class Beranda extends CI_Controller {
 			'berita'=> count($this->db->get('tb_berita')->result_array()),
 			'pdf'=>count($pdf),
 			'galeri' =>count($galeri),
-			'survey' =>count($survey)
+			'survey' =>count($survey),
+			'pengumuman' =>$this->db->get('tb_pengumuman')->result_array()
 		);
 		$this->load->view('admin/snippet/template',$data);
+	}
+	public function tambah(){
+		$id_p=$this->Mcrypt->decrypt($this->input->post('id_pengumuman'));
+		$check=$this->db->get_where('tb_pengumuman',array('id_pengumuman'=>$id_p))->result_array();
+		if(count($check)==0){
+			$simpan=array(
+				'id_pengumuman'=>1,
+				'isi_pengumuman' =>$this->input->post('isi_pengumuman')
+			);
+			$this->db->insert('tb_pengumuman',$simpan);
+		}else{
+			$simpan=array(
+				'isi_pengumuman' =>$this->input->post('isi_pengumuman')
+			);
+			$this->db->update('tb_pengumuman',$simpan,array('id_pengumuman'=>$id_p));
+		}
+			$res=$this->db->get('tb_pengumuman')->result_array();
+		$data=array(
+				'pesan' => "Pengumuman Berhasil Di Ubah!!",
+				'hasil' => $res[0]['isi_pengumuman']
+			);
+		echo json_encode($data);
 	}
 }

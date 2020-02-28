@@ -12,6 +12,7 @@
 <div class="container-fluid" style="text-align:left;width:70%">
     <a href="<?php echo base_url('frontend/survey') ?>" class="btn btn-success">Survey</a>
     <a href="<?php echo base_url('frontend/survey/hasil') ?>" class="btn btn-danger">Hasil Survey</a>
+    <a href="#" class="btn btn-default">Jumlah Survey : <?php echo $jumlah; ?></a>
      <div class="row">
         <div class="col">
             <div class="accordion" id="accordionExample">
@@ -79,7 +80,7 @@
 <br>
 <br>
 <br>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="<?php echo base_url('asset/control/chart.js');?>"></script>
 <script type="text/javascript">
 // Load google charts
 google.charts.load('current', {'packages':['corechart']});

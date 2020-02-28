@@ -7,8 +7,7 @@ class Survey extends CI_Controller {
 		if(empty($this->input->post('tombol'))){
 			$data=array(
 				'isi'=>'frontend/page/survey',
-				'soal' =>$this->db->get('tb_soal')->result_array()
-
+				'soal' =>$this->db->get('tb_soal')->result_array(),
 			);
 			$this->load->view('frontend/snippet/template',$data);
 		}else{
@@ -41,6 +40,7 @@ class Survey extends CI_Controller {
 				'soal' =>$this->db->get('tb_soal',$bagi,0)->result_array(),
 				'soal2' =>$this->db->get('tb_soal',$jumlah,$bagi)->result_array(),
 				'semua' =>$this->db->get('tb_soal')->result_array(),
+				'jumlah' =>count($this->db->get('tb_survey')->result_array())
 
 			);
 			$this->load->view('frontend/snippet/template',$data);

@@ -32,9 +32,9 @@ class Struktural extends CI_Controller {
 		$nmfile=$this->input->post('nama_struktural').time();
         $config['upload_path']          = 'asset/gambar/foto/';
         $config['allowed_types']        = 'jpg|jpeg|png';
-        $config['max_size']             = 1048576;
-        $config['max_width']            = 10240;
-        $config['max_height']           = 7680;
+        $config['max_size']             = 10485760;
+        $config['max_width']            = 102400;
+        $config['max_height']           = 76800;
         $config['file_name']            = $nmfile;
 
         $this->load->library('upload', $config);
@@ -86,15 +86,33 @@ class Struktural extends CI_Controller {
         $decode['id_file'] = $this->Mcrypt->decrypt($this->input->post('id_file'));
         if($this->upload->do_upload('file')){
                     if(!empty($this->input->post('id_file'))){
-                        $basePath=base_url('asset/gambar/foto/'.$this->upload->file_name);
-                                    $simpan = array(
-						            	'url_file'  => $basePath,
-						            	'nama_file' => $nmfile,
-						            	'kat_file'  => 'struktural',
-						            	'tgl_file'	=> date('Y-m-d'),
-						            );
+                        
+                            $check=$this->db->get_where('tb_file',array(
+                                'ket_file' =>  $this->Mcrypt->decrypt($this->input->post('id_struktural')),
+                                'kat_file' => "struktural"
+                            ))->result_array();
+                            if(count($check)==0){
+                                $basePath=base_url('asset/gambar/foto/'.$this->upload->file_name);
+                                $simpan = array(
+                                                    'url_file'  => $basePath,
+                                                    'nama_file' => $nmfile,
+                                                    'kat_file'  => 'struktural',
+                                                    'tgl_file'  => date('Y-m-d'),
+                                                    'ket_file'  => $this->Mcrypt->decrypt($this->input->post('id_struktural'))
+                                );;
 
-                            $this->db->update('tb_file',$simpan,$decode);
+                                $this->db->insert('tb_file',$simpan);
+                            }else{
+                                $basePath=base_url('asset/gambar/foto/'.$this->upload->file_name);
+                                    $simpan = array(
+                                        'url_file'  => $basePath,
+                                        'nama_file' => $nmfile,
+                                        'kat_file'  => 'struktural',
+                                        'tgl_file'  => date('Y-m-d'),
+                                    );
+                                    $this->db->update('tb_file',$simpan,$decode);
+                            }
+                            
 
                             $baris=$this->Mgaleri->struktural();
 

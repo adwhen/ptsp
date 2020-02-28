@@ -37,6 +37,7 @@
                 </form>
                 <br>
                 <div class="card-columns">
+
                    <a href="<?php echo base_url('frontend/survey');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-poll"></i><br>SURVEY</a>
                     <a href="<?php echo base_url('frontend/sarana');?>" class="btn btn-primary text-white buttonUtama" style="font-size: 14px;"><i
@@ -44,12 +45,13 @@
                     <a href="<?php echo base_url('frontend/galeri');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-images"></i><br>GALERI</a>
                     <a href="<?php echo base_url('frontend/pengaduan');?>" class="btn btn-info text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-headset"></i><br>PENGADUAN</a>
-                            <a class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
+                            <a href="../../../master/silaptipikor" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-balance-scale"></i><br>SILAPTIPIKOR</a>
                     <a href="<?php echo base_url('frontend/berita');?>" class="btn btn-secondary text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-newspaper"></i><br>BERITA</a>
                     <a href="<?php echo base_url('frontend/agenda');?>" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-calendar-check"></i><br>AGENDA</a>
                     <a href="<?php echo base_url('frontend/struktural');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-project-diagram"></i><br>STRUKTURAL</a>
                     <a href="<?php echo base_url('frontend/kontak');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-address-book"></i><br>KONTAK</a>
+
                 </div>
                 <br>
                 <center><a href="#berita" class="btn btn-success buttonBawah"><i style="font-size: 20px;" class="fas fa-angle-double-down"></i></a></center>

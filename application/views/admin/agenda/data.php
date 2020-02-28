@@ -79,7 +79,7 @@ $this->load->view('admin/snippet/sidebar');?>
     <div class="clearfix"></div>
 </div>
 <div class="modal modal-danger fade" id="hapus-berita">
-  <?php  echo form_open_multipart('admin/berita/hapus/',array('class'=>"form-horizontal",'method'=>'POST','id'=>'hapusPeraturan')); ?>
+  <?php  echo form_open_multipart('admin/agenda/hapus/',array('class'=>"form-horizontal",'method'=>'POST','id'=>'hapusPeraturan')); ?>
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">

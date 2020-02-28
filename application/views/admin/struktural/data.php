@@ -27,7 +27,9 @@ $this->load->view('admin/snippet/sidebar');
                 Tambah Data
           </button>
         </div>
+        <center>
         <p class="loading"></p>
+        </center>
         <!-- /.col -->
       </div>
       <!-- /.row -->
@@ -80,11 +82,42 @@ $this->load->view('admin/snippet/sidebar');
 </div>
 <script type="text/javascript">
   function struktural_ubah(id_struktural,id_file,nama_struktural,jabatan_struktural,nip_pegawai) {
+    $('#jbtn1').removeAttr('selected');
+    $('#jbtn2').removeAttr('selected');
+    $('#jbtn3').removeAttr('selected');
+    $('#jbtn4').removeAttr('selected');
+    $('#jbtn5').removeAttr('selected');
+    $('#jbtn6').removeAttr('selected');
+    $('#jbtn7').removeAttr('selected');
+    $('#jbtn8').removeAttr('selected');
+    $('#jbtn9').removeAttr('selected');
+    $('#jbtn10').removeAttr('selected');
+
 
     $('#id_struktural1').val(id_struktural);
     $('#id_file1').val(id_file);
     $('#nama_struktural1').val(nama_struktural);
-    $('#jabatan_struktural1').val(nama_struktural);
+    if(jabatan_struktural=="Kepala Kejaksaan Tinggi"){
+      $('#jbtn1').attr('selected',"true");
+    }else if(jabatan_struktural=="Wakil Kepala Kejaksaan Tinggi"){
+      $('#jbtn2').attr('selected',"true");
+    }else if(jabatan_struktural=="Tata Usaha"){
+      $('#jbtn3').attr('selected',"true");
+    }else if(jabatan_struktural=="Asisten Pembinaan"){
+      $('#jbtn4').attr('selected',"true");
+    }else if(jabatan_struktural=="Asisten Intelijen"){
+      $('#jbtn5').attr('selected',"true");
+    }else if(jabatan_struktural=="Asisten Tindak Pidana Umum"){
+      $('#jbtn6').attr('selected',"true");
+    }else if(jabatan_struktural=="Asisten Tindak Pidana Khusus"){
+      $('#jbtn7').attr('selected',"true");
+    }else if(jabatan_struktural=="Asisten Perdata dan Tata Usaha Negara"){
+      $('#jbtn8').attr('selected',"true");
+    }else if(jabatan_struktural=="Asisten Pengawas"){
+      $('#jbtn9').attr('selected',"true");
+    }else if(jabatan_struktural=="Koordinator"){
+      $('#jbtn10').attr('selected',"true");
+    }
     $('#nip_pegawai1').val(nip_pegawai);
 
   }
@@ -118,7 +151,7 @@ function struktural_hapus(id_struktural,id_file,no) {
                  <div class="form-group">
                     <label class="control-label col-md-2">NIP</label>
                     <div class="col-md-9">
-                     <input  name="nip_pegawai" id="nip_pegawai" type="text" class="form-control" required>
+                     <input  name="nip_pegawai" id="nip_pegawai" type="text" maxlength="18" size="18" class="form-control" required>
                     </div>
                 </div>  
                 <div class="form-group">
@@ -126,8 +159,8 @@ function struktural_hapus(id_struktural,id_file,no) {
                       <div class="col-md-9">
                        <select name="jabatan_struktural" id="jabatan_struktural" type="text" class="form-control" required>
                         <option value="">Pilih</option>
-                        <option>Ketua</option>
-                        <option>Wakil</option>
+                        <option>Kepala Kejaksaan Tinggi</option>
+                        <option>Wakil Kepala Kejaksaan Tinggi</option>
                         <option>Tata Usaha</option>
                         <option>Asisten Pembinaan</option>
                         <option>Asisten Intelijen</option>
@@ -163,7 +196,7 @@ function struktural_hapus(id_struktural,id_file,no) {
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Tambah Galeri Foto</h4>
+                <h4 class="modal-title">Ubah Foto</h4>
               </div>
               <div class="modal-body">
               <input type="hidden" name="id_file" id="id_file1">
@@ -178,7 +211,7 @@ function struktural_hapus(id_struktural,id_file,no) {
                  <div class="form-group">
                     <label class="control-label col-md-2">NIP</label>
                     <div class="col-md-9">
-                     <input  name="nip_pegawai" id="nip_pegawai1" type="text" class="form-control" required>
+                     <input  name="nip_pegawai" id="nip_pegawai1"  type="text" maxlength="18" size="18" class="form-control" required>
                     </div>
                 </div>  
                 <div class="form-group">
@@ -186,16 +219,16 @@ function struktural_hapus(id_struktural,id_file,no) {
                       <div class="col-md-9">
                       <select name="jabatan_struktural" id="jabatan_struktural" type="text" class="form-control" required>
                         <option value="">Pilih</option>
-                        <option>Kepala Kejaksaan Tinggi</option>
-                        <option>Wakil Kepala Kejaksaan Tinggi</option>
-                        <option>Tata Usaha</option>
-                        <option>Asisten Pembinaan</option>
-                        <option>Asisten Intelijen</option>
-                        <option>Asisten Tindak Pidana Umum</option>
-                        <option>Asisten Tindak Pidana Khusus</option>
-                        <option>Asisten Perdata dan Tata Usaha Negara</option>
-                        <option>Asisten Pengawas</option>
-                        <option>Koordinator</option>     
+                        <option id="jbtn1">Kepala Kejaksaan Tinggi</option>
+                        <option id="jbtn2">Wakil Kepala Kejaksaan Tinggi</option>
+                        <option id="jbtn3">Tata Usaha</option>
+                        <option id="jbtn4">Asisten Pembinaan</option>
+                        <option id="jbtn5">Asisten Intelijen</option>
+                        <option id="jbtn6">Asisten Tindak Pidana Umum</option>
+                        <option id="jbtn7">Asisten Tindak Pidana Khusus</option>
+                        <option id="jbtn8">Asisten Perdata dan Tata Usaha Negara</option>
+                        <option id="jbtn9">Asisten Pengawas</option>
+                        <option id="jbtn10">Koordinator</option>     
                        </select>
                       </div>
                 </div>  

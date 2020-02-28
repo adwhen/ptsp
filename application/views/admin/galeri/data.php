@@ -1,3 +1,9 @@
+<style type="text/css">
+  td{
+    word-wrap: break-word;
+    width: 300px;
+  }
+</style>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -23,7 +29,9 @@
                 Tambah Data
           </button>
         </div>
+        <center>
         <p class="loading"></p>
+        </center>
         <!-- /.col -->
       </div>
       <!-- /.row -->
@@ -32,6 +40,7 @@
           <h3 style="font-size: 20px;color: #3e3f3f;"><center><strong>GALERI</strong></center></h3>    
       </div> <br>
       <div class="row">
+        <div class="col-md-12">
         <div class="col-xs-12 table-responsive">
           <table id="example1" class="table table-bordered table-striped">
             <thead>
@@ -47,7 +56,7 @@
                 <td><?php echo ++$no;?></td>
                 <td><?php echo $dt['nama_file'];?></td>
                 <td><?php echo $dt['kat_file'];?></td>
-                <td><?php echo $dt['url_file']?></td>
+                <td style="word-wrap: break-all"><?php echo $dt['url_file']?></td>
                 <td>
                   <center>
                     <div class="tooltip-demo">
@@ -66,6 +75,7 @@
           </table>
         </div>
         <!-- /.col -->
+      </div>
       </div>
     </section>
     <!-- /.content -->

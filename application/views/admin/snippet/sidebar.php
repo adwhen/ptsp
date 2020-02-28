@@ -35,7 +35,7 @@
         </li>
         <li style="font-size: 12px;">
           <a href="<?php echo base_url('admin/kejari');?>">
-            <i class="fa fa-database" aria-hidden="true"></i><span>Kejaksaan Tinggi Negeri</span>
+            <i class="fa fa-database" aria-hidden="true"></i><span>Kejaksaan Negeri</span>
           </a>
         </li>
         <li style="font-size: 12px;">

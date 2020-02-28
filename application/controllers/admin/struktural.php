@@ -29,7 +29,7 @@ class Struktural extends CI_Controller {
 		);
 		$this->db->insert('tb_struktural',$simpanStruktural);
 		$id=$this->db->insert_id();
-		$nmfile=$this->input->post('nama_struktural').time();
+		$nmfile="struktural".time();
         $config['upload_path']          = 'asset/gambar/foto/';
         $config['allowed_types']        = 'jpg|jpeg|png';
         $config['max_size']             = 10485760;
@@ -74,7 +74,7 @@ class Struktural extends CI_Controller {
 			'jabatan_struktural' => $this->input->post('jabatan_struktural'),
 		);
 		$this->db->update('tb_struktural',$simpanStruktural,$id);
-		$nmfile=$this->input->post('nama_struktural').time();
+		$nmfile="struktural".time();
         $config['upload_path']          = 'asset/gambar/foto/';
         $config['allowed_types']        = 'jpg|jpeg|png';
         $config['max_size']             = 1048576;

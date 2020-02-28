@@ -40,42 +40,40 @@
           <h3 style="font-size: 20px;color: #3e3f3f;"><center><strong>GALERI</strong></center></h3>    
       </div> <br>
       <div class="row">
-        <div class="col-md-12">
         <div class="col-xs-12 table-responsive">
-          <table id="example1" class="table table-bordered table-striped">
-            <thead>
-              <th>No.</th>
-              <th>nama File</th>
-              <th>Kateogori</th>
-              <th>Url</th>
-              <th>Aksi</th>
-            </thead>
-            <tbody id="showdata">
-            <?php $x=1; $no=0; foreach($data as $dt){?>
-              <tr>
-                <td><?php echo ++$no;?></td>
-                <td><?php echo $dt['nama_file'];?></td>
-                <td><?php echo $dt['kat_file'];?></td>
-                <td style="word-wrap: break-all"><?php echo $dt['url_file']?></td>
-                <td>
-                  <center>
-                    <div class="tooltip-demo">
-                      
-                        <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#modal_ubah" onclick="modal_ubah('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
+            <table id="example1" class="table table-bordered table-striped" >
+              <thead>
+                <th>No.</th>
+                <th>nama File</th>
+                <th>Kateogori</th>
+                <th>Url</th>
+                <th>Aksi</th>
+              </thead>
+              <tbody id="showdata">
+              <?php $x=1; $no=0; foreach($data as $dt){?>
+                <tr>
+                  <td><?php echo ++$no;?></td>
+                  <td><?php echo $dt['nama_file'];?></td>
+                  <td><?php echo $dt['kat_file'];?></td>
+                  <td style="word-wrap: break-all"><?php echo $dt['url_file']?></td>
+                  <td>
+                    <center>
+                      <div class="tooltip-demo">
+                        
+                          <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#modal_ubah" onclick="modal_ubah('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
 
- 
-                        <button onclick="modal_hapus('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-data" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
+   
+                          <button onclick="modal_hapus('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-data" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
 
-                    </div>
-                  </center>
-                </td>
-              </tr>
-            <?php }?>
-            </tbody>
-          </table>
-        </div>
+                      </div>
+                    </center>
+                  </td>
+                </tr>
+              <?php }?>
+              </tbody>
+            </table>
         <!-- /.col -->
-      </div>
+        </div>
       </div>
     </section>
     <!-- /.content -->

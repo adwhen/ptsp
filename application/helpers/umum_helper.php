@@ -85,7 +85,7 @@
         $CI->db->select('nama_file,url_file');
 		$CI->db->from('tb_file');
 		$CI->db->join('tb_informasi','ket_file = id_informasi');
-        $CI->db->where('kat_informasi',$jenis);
+        $CI->db->where('kat_file',$jenis);
         $CI->db->where('judul_informasi',$judul);
         $CI->db->where('sub_informasi',$subjudul);
 		$query  = $CI->db->get();
@@ -161,7 +161,7 @@
 
         $CI->db->select('*');
 		$CI->db->from('tb_struktural');
-		$CI->db->join('tb_file','ket_file = id_struktural');
+		$CI->db->join('tb_file','id_struktural = ket_file','left');
         $CI->db->where('jabatan_struktural',$jabatan);
         $CI->db->where('kat_file','struktural');
 		$query  = $CI->db->get();

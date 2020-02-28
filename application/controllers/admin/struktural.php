@@ -145,7 +145,7 @@ class Struktural extends CI_Controller {
         	$decode['id_file'] = $this->Mcrypt->decrypt($this->input->post('id_file'));
              $simpan = array(
             	'nama_file' => $this->input->post('nama_file'),
-            	'kat_file'  => $this->input->post('kat_file'),
+            	'kat_file'  => 'struktural',
             	'tgl_file'	=> $this->input->post('tgl_file'),
             );
 

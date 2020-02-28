@@ -1,3 +1,4 @@
+<br><br>
 <div class="container col-sm-12 konten2-wrapper" id="banner6">
     <br>
     <div class="row">

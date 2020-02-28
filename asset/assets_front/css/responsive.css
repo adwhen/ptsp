@@ -142,8 +142,17 @@ hr.garisBaganVer2 {
 
 hr.garisBaganHor1 {
 	width: 40%;
+	border: 2px dashed green;
+	margin-top: 28px;
+	float: right;
+}
+
+hr.garisBaganHor11 {
+	width: 40%;
 	border: 2px solid green;
 	margin-top: 28px;
+	margin-left: 0px;
+	float: left;
 }
 
 hr.garisBaganVer3 {

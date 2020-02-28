@@ -101,7 +101,7 @@ $this->load->view('admin/snippet/sidebar');
       $('#jbtn1').attr('selected',"true");
     }else if(jabatan_struktural=="Wakil Kepala Kejaksaan Tinggi"){
       $('#jbtn2').attr('selected',"true");
-    }else if(jabatan_struktural=="Tata Usaha"){
+    }else if(jabatan_struktural=="Kepala Bagian Tata Usaha"){
       $('#jbtn3').attr('selected',"true");
     }else if(jabatan_struktural=="Asisten Pembinaan"){
       $('#jbtn4').attr('selected',"true");
@@ -113,7 +113,7 @@ $this->load->view('admin/snippet/sidebar');
       $('#jbtn7').attr('selected',"true");
     }else if(jabatan_struktural=="Asisten Perdata dan Tata Usaha Negara"){
       $('#jbtn8').attr('selected',"true");
-    }else if(jabatan_struktural=="Asisten Pengawas"){
+    }else if(jabatan_struktural=="Asisten Pengawasan"){
       $('#jbtn9').attr('selected',"true");
     }else if(jabatan_struktural=="Koordinator"){
       $('#jbtn10').attr('selected',"true");
@@ -161,13 +161,13 @@ function struktural_hapus(id_struktural,id_file,no) {
                         <option value="">Pilih</option>
                         <option>Kepala Kejaksaan Tinggi</option>
                         <option>Wakil Kepala Kejaksaan Tinggi</option>
-                        <option>Tata Usaha</option>
+                        <option>Kepala Bagian Tata Usaha</option>
                         <option>Asisten Pembinaan</option>
                         <option>Asisten Intelijen</option>
                         <option>Asisten Tindak Pidana Umum</option>
                         <option>Asisten Tindak Pidana Khusus</option>
                         <option>Asisten Perdata dan Tata Usaha Negara</option>
-                        <option>Asisten Pengawas</option>
+                        <option>Asisten Pengawasan</option>
                         <option>Koordinator</option>     
                        </select>
                       </div>
@@ -221,13 +221,13 @@ function struktural_hapus(id_struktural,id_file,no) {
                         <option value="">Pilih</option>
                         <option id="jbtn1">Kepala Kejaksaan Tinggi</option>
                         <option id="jbtn2">Wakil Kepala Kejaksaan Tinggi</option>
-                        <option id="jbtn3">Tata Usaha</option>
+                        <option id="jbtn3">Kepala Bagian Tata Usaha</option>
                         <option id="jbtn4">Asisten Pembinaan</option>
                         <option id="jbtn5">Asisten Intelijen</option>
                         <option id="jbtn6">Asisten Tindak Pidana Umum</option>
                         <option id="jbtn7">Asisten Tindak Pidana Khusus</option>
                         <option id="jbtn8">Asisten Perdata dan Tata Usaha Negara</option>
-                        <option id="jbtn9">Asisten Pengawas</option>
+                        <option id="jbtn9">Asisten Pengawasan</option>
                         <option id="jbtn10">Koordinator</option>     
                        </select>
                       </div>

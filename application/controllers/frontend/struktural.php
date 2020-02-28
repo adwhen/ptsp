@@ -6,13 +6,14 @@ class Struktural extends CI_Controller {
 	{
 		$kajati = struktural('kepala kejaksaan tinggi');
 		$wakajati = struktural('wakil kepala kejaksaan tinggi');
-		$tu = struktural('tata usaha');
+		$tu = struktural('kepala bagian tata usaha');
 		$pembinaan = struktural('asisten pembinaan');
 		$intel = struktural('asisten intelijen');
 		$pidum = struktural('asisten tindak pidana umum');
 		$pidsus = struktural('asisten tindak pidana khusus');
 		$ptun = struktural('asisten perdata dan tata usaha negara');
-		$pengawas = struktural('asisten pengawas');
+		$pengawas = struktural('asisten pengawasan');
+		$koordinator = struktural('koordinator');
 		$data=array(
 			'isi'=>'frontend/page/struktural',
 			'kajati' => $kajati,
@@ -23,7 +24,8 @@ class Struktural extends CI_Controller {
 			'pidum' => $pidum,
 			'pidsus' => $pidsus,
 			'ptun' => $ptun,
-			'pengawas' => $pengawas
+			'pengawas' => $pengawas,
+			'koor' => $koordinator
 		);
 		$this->load->view('frontend/snippet/template',$data);
 	}

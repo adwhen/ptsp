@@ -4,9 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Berita extends CI_Controller {
 	public function index()
 	{
+		$jlh = $this->db->get('tb_berita');
+		$config = pagination($jlh,'/frontend/berita/index/',9);
+		$this->pagination->initialize($config);
+		$from = $this->uri->segment(4);
 		$data=array(
 			'isi'=>'frontend/page/berita',
-			'data' =>$this->db->get('tb_berita')->result_array()
+			'data' =>$this->db->get('tb_berita',$config['per_page'],$from)->result_array()
 		);
 		$this->load->view('frontend/snippet/template',$data);
 	}

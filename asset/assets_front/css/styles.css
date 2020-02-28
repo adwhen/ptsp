@@ -219,10 +219,10 @@ body {
 .buttonUtama {
 	width: 100%;
 	height: 100%;
+	font-size: 4px;
 	margin-bottom: 20px;
 	text-align: center;
 	padding: 15px 25px;
-	font-size: 24px;
 	text-align: center;
 	cursor: pointer;
 	outline: none;
@@ -246,6 +246,14 @@ body {
 	background-color: #3e8e41;
 	box-shadow: 0 5px #666;
 	transform: translateY(8px);
+}
+
+.buttonBawah:hover {
+	text-decoration: none;
+	transform: translateY(8px);
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
 }
 
 /*

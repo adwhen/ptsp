@@ -95,6 +95,34 @@
 
     }
     
+    function periode($jenis){
+        $CI =& get_instance();
+
+        $CI->db->select('YEAR(tgl_file) as periode');
+        $CI->db->from('tb_file');
+        $CI->db->where('kat_file',$jenis);
+        $CI->db->group_by('YEAR(tgl_file)');
+        $query  = $CI->db->get();
+        $array  = $query->result_array();
+        
+        return $array;
+
+    }
+    
+    function filePerPeriode($jenis,$periode){
+        $CI =& get_instance();
+
+        $CI->db->select('nama_file,url_file');
+        $CI->db->from('tb_file');
+        $CI->db->where('kat_file',$jenis);
+        $CI->db->where('YEAR(tgl_file)',$periode);
+        $query  = $CI->db->get();
+        $array  = $query->result_array();
+        
+        return $array;
+
+    }
+    
     function tgl_indo($tanggal){
         $bulan = array (
             1 =>   'Januari',
@@ -135,6 +163,7 @@
 		$CI->db->from('tb_struktural');
 		$CI->db->join('tb_file','ket_file = id_struktural');
         $CI->db->where('jabatan_struktural',$jabatan);
+        $CI->db->where('kat_file','struktural');
 		$query  = $CI->db->get();
         $array  = $query->result_array();
     

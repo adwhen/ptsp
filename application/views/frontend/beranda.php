@@ -37,23 +37,24 @@
                 </form>
                 <br>
                 <div class="card-columns">
-                    <button class="btn btn-primary text-white buttonUtama" data-tooltip='Button 1'><i
-                            id="iconButton" class="fa fa-edit"></i><br>REGISTRASI USER</button>
-                    <a href="../../../master/silaptipikor"><button class="btn btn-danger text-white buttonUtama" data-tooltip='Button 2'><i
-                            id="iconButton" class="fa fa-paper-plane"></i><br>SILAPTIPIKOR</button></a>
-                    <a href="<?php echo base_url('frontend/survey');?>"><button class="btn btn-warning text-white buttonUtama" data-tooltip='Button 3'><i
-                            id="iconButton" class="fa fa-at"></i><br>SURVEY</button></a>
-                    <button class="btn btn-info text-white buttonUtama" data-tooltip='Button 4'><i
-                            id="iconButton" class="fa fa-globe"></i><br>APLIKASI LAIN 2</button>
-                    <a href="<?php echo base_url('frontend/galeri');?>" class="btn btn-success text-white buttonUtama"><i id="iconButton" class="fa fa-images"></i><br>GALERI</a>
-                    <a href="<?php echo base_url('frontend/berita');?>" class="btn btn-secondary text-white buttonUtama"><i id="iconButton" class="fa fa-newspaper"></i><br>BERITA</a>
-                    <a href="<?php echo base_url('login') ?>" class="btn btn-success text-white buttonUtama"
-                        data-tooltip='Button 7'><i id="iconButton" class="fa fa-power-off"></i><br>LOGIN</a>
-                    <a href="<?php echo base_url('frontend/struktural');?>" class="btn btn-warning text-white buttonUtama"><i id="iconButton" class="fa fa-id-card"></i><br>STRUKTURAL</a>
-                    <button class="btn btn-danger text-white buttonUtama" data-tooltip='Button 9'><i
-                            id="iconButton" class="fa fa-info-circle"></i><br>INFORMASI PERKARA</button>
+
+                   <a href="<?php echo base_url('frontend/survey');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i
+                            id="iconButton" class="fa fa-poll"></i><br>SURVEY</a>
+                    <a href="<?php echo base_url('frontend/sarana');?>" class="btn btn-primary text-white buttonUtama" style="font-size: 14px;"><i
+                            id="iconButton" class="fa fa-box-open"></i><br>SARANA</a>
+                    <a href="<?php echo base_url('frontend/galeri');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-images"></i><br>GALERI</a>
+                    <a href="<?php echo base_url('frontend/pengaduan');?>" class="btn btn-info text-white buttonUtama" style="font-size: 14px;"><i
+                            id="iconButton" class="fa fa-headset"></i><br>PENGADUAN</a>
+                            <a href="../../../master/silaptipikor" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
+                            id="iconButton" class="fa fa-balance-scale"></i><br>SILAPTIPIKOR</a>
+                    <a href="<?php echo base_url('frontend/berita');?>" class="btn btn-secondary text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-newspaper"></i><br>BERITA</a>
+                    <a href="<?php echo base_url('frontend/agenda');?>" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-calendar-check"></i><br>AGENDA</a>
+                    <a href="<?php echo base_url('frontend/struktural');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-project-diagram"></i><br>STRUKTURAL</a>
+                    <a href="<?php echo base_url('frontend/kontak');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-address-book"></i><br>KONTAK</a>
+
                 </div>
-                <br><br>
+                <br>
+                <center><a href="#berita" class="btn btn-success buttonBawah"><i style="font-size: 20px;" class="fas fa-angle-double-down"></i></a></center>
             </div>
         </div>
     </div>
@@ -109,8 +110,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="text-center" style="margin-top:5px;">Jaksa Agung Republik Indonesia</h5>
-                        <img class="card-img cardJaksa" src="<?php echo $fotojaksa[0]['url_file']?>" alt="Card image">
-                        <h5 class="text-center" style="margin-top:20px;">DR. H. ST. Burhanuddin</h5>
+                        <img class="card-img cardJaksa" src="<?php if(!empty($fotojaksa)){echo $fotojaksa[0]['url_file'];}?>" alt="Foto belum dimasukkan">
+                        <h5 class="text-center" style="margin-top:20px;"><?php echo $perintah[0]['nama_jaksa'] ?></h5>
                     </div>
                 </div>
             </div>
@@ -127,7 +128,7 @@
     <br>
 </div>
 
-<div class="container-fluid" style="width:92%">
+<div class="container-fluid" style="width:92%" id="berita">
     <div class="row">
         <div class="col-sm-3"><br>
             <div class="card text-center shadow">
@@ -177,8 +178,7 @@
                             <div class="carousel-inner">
                                 <?php $x=0; foreach($beritautama as $utama){?>
                                 <div class="carousel-item <?php if($x==0){echo 'active';}?>">
-                                    <img class="d-block w-100"
-                                            src="<?php echo $utama['cover_berita']?>" style="max-height:400px" alt="First slide">
+                                    <div id="beritaFoto" style="background-image:url(<?php echo $utama['cover_berita']?>);height: 200px;"></div>
                                     <br>
                                     <h5><?php echo $utama['judul_berita'];?></h5>
                                     <?php echo substr($utama['isi_berita'],0,50).' [. . .]';?>
@@ -257,8 +257,7 @@
                                         <td>
                                             <div class="card" style="width: 15rem;">
                                                 <div class="card-body">
-                                                    <img class="card-img" src="<?php echo $agd1['cover_berita']?>"
-                                                        alt="Card image">
+                                                    <div id="beritaFoto" style="background-image:url(<?php echo $agd1['cover_berita']?>);height: 200px;"></div>
                                                     <h5 class="text-justify" style="margin-top:20px;font-size:16px">
                                                         <?php echo $agd1['judul_berita']?></h5>
                                                     <a href="<?php echo base_url('frontend/agenda/agendaDetail/').$agd1['id_berita'];?>">Lihat Agenda</a>
@@ -281,8 +280,7 @@
                                         <td>
                                             <div class="card" style="width: 15rem;">
                                                 <div class="card-body">
-                                                    <img class="card-img" src="<?php echo $agd2['cover_berita']?>"
-                                                        alt="Card image">
+                                                    <div id="beritaFoto" style="background-image:url(<?php echo $agd2['cover_berita']?>);height: 200px;"></div>
                                                     <h5 class="text-justify" style="margin-top:20px;font-size:16px">
                                                         <?php echo $agd2['judul_berita']?></h5>
                                                     <a href="<?php echo base_url('frontend/agenda/agendaDetail/').$agd2['id_berita'];?>">Lihat Agenda</a>
@@ -319,12 +317,12 @@
 <div class="container col-sm-12" id="zonaintegritas">
     <center>
         <a href="<?php echo base_url('frontend/zonaint')?>">
-            <img src="<?php echo base_url('/asset/assets_front') ?>/img/zonaintegritas3.png" style="width:80%;">
+            <img src="<?php echo base_url('/asset/assets_front') ?>/img/zonaintegritas3.png" class="cardJaksa" style="width:88%;">
         </a>
     </center>
 </div>
 
-<div class="container-fluid" style="width:82%">
+<div class="container-fluid" style="width:92%">
     <div class="row">
         <div class="col-sm-5"><br>
             <div class="card text-center shadow">
@@ -348,12 +346,14 @@
                         style="border: 2px solid yellow;float: center;width: 20%;margin-bottom:unset;margin-top:unset;">
                 </div>
                 <div class="card-body">
-                    <div class="card-columns">
+                    <div class="row">
                         <?php foreach($beritazi as $zi){?>
-                        <div class="card cardJaksa">
-                            <a href="<?php echo base_url('frontend/berita/beritaDetail/').$zi['id_berita'];?>"><img class="card-img" src="<?php echo $zi['cover_berita']?>" alt="Card image cap"></a>
+                        <div class="col-sm col-lg-4">
+                            <div class="card h-100 cardJaksa">
+                                <a href="<?php echo base_url('frontend/berita/beritaDetail/').$zi['id_berita'];?>"><div id="beritaFoto" style="background-image:url(<?php echo $zi['cover_berita']?>);height: 200px;"></div></a>
+                            </div>
                         </div>
-                        <?php } ?>
+                        <?php }?>
                     </div>
                 </div>
             </div>

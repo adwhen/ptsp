@@ -59,7 +59,7 @@ class Struktural extends CI_Controller {
             echo json_encode($data);  
         }else{
             $data = array(
-                'error' => "error",
+                'message' => "error",
                 'baris'     =>$this->Mgaleri->struktural()
                 );
 
@@ -78,8 +78,8 @@ class Struktural extends CI_Controller {
         $config['upload_path']          = 'asset/gambar/foto/';
         $config['allowed_types']        = 'jpg|jpeg|png';
         $config['max_size']             = 1048576;
-        $config['max_width']            = 10240;
-        $config['max_height']           = 7680;
+        $config['max_width']            = 102400;
+        $config['max_height']           = 76800;
         $config['file_name']            = $nmfile;
 
         $this->load->library('upload', $config);

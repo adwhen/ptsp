@@ -235,7 +235,7 @@ function struktural_hapus(id_struktural,id_file,no) {
                 <div class="form-group">
                       <label class="control-label col-md-2">File</label>
                       <div class="col-md-9">
-                       <input  type="file" name="file" id="file" required>
+                       <input  type="file" name="file"  required>
                       </div>
                 </div>  
               </div>

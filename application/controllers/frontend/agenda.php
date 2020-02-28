@@ -5,7 +5,7 @@ class Agenda extends CI_Controller {
 	public function index()
 	{	
 		$jlh = $this->db->get_where('tb_berita',array('kat_berita'=>'agenda'));
-		$config = pagination($jlh,'/frontend/agenda/index/',2);
+		$config = pagination($jlh,'/frontend/agenda/index/',5);
 		$this->pagination->initialize($config);
 		$from = $this->uri->segment(4);
 		$data=array(

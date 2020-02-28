@@ -19,6 +19,16 @@
     </div>
 </div>
 <br>
+<div class="container-fluid" style="text-align:center;width:70%">
+    <div class="row justify-content-center">
+        <div class="col-2">
+            <?php 
+                echo $this->pagination->create_links();
+            ?>
+        </div>
+    </div>
+</div>
+<br>
 <br>
 <br>
 <br>

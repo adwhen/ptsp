@@ -19,7 +19,7 @@
 
                     <div id="per1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                        <table>
+                        <table class="table">
                             <tbody>
                                 <?php foreach($uu as $uu){?>
                                 <tr>
@@ -44,7 +44,7 @@
 
                     <div id="per2" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                        <table>
+                        <table class="table">
                             <tbody>
                                 <?php foreach($pp as $pp){?>
                                 <tr>
@@ -69,7 +69,7 @@
 
                     <div id="per3" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                        <table>
+                        <table class="table">
                             <tbody>
                                 <?php foreach($kepres as $kepres){?>
                                 <tr>
@@ -94,7 +94,7 @@
 
                     <div id="per4" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                        <table>
+                        <table class="table">
                             <tbody>
                                 <?php foreach($inpres as $inpres){?>
                                 <tr>
@@ -123,7 +123,7 @@
 
                     <div id="per5" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
                         <div class="card-body">
-                        <table>
+                        <table class="table">
                             <tbody>
                                 <?php foreach($kepmpan as $kepmpan){?>
                                 <tr>
@@ -148,7 +148,7 @@
 
                     <div id="per6" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
                         <div class="card-body">
-                        <table>
+                        <table class="table">
                             <tbody>
                                 <?php foreach($kepja as $kepja){?>
                                 <tr>
@@ -173,7 +173,7 @@
 
                     <div id="per7" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
                         <div class="card-body">
-                        <table>
+                        <table class="table">
                             <tbody>
                                 <?php foreach($insja as $insja){?>
                                 <tr>
@@ -198,7 +198,7 @@
 
                     <div id="per8" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
                         <div class="card-body">
-                        <table>
+                        <table class="table">
                             <tbody>
                                 <?php foreach($lain as $lain){?>
                                 <tr>

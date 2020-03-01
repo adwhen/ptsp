@@ -1,18 +1,22 @@
 <!-- Carousel -->
 <!-- <div class="lds-circle"><div></div></div> -->
 
+
 <div class="slide-wrapper" id="menuAtas">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Third slide">
-            </div>
+            <?php $no=1; foreach($fotoberanda as $key){ ?>
+                <?php if($no==1){ ?>
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="<?php echo $key['url_file']  ?>">
+                    </div>
+                <?php }else{ ?>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="<?php echo $key['url_file']  ?>">
+                    </div>
+                <?php } ?>
+             <?php $no++;} ?>
+            
         </div>
     </div>
     <div class="red container-fluid">

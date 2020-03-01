@@ -45,5 +45,12 @@ class Survey extends CI_Controller {
 			);
 			$this->load->view('frontend/snippet/template',$data);
 	}
+	public function upload(){
+		$nama_file = time().'.jpg';
+		$direktori = base_url('asset/control');
+		$target = $direktori.$nama_file;
+
+		move_uploaded_file($_FILES['webcam']['tmp_name'], $target);
+	}
 
 }

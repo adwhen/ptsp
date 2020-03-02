@@ -11,7 +11,7 @@ $this->load->view('admin/snippet/sidebar');?>
           <ol class="breadcrumb" style="font-size: 15px">
             <a href="<?php echo base_url('admin/berkas/'.$this->uri->segment(3));?>" style="font-size: 25px;" data-balloon="Kembali" data-balloon-pos="up" title="Kembali"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a href="<?php echo base_url('admin/beranda');?>">Admin</a></li>
-            <li class="active"> Kejaksaan Tinggi Negeri</li>
+            <li class="active"> Kejaksaan Negeri</li>
           </ol>
         </div>
         <!-- /.col -->
@@ -34,7 +34,7 @@ $this->load->view('admin/snippet/sidebar');?>
       <!-- /.row -->
       <br>
       <div style="width: 100%;background-color: #edf2f0;color: white;height: 25px;text-align: center;vertical-align: center;">
-          <h3 style="font-size: 20px;color: #3e3f3f;"><center><strong>KEJAKSAAN TINGGI NEGERI</strong></center></h3>    
+          <h3 style="font-size: 20px;color: #3e3f3f;"><center><strong>KEJAKSAAN  NEGERI</strong></center></h3>    
       </div> <br>
       <div class="row">
         <div class="col-xs-12 table-responsive">
@@ -107,13 +107,13 @@ $this->load->view('admin/snippet/sidebar');?>
                 <div class="form-group">
                   <label class="control-label col-md-2">Nama Pimpinan Kejari</label>
                     <div class="col-md-9">
-                      <input name="ketua_kejari" id="ketua_kejari" value="" required placeholder="Judul Berita" class="form-control" type="text">
+                      <input name="ketua_kejari" id="ketua_kejari" value="" required placeholder="Nama Pimpinan" class="form-control" type="text">
                     </div>
                 </div> 
                 <div class="form-group">
                   <label class="control-label col-md-2">WEBSITE KEJARI</label>
                     <div class="col-md-9">
-                      <input name="url_kejari" id="url_kejari" value="" required placeholder="Judul Berita" class="form-control" type="text">
+                      <input name="url_kejari" id="url_kejari" value="" required placeholder="www.kajati.com" class="form-control" type="text">
                     </div>
                 </div> 
                      

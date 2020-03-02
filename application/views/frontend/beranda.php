@@ -5,17 +5,32 @@
 <div class="slide-wrapper" id="menuAtas">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <?php $no=1; foreach($fotoberanda as $key){ ?>
-                <?php if($no==1){ ?>
+            <?php if (!empty($fotoberanda)) { ?>
+                            <?php $no=1; foreach($fotoberanda as $key){ ?>
+                        <?php if($no==1){ ?>
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="<?php echo $key['url_file']  ?>">
+                            </div>
+                        <?php }else{ ?>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="<?php echo $key['url_file']  ?>">
+                            </div>
+                        <?php } ?>
+                     <?php $no++;} ?>
+            <?php }else{ ?>
+                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="<?php echo $key['url_file']  ?>">
+                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="First slide">
                     </div>
-                <?php }else{ ?>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo $key['url_file']  ?>">
+                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Second slide">
                     </div>
-                <?php } ?>
-             <?php $no++;} ?>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Third slide">
+                    </div>
+                </div>
+            <?php } ?>
+            
             
         </div>
     </div>

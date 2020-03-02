@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Beranda extends CI_Controller {
 	public function index()
 	{
+		error_reporting(0);
 		$jlh = $this->db->get('tb_berita');
 		$config = pagination($jlh,'/frontend/berita/index/',9);
 		$this->db->join('tb_file', 'ket_file=id_struktural');

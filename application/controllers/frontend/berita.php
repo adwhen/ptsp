@@ -8,9 +8,12 @@ class Berita extends CI_Controller {
 		$config = pagination($jlh,'/frontend/berita/index/',9);
 		$this->pagination->initialize($config);
 		$from = $this->uri->segment(4);
+		$this->db->order_by('id_berita', 'DESC');
+		$this->db->order_by('tgl_update', 'DESC');
+		$berita=$this->db->get('tb_berita',$config['per_page'],$from)->result_array();
 		$data=array(
 			'isi'=>'frontend/page/berita',
-			'data' =>$this->db->get('tb_berita',$config['per_page'],$from)->result_array()
+			'data' =>$berita
 		);
 		$this->load->view('frontend/snippet/template',$data);
 	}

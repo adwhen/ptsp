@@ -116,7 +116,7 @@
                             <h5 class="card-text text-center" style="font-size:13px;"><?php echo $pembinaan[0]['nama_struktural']?></h5>
                         <?php } ?>
                         </td>
-                        <td style="width:16.7%">
+                        <td style="width:16.7%;vertical-align: top;">
                         <?php if(!empty($intel)){?>
                            <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
                                 <div id="beritaFoto" style="background-image:url(<?php echo $intel[0]['url_file']?>);height: 180px;"></div>

@@ -55,7 +55,7 @@
                         </span>
                     </div>
                 </form>
-                <marquee class="shadow" width="100%">
+                <marquee style ="color: white;" class="shadow" width="100%">
                 <h5><?php echo $pengumuman[0]['isi_pengumuman'] ?></h5>
                 </marquee>
                 <br>

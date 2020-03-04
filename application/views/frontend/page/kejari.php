@@ -35,7 +35,7 @@
         <div class="col-sm col-lg-6">
             <div class="accordion" id="accordionExample2">
                 <br>
-                <?php for($i=(count($data)/2)+1;$i<count($data);$i++){?>
+                <?php for($i=(count($data)/2);$i<count($data);$i++){?>
                 <div class="card">
                     <div class="card-header" style="background-color:#108f32;color:white;" id="headingOne">
                         <h5 class="mb-0">

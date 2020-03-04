@@ -99,7 +99,7 @@
               <div class="modal-body form">
                 <input type="hidden" name="id_berita" value="<?php echo $id ?>">
                 <div class="form-group">
-                  <label class="control-label col-md-2">Judul Agenda</label>
+                  <label class="control-label col-md-2">Judul Berita</label>
                     <div class="col-md-9">
                       <input name="judul_berita" id="judul_berita" value="<?php echo $data[0]['judul_berita'] ?>" required placeholder="Judul Berita" class="form-control" type="text">
                     </div>
@@ -119,7 +119,7 @@
                     </div>
                 </div>  
                 <div class="form-group">
-                    <label class="control-label col-md-2">Isi Agenda</label>
+                    <label class="control-label col-md-2">Isi Berita</label>
                     <div class="col-md-9">
                       <textarea id="editor1" name="isi_berita" rows="10" cols="80" required>
                         <?php echo $data[0]['isi_berita']; ?>
@@ -127,10 +127,17 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-md-2">URL Cover Agenda</label>
+                  <label class="control-label col-md-2">URL Cover Berita</label>
                     <div class="col-md-9">
                     <input name="cover_berita" id="cover_berita" value="<?php echo $data[0][
                     'cover_berita']; ?>" required class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">URL Video</label>
+                    <div class="col-md-9">
+                    <input name="video_url" id="video_url" value="<?php echo $data[0][
+                    'video_url']; ?>" class="form-control" type="text">
                     </div>
                 </div>                     
                 <div class="modal-footer">
@@ -140,7 +147,6 @@
             </form>
           </div>
           <div class="col-md-12">
-                  
 
                     <div class="container">
                       <span id="gambar" style="display: none;" onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -150,16 +156,7 @@
                       
                     </div>
                   <div id="preview" class="col-md-3"></div>
-                    <script>
-                    function myFunction(imgs) {
-                      $('#gambar').show();
-                      var expandImg = document.getElementById("expandedImg");
-                      var imgText = document.getElementById("imgtext");
-                      expandImg.src = imgs.src;
-                      imgText.innerHTML = '<input class="form-control" readonly value="'+imgs.src+'" id="myvalue"><button class="btn btn-default"  onclick="copyToClipboard()"><i class="fa fa-file">Copy text</i></button>';
-                      expandImg.parentElement.style.display = "block";
-                    }
-                    </script>
+
           </div>
           <!-- /.row -->
         </section>
@@ -168,22 +165,24 @@
         <section class="invoice">
           <!-- info row -->
           <div style="text-align:center">
-            <h2>Tabbed Image Gallery</h2>
-            <p>Click on the images below:</p>
-            <?php  echo form_open_multipart('admin/agenda/upload',array('class'=>"form-horizontal",'method'=>'POST','id'=>'image-upload')); ?>
+            <h2>FOTO</h2>
+            <p>Untuk Menambah Foto isi dulu judul berita dan ketegori</p>
+            <?php  echo form_open_multipart('admin/berita/upload',array('class'=>"form-horizontal",'method'=>'POST','id'=>'image-upload')); ?>
               <input type="hidden" name="id_berita" value="<?php echo $id ?>">
               <input type="hidden" name="kat_file" name="kat_berita" id="kat_berita2" value="<?php echo $data[0]['judul_berita'] ?>">
               <input name="judul_berita" id="judul_berita2" value="<?php echo $data[0]['judul_berita'] ?>" required class="form-control" type="hidden">
               <input <?php if(count($data)==0){echo "disabled";}?> type="file" name="file" id="image" required />
             </form>
             <p class="loading"></p>
-            <div class="row" id="image-place">
+            <div class="row" >
+              <div class="col-md-12" id="image-place">
                         <?php foreach($foto as $key){ ?>
-                        <img src="<?php echo $key['url_file'] ?>" style="height:100px;" onclick="myFunction(this);">
+                        <img src="<?php echo $key['url_file'] ?>" style="height:100px;" onclick="gmbr(this);">
                         <br>
                         <?php } ?>
-                     
+                      
                     </div>
+              </div>
         </div>
           <!-- /.row -->
         </section>
@@ -196,8 +195,16 @@
   <img style="width: 30%;" class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
-<script type="text/javascript">
-   function gmbr(imgs){
+                    <script>
+                    function myFunction(imgs) {
+                      $('#gambar').show();
+                      var expandImg = document.getElementById("expandedImg");
+                      var imgText = document.getElementById("imgtext");
+                      expandImg.src = imgs.src;
+                      imgText.innerHTML = '<input class="form-control" readonly value="'+imgs.src+'" id="myvalue"><button class="btn btn-default"  onclick="copyToClipboard()"><i class="fa fa-file">Copy text</i></button>';
+                      expandImg.parentElement.style .display = "block";
+                    }
+                    function gmbr(imgs){
                       var modal = document.getElementById("myModal");
 
                       // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -218,4 +225,7 @@
                       var modal = document.getElementById("myModal");
                         modal.style.display = "none";
                     }
-</script>
+                    // span.onclick = function() { 
+                    //     
+                    //   }
+                    </script>

@@ -14,7 +14,8 @@ class Galeri extends CI_Controller {
 
 	public function index()
 	{      
-        $query=$this->db->query('SELECT * from tb_file where url_file like "%.jpg%" or url_file like "%.png%" or url_file like "%.jpeg%"')->result_array();
+        // $query=$this->db->query('SELECT * from tb_file where  url_file like "%.jpg%" or url_file like "%.png%" or url_file like "%.jpeg%"')->result_array();
+        $query=$this->db->query('SELECT * from tb_file where (kat_file="galeri" or kat_file="sarana") AND (url_file like "%.jpg%" or url_file like "%.png%" or url_file like "%.jpeg%")')->result_array();
         $data=array(
 			'isi'=>'admin/galeri/data',
 			'data' => $query

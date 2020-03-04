@@ -95,7 +95,7 @@
           <div class="row invoice-info">
             <?php echo validation_errors(); ?>
 
-            <?php  echo form_open_multipart('admin/pidum/form/'.$this->uri->segment(4),array('class'=>"form-horizontal",'method'=>'POST')); ?>
+            <?php  echo form_open_multipart('admin/pidsus/form/'.$this->uri->segment(4),array('class'=>"form-horizontal",'method'=>'POST')); ?>
               <div class="modal-body form">
                 <input type="hidden" name="id_berita" value="<?php echo $id ?>">
                 <div class="form-group">
@@ -114,7 +114,7 @@
                     <label class="control-label col-md-2">Kateogri Berita</label>
                     <div class="col-md-9">
                      <select class="form-control" name="kat_berita" id="kat_berita" required="">
-                        <option>pidana umum</option>
+                        <option>pidana khusus</option>
                       </select>
                     </div>
                 </div>  

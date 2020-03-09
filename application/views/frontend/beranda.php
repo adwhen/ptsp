@@ -68,10 +68,10 @@
                     <a href="<?php echo base_url('frontend/galeri');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-images"></i><br>GALERI</a>
                     <a href="<?php echo base_url('frontend/pengaduan');?>" class="btn btn-info text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-headset"></i><br>PENGADUAN</a>
-                            <a href="../../../master/silaptipikor" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
+                            <a href="../../../silaptipikor" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-balance-scale"></i><br>SILAPTIPIKOR</a>
                     <a href="<?php echo base_url('frontend/berita');?>" class="btn btn-secondary text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-newspaper"></i><br>BERITA</a>
-                    <a href="<?php echo base_url('frontend/agenda');?>" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-calendar-check"></i><br>AGENDA</a>
+                    <a href="../../../sicuti" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-calendar-check"></i><br>SICUTI</a>
                     <a href="<?php echo base_url('frontend/struktural');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-project-diagram"></i><br>STRUKTURAL</a>
                     <a href="<?php echo base_url('frontend/kontak');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-address-book"></i><br>KONTAK</a>
 
@@ -204,7 +204,7 @@
                                     <div id="beritaFoto" style="background-image:url(<?php echo $utama['cover_berita']?>);height: 200px;"></div>
                                     <br>
                                     <h5><?php echo $utama['judul_berita'];?></h5>
-                                    <?php echo substr($utama['isi_berita'],0,50).' [. . .]';?>
+                                    <?php echo substr($utama['isi_berita'],0,150).' [. . .]';?>
                                     <br>
                                     <a href="<?php echo base_url('frontend/berita/beritaDetail/').$utama['id_berita'];?>">Lihat Berita</a>
                                     <br>

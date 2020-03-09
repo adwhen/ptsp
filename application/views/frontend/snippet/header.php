@@ -7,4 +7,5 @@
     <link rel="stylesheet" href="<?php echo base_url('/asset/assets_front') ?>/css/styles.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/asset/assets_front') ?>/vendor/bootstrap/bootstrap.css">
     <link href="<?php echo base_url('/asset/assets_front') ?>/vendor/fontawesome/css/all.css" rel="stylesheet">
+    
 </head>

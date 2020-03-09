@@ -22,4 +22,8 @@ class Welcome extends CI_Controller {
 	{
 		redirect('frontend/beranda');
 	}
+	public function coba()
+	{
+		echo 1;
+	}
 }

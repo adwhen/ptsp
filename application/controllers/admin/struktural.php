@@ -13,6 +13,7 @@ class Struktural extends CI_Controller {
     }
 	public function index()
 	{   
+	    $this->db->order_by('id_struktural','ASC');
 		$this->db->join('tb_file','tb_struktural.id_struktural=tb_file.ket_file','left');   
 		$query=$this->db->get('tb_struktural')->result_array();
         $data=array(

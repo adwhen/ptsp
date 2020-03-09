@@ -2,18 +2,32 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Survey extends CI_Controller {
-	public function index()
+	public function index($id=null)
 	{
-		if(empty($this->input->post('tombol'))){
+		if(empty($id)){
 			$data=array(
 				'isi'=>'frontend/page/survey',
 				'soal' =>$this->db->get('tb_soal')->result_array(),
 			);
 			$this->load->view('frontend/snippet/template',$data);
 		}else{
+			$img = $this->input->post('image');
+		    $folderPath = 'asset/gambar/survey/';
+		  
+		    $image_parts = explode(";base64,", $img);
+		    $image_type_aux = explode("image/", $image_parts[0]);
+		    $image_type = $image_type_aux[1];
+		  
+		    $image_base64 = base64_decode($image_parts[1]);
+		    $fileName = uniqid() . '.png';
+		  
+		    $file = $folderPath . $fileName;
+		    file_put_contents($file, $image_base64);
+
 			$orang=array(
 				'nama_survey'=>$this->input->post('nama_survey'),
 				'pekerjaan_survey'=>$this->input->post('pekerjaan_survey'),
+				'url'=>base_url($file)
 			);
 			$this->db->insert('tb_survey',$orang);
 			$id=$this->db->insert_id();

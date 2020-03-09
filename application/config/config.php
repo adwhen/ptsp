@@ -256,6 +256,7 @@ $config['encryption_key'] = 'V1A1RrxYLIs4HRuq7keJNEjTs1weVTDN';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
+$config['sess_save_path'] = sys_get_temp_dir();
 $config['sess_cookie_name']		= 'ci_session';
 $config['sess_expiration']		= 7200;
 $config['sess_expire_on_close']	= FALSE;

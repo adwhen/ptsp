@@ -15,9 +15,10 @@ class Berita extends CI_Controller {
 	public function index()
 	{
 		$this->db->delete('tb_file',array('ket_file'=>"sementara"));
+		$where='kat_berita="umum" OR kat_berita="zi" OR kat_berita="hukum" OR kat_berita="pembinaan" OR kat_berita="pidana"  ';
 		$data=array(
 			'isi'=>'admin/berita/data',
-			'data' =>$this->db->get_where('tb_berita',array('kat_berita !='=>'agenda'))->result_array()
+			'data' =>$this->db->get_where('tb_berita',$where)->result_array()
 		);
 		$this->load->view('admin/snippet/template',$data);
 	}

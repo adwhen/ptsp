@@ -30,6 +30,7 @@ class Beranda extends CI_Controller {
 			'fotoberanda' =>$this->db->get_where('tb_file',array('kat_file'=>'beranda'))->result_array()
 		);
 		$this->load->view('frontend/snippet/template_home',$data);
+		$this->output->cache(60);
 	}
 	public function pencarian(){
 		$keyword = $this->input->post('keyword');

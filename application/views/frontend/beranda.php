@@ -9,24 +9,24 @@
                             <?php $no=1; foreach($fotoberanda as $key){ ?>
                         <?php if($no==1){ ?>
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="<?php echo $key['url_file']  ?>">
+                                <img class="d-block w-100 lazyload" src="<?php echo $key['url_file']  ?>">
                             </div>
                         <?php }else{ ?>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="<?php echo $key['url_file']  ?>">
+                                <img class="d-block w-100 lazyload" src="<?php echo $key['url_file']  ?>">
                             </div>
                         <?php } ?>
                      <?php $no++;} ?>
             <?php }else{ ?>
                  <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="First slide">
+                        <img class="d-block w-100 lazyload" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Second slide">
+                        <img class="d-block w-100 lazyload" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Third slide">
+                        <img class="d-block w-100 lazyload" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Third slide">
                     </div>
                 </div>
             <?php } ?>
@@ -39,8 +39,8 @@
             <div class="container-fluid containerMenuAtas" id="containerMenuAtas">
                 <br>
                 <center>
-                    <a href="http://www.denpasarkota.go.id/home" id="logoMenuAtas" class="logo"><img
-                            class="logoKajati" src="<?php echo base_url('/asset/assets_front') ?>/img/logoatas.png" style="width:430px" alt=""></a>
+                    <a id="logoMenuAtas" class="logo"><img
+                            class="logoKajati lazyload" src="<?php echo base_url('/asset/assets_front') ?>/img/logoatas.png" style="width:430px" alt=""></a>
                 </center>
                 <br><br><br>
                 <form id="w0" action="<?php echo base_url('frontend/beranda/pencarian');?>" method="post">
@@ -63,17 +63,17 @@
 
                    <a href="<?php echo base_url('frontend/survey');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-poll"></i><br>SURVEY</a>
-                    <a href="<?php echo base_url('frontend/sarana');?>" class="btn btn-primary text-white buttonUtama" style="font-size: 14px;"><i
-                            id="iconButton" class="fa fa-box-open"></i><br>SARANA</a>
+                    <a href="https://ptsp.kejati-bengkulu.go.id/" class="btn btn-primary text-white buttonUtama" style="font-size: 14px;"><i
+                            id="iconButton" class="fa fa-box-open"></i><br>PTSP</a>
                     <a href="<?php echo base_url('frontend/galeri');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-images"></i><br>GALERI</a>
                     <a href="<?php echo base_url('frontend/pengaduan');?>" class="btn btn-info text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-headset"></i><br>PENGADUAN</a>
-                            <a href="../../../silaptipikor" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
+                            <a href="https://kejati-bengkulu.go.id/silaptipikor/" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-balance-scale"></i><br>SILAPTIPIKOR</a>
                     <a href="<?php echo base_url('frontend/berita');?>" class="btn btn-secondary text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-newspaper"></i><br>BERITA</a>
-                    <a href="../../../sicuti" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-calendar-check"></i><br>SICUTI</a>
+                    <a href="https://kejati-bengkulu.go.id/sicuti/" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-calendar-check"></i><br>SICUTI</a>
                     <a href="<?php echo base_url('frontend/struktural');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-project-diagram"></i><br>STRUKTURAL</a>
-                    <a href="<?php echo base_url('frontend/kontak');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-address-book"></i><br>KONTAK</a>
+                    <a href="http://epamgal.com/login" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-unlock-alt"></i><br>EPAMGAL</a>
 
                 </div>
                 <br>
@@ -133,7 +133,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="text-center" style="margin-top:5px;">Jaksa Agung Republik Indonesia</h5>
-                        <img class="card-img cardJaksa" src="<?php if(!empty($fotojaksa)){echo $fotojaksa[0]['url_file'];}?>" alt="Foto belum dimasukkan">
+                        <img class="card-img cardJaksa lazyload" src="<?php if(!empty($fotojaksa)){echo $fotojaksa[0]['url_file'];}?>" alt="Foto belum dimasukkan">
                         <h5 class="text-center" style="margin-top:20px;"><?php echo $perintah[0]['nama_jaksa'] ?></h5>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
                         <div class="carousel-inner">
                             <?php $x=0;foreach($struktural as $str){?>
                             <div class="carousel-item <?php if($x==0){echo 'active';}?>">
-                                <img class="d-block w-100"
+                                <img class="d-block w-100 lazyload"
                                         src="<?php echo $str['url_file']?>" style="max-height:400px" alt="First slide">
                                 <br>
                                 <h5 style="font-size:14px"><?php echo $str['jabatan_struktural']?></h5>
@@ -230,7 +230,7 @@
                                 class="list-group-item list-group-item-action flex-column align-items-start zoomBerita">
                                 <div class="row">
                                     <div class="col-4">
-                                        <img style="max-height:90px" src="<?php echo $smpng['cover_berita']?>" class="img-fluid"
+                                        <img style="max-height:90px" src="<?php echo $smpng['cover_berita']?>" class="img-fluid lazyload"
                                             style="text-align:center" alt="Responsive image">
                                     </div>
                                     <div class="col-8">
@@ -340,7 +340,7 @@
 <div class="container col-sm-12" id="zonaintegritas">
     <center>
         <a href="<?php echo base_url('frontend/zonaint')?>">
-            <img src="<?php echo base_url('/asset/assets_front') ?>/img/zonaintegritas3.png" class="cardJaksa" style="width:88%;">
+            <img src="<?php echo base_url('/asset/assets_front') ?>/img/zonaintegritas3-min.png" class="cardJaksa lazyload" style="width:88%;">
         </a>
     </center>
 </div>
@@ -356,7 +356,7 @@
                 </div>
                 <div class="card-body">
                     <iframe style="width:100%;height:345px"
-                        src="https://www.youtube.com/embed/videoseries?list=PLBPVBwFbSAKdz-tgvo1VTqrMyCe5SBCb5"
+                        src="https://www.youtube.com/embed/bImMpRHXKWE"
                         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>

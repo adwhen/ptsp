@@ -84,6 +84,7 @@
 </script>
 <script src="<?php echo base_url('/asset/assets_front') ?>/js/scrolling.js" type="text/javascript">
 </script>
+<script src="<?php echo base_url('/asset/lazyload') ?>/lazysizes.min.js" async=""></script>
 <script type="text/javascript">
     $(document).ready(function () {
 

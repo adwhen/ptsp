@@ -35,7 +35,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/adminlte/balloon/balloon.css');?>"/>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/adminlte/balloon/balloon.min.css');?>"/>
   <link rel="stylesheet" href="<?php echo base_url('/asset/adminlte') ?>/bower_components/select2/dist/css/select2.min.css">
-  <script type="text/javascript" src="<?php echo base_url()?>asset/faq/bootstrap/js/bootstrap.min.js"></script>
+  
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

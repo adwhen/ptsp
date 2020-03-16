@@ -9,7 +9,7 @@ $this->load->view('admin/snippet/sidebar');?>
       <div class="row">
         <div class="col-xs-12">
           <ol class="breadcrumb" style="font-size: 15px">
-            <a href="<?php echo base_url('admin/berkas/'.$this->uri->segment(3));?>" style="font-size: 25px;" data-balloon="Kembali" data-balloon-pos="up" title="Kembali"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            
             <li><a href="<?php echo base_url('admin/beranda');?>">Admin</a></li>
             <li class="active"> INFORMASI RENCANA KERJA</li>
           </ol>

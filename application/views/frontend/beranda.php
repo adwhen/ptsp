@@ -73,7 +73,7 @@
                     <a href="<?php echo base_url('frontend/berita');?>" class="btn btn-secondary text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-newspaper"></i><br>BERITA</a>
                     <a href="https://kejati-bengkulu.go.id/sicuti/" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-calendar-check"></i><br>SICUTI</a>
                     <a href="<?php echo base_url('frontend/struktural');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-project-diagram"></i><br>STRUKTURAL</a>
-                    <a href="http://epamgal.com/login" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-unlock-alt"></i><br>EPAMGAL</a>
+                    <a href="http://epamgal.com/login" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-gavel"></i><br>E-DUL</a>
 
                 </div>
                 <br>

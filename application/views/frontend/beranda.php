@@ -204,7 +204,7 @@
                                     <div id="beritaFoto" style="background-image:url(<?php echo $utama['cover_berita']?>);height: 200px;"></div>
                                     <br>
                                     <h5><?php echo $utama['judul_berita'];?></h5>
-                                    <?php echo substr($utama['isi_berita'],0,150).' [. . .]';?>
+                                    <?php echo substr(strip_tags($utama['isi_berita']),0,150).' [. . .]';?>
                                     <br>
                                     <a href="<?php echo base_url('frontend/berita/beritaDetail/').$utama['id_berita'];?>">Lihat Berita</a>
                                     <br>

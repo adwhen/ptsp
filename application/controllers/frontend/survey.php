@@ -27,6 +27,12 @@ class Survey extends CI_Controller {
 			$orang=array(
 				'nama_survey'=>$this->input->post('nama_survey'),
 				'pekerjaan_survey'=>$this->input->post('pekerjaan_survey'),
+				'jk_survey'=>$this->input->post('jk_survey'),
+				'email_survey'=>$this->input->post('email_survey'),
+				'no_survey'=>$this->input->post('no_survey'),
+				'saran_survey'=>$this->input->post('saran_survey'),
+				'pendidikan_survey'=>$this->input->post('pendidikan_survey'),
+				'usia_survey'=>$this->input->post('usia_survey'),
 				'url'=>base_url($file)
 			);
 			$this->db->insert('tb_survey',$orang);

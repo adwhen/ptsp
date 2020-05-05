@@ -45,7 +45,19 @@
             <div class="accordion" id="accordionExample">
                 <br>
                 <label class="label-control">Pendidikan</label>
-                <input required class="form-control" type="text" name="pendidikan_survey">
+                <select required class="form-control" type="text" name="pendidikan_survey">
+                    <option value="">Pilih</option>
+                    <option>Tidak Sekolah</option>
+                    <option>SD/MA</option>
+                    <option>SMP/MTS</option>
+                    <option>SMA/SMK</option>
+                    <option>D1</option>
+                    <option>D2</option>
+                    <option>D3</option>
+                    <option>S1/D4</option>
+                    <option>S2</option>
+                    <option>S3</option>
+                </select>
             </div>
         </div>
         <div class="col">
@@ -71,8 +83,8 @@
                 <table style="border-top: 1px solid;border-bottom: 1px solid;width: 100%;" >
                     <thead>
                         <th style="width:50%;text-align:center">Pertanyaan</th>
-                        <th style="width:10%;text-align:center">Puas</th>
                         <th style="width:10%;text-align:center">Sangat Puas</th>
+                        <th style="width:10%;text-align:center">Puas</th>
                         <th style="width:10%;text-align:center">Kurang Puas</th>
                         <th style="width:10%;text-align:center">Sangat Kurang Puas</th>
                     </thead>
@@ -111,7 +123,7 @@
                         </div>
                         <div class="col">
                             <div class="accordion" id="accordionExample">
-                                <label class="label-control">HP/WhatsUp</label>
+                                <label class="label-control">HP/Whatsapp</label>
                                 <input class="form-control" type="text" name="no_survey">
                             </div>
                         </div>

@@ -15,10 +15,10 @@
         </div>
         <div class="col-md-3 text-left" style="padding-right:25px; padding-left:25px">
             <p style="font-size:20px; "><b>Hubungi Kami</b></p>
-            <a href="https://twitter.com/KejatiBengkulu" target="_BLANK">
+            <a href="https://twitter.com/TinggiKejaksaan" target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black;"><i
                         style="font-size:20px;width:30px;color:#1bb4e3;margin-bottom:5px;"
-                        class="fab fa-twitter"></i>@KejatiBengkulu</p>
+                        class="fab fa-twitter"></i>@TinggiKejaksaan</p>
             </a>
             <a href="https://instagram.com/kejatibengkulu_/"
                 target="_BLANK">

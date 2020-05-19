@@ -114,7 +114,7 @@
                     <label class="control-label col-md-2">Kateogri Berita</label>
                     <div class="col-md-9">
                      <select class="form-control" name="kat_berita" id="kat_berita" required="">
-                        <option value="agenda">Agenda</option>
+                        <option value="pembinaan">Pembinaan</option>
                       </select>
                     </div>
                 </div>  

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2020 at 12:47 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Generation Time: May 19, 2020 at 07:30 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `ptsp_kejati`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `log`
+--
+
+CREATE TABLE `log` (
+  `id` int(11) NOT NULL,
+  `ip` varchar(20) NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -478,6 +489,12 @@ INSERT INTO `tb_visimisi` (`id_visimisi`, `isi_visimisi`, `ket_visimisi`) VALUES
 --
 
 --
+-- Indexes for table `log`
+--
+ALTER TABLE `log`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
@@ -564,6 +581,12 @@ ALTER TABLE `tb_visimisi`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `log`
+--
+ALTER TABLE `log`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_berita`

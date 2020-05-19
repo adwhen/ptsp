@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Survey extends CI_Controller {
+	 function __construct()
+	{
+		 parent::__construct();
+	         $this->Mlog->log();
+		 	error_reporting(0);
+	}
 	public function index($id=null)
 	{
 		if(empty($id)){

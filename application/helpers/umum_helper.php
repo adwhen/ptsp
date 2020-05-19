@@ -169,5 +169,20 @@
     
         return $array;
     }
+    function getIp(){
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+            } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            } else {
+                $ip = $_SERVER['REMOTE_ADDR'];
+            }
+            return $ip;
+    }
+    function pengunjung(){
+        $CI =& get_instance();
+        $query=$CI->db->query('SELECT ip,date(date) as tgl FROM `log` group by ip,tgl')->result_array();
+        return $query;
+    }
 
 ?>

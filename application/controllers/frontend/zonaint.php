@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Zonaint extends CI_Controller {
+	 function __construct()
+	{
+		 parent::__construct();
+	         $this->Mlog->log();
+		 	error_reporting(0);
+	}
 	public function index()
 	{
 		$jlh = $this->db->get_where('tb_berita',array('kat_berita'=>'zi'));

@@ -85,8 +85,8 @@
                         <th style="width:50%;text-align:center">Pertanyaan</th>
                         <th style="width:10%;text-align:center">Sangat Puas</th>
                         <th style="width:10%;text-align:center">Puas</th>
+                        <th style="width:10%;text-align:center">Biasa</th>
                         <th style="width:10%;text-align:center">Kurang Puas</th>
-                        <th style="width:10%;text-align:center">Sangat Kurang Puas</th>
                     </thead>
                     <tbody>
                     <?php $no=0; foreach($soal as $key){ ?>

@@ -110,8 +110,8 @@
       ['Kriteria','Survey'],
       ['Sangat Puas', <?php echo $nilai4; ?>],
       ['Puas', <?php echo $nilai3; ?>],
-      ['Kurang Puas', <?php echo $nilai2; ?>],
-      ['Sangat Kurang Puas', <?php echo $nilai1; ?>],
+      ['Biasa', <?php echo $nilai2; ?>],
+      ['Kurang Puas', <?php echo $nilai1; ?>],
     ]);
       // Optional; add a title and set the width and height of the chart
       var options = {'title':'Survey', 'width':'30%', 'height':400};

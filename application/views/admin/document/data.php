@@ -24,9 +24,9 @@ $this->load->view('admin/snippet/sidebar');
         </div>
         <!-- /.col -->
         <div class="col-sm-6 invoice-col" style="text-align: right;">   
-          <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah-dokumen">
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah-dokumen">
                 Tambah Data
-          </button> -->
+          </button>
         </div>
         <center>
         <p class="loading"></p>
@@ -62,10 +62,10 @@ $this->load->view('admin/snippet/sidebar');
                         <a target="_blank" href="<?php echo $dt['url_file'] ?>">
                             <button data-balloon="Edit" class="btn btn-default" title="Ubah"><i class="fa fa-file"></i></button>
                         </a>
-                       <!--  <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#ubah-dokumen" onclick="modal_ubah('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
+                       <!--  <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#ubah-dokumen" onclick="modal_ubah('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>-->
 
  
-                        <button onclick="modal_hapus('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-dokumen" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button> -->
+                        <button onclick="modal_hapus('<?php echo $this->Mcrypt->encrypt($dt['id_file']);?>','<?php echo $dt['nama_file'];?>','<?php echo $dt['url_file'];?>','<?php echo $dt['kat_file'];?>')" data-balloon="Hapus" data-balloon-pos="up" data-toggle="modal" data-target="#hapus-dokumen" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button> 
 
                     </div>
                   </center>
@@ -83,7 +83,7 @@ $this->load->view('admin/snippet/sidebar');
 </div>
 <?php $this->load->view('admin/snippet/footer');?>
 <div class="modal fade" id="tambah-dokumen">
-  <?php  echo form_open_multipart('admin/document/tambah/',array('class'=>"form-horizontal",'method'=>'POST','id'=>'tambahData')); ?>
+  <?php  echo form_open_multipart('admin/document/tambah/',array('class'=>"form-horizontal",'method'=>'POST')); ?>
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -97,7 +97,7 @@ $this->load->view('admin/snippet/sidebar');
                 <div class="form-group">
                   <label class="control-label col-md-2">Nama Dokumen</label>
                     <div class="col-md-9">
-                      <input name="nama_file" id="nama_file" value="" required placeholder="Nama Foto" class="form-control" type="text">
+                      <input name="nama_file" id="nama_file" value="" required placeholder="Nama Dokumen" class="form-control" type="text">
                     </div>
                 </div>              
                  <div class="form-group">
@@ -105,7 +105,15 @@ $this->load->view('admin/snippet/sidebar');
                     <div class="col-md-9">
                      <select class="form-control" name="kat_file" id="kat_file" required="">
                         <option value="">Pilih</option>
-                        <option value="sarana">Sarana</option>
+                        <option value="Pembinaan">Pembinaan</option>
+                        <option value="Rencana Kerja">Rencana Kerja</option>
+                        <option value="Intelijen">Intelijen</option>
+                        <option value="Pidana Umum">Pidana Umum</option>
+                        <option value="Pidana Khusus">Pidana Khusus</option>
+                        <option value="Perdata Dan Tata Usaha Negara">Perdata Dan Tata Usaha Negara</option>
+                        <option value="Pengawasan">Pengawasan</option>
+                        <option value="Pengadaan">Pengadaan</option>
+                        <option value="Lainnya">Lainnya</option>
                       </select>
                     </div>
                 </div>  
@@ -119,7 +127,7 @@ $this->load->view('admin/snippet/sidebar');
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" id="button_tambah" class="btn btn-primary">Save changes</button>
+                <button type="submit"  class="btn btn-primary">Save changes</button>
               </div>
             </div>
             <!-- /.modal-content -->
@@ -139,9 +147,9 @@ $this->load->view('admin/snippet/sidebar');
               <input type="hidden" name="id_file" id="id_file2">
               <div class="modal-body form">
                 <div class="form-group">
-                  <label class="control-label col-md-2">Nama Foto</label>
+                  <label class="control-label col-md-2">Nama Dokumen</label>
                     <div class="col-md-9">
-                      <input name="nama_file" id="nama_file2" value="" required placeholder="Nama Foto" class="form-control" type="text">
+                      <input name="nama_file" id="nama_file2" value="" required placeholder="Nama Dokoument" class="form-control" type="text">
                     </div>
                 </div>              
                  <div class="form-group">
@@ -190,7 +198,7 @@ $this->load->view('admin/snippet/sidebar');
                 <h4 class="modal-title">Tambah Dokumen</h4>
               </div>
               <div class="modal-body">
-               <input type="hidden" name="id_file" id="id_file3"> 
+               <input type="hidden" name="id_file" id="id_file4"> 
               <div class="modal-body form">
                 <div class="form-group">
                   <label class="control-label col-md-2">Nama Foto</label>
@@ -198,28 +206,14 @@ $this->load->view('admin/snippet/sidebar');
                       <input readonly name="nama_file" id="nama_file3" value="" required placeholder="Nama Foto" class="form-control" type="text">
                     </div>
                 </div>              
-                 <div hidden="" class="form-group">
-                    <label class="control-label col-md-2">Kateogri</label>
-                    <div class="col-md-9">
-                     <select  readonly class="form-control" name="kat_file" id="kat_file3" required="">
-                        <option value="">Pilih</option>
-                       <option id="sarana3" value="sarana">Sarana</option>
-                        <option id="umum3" value="umum">Umum</option>
-                      </select>
-                    </div>
-                </div> 
                 <div  class="form-group">
-                <div class="col-md-12">
-                  <center>
-                    <div id="preview3"></div>
-                  </center>
-                </div>
+                
               </div> 
               </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" id="button_hapus" class="btn btn-primary">Save changes</button>
+                <button type="submit" id="button_hapus" class="btn btn-primary">Save changes</button>
               </div>
             </div>
             <!-- /.modal-content -->
@@ -248,7 +242,7 @@ $this->load->view('admin/snippet/sidebar');
 </script>
 <script type="text/javascript">
 function modal_hapus(id_file,nama_file,url_file,kat_file) {
-    $('#id_file3').val(id_file);
+    $('#id_file4').val(id_file);
     $('#nama_file3').val(nama_file);
     if(kat_file=='sarana'){
       $('#sarana3').attr('selected',"true");

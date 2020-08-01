@@ -7,7 +7,7 @@
     <br>
 </div>
 <div class="container-fluid" style="text-align:center;width:75%">
-    <img src="<?php echo $data[0]['cover_berita']?>" class="img-fluid" style="text-align:center" alt="Responsive image">
+    <img src="<?php echo $data[0]['cover_berita']?>" class="img-fluid lazyload" style="text-align:center" alt="Responsive image">
 </div>
 <br>
 <div class="container-fluid" style="text-align:justify;width:75%">

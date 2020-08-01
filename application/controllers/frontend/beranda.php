@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Beranda extends CI_Controller {
-	 function __construct()
+     function __construct()
 	{
 		 parent::__construct();
 	         $this->Mlog->log();

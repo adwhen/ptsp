@@ -5,7 +5,7 @@
             <div class="col-md-12 text-white text-center">
                 <p style="margin-bottom:unset; font-size:13px">Copyright © 2020 Website Resmi Kejaksaan
                     Tinggi Bengkulu. All Right Reserved.</p>
-                    <p style="margin-bottom:unset; font-size:13px">Pengunjung : <?php echo count(pengunjung()); ?></p>
+                     <p style="margin-bottom:unset; font-size:13px">Pengunjung : <?php echo count(pengunjung()); ?></p>
             </div>
         </div>
     </div>

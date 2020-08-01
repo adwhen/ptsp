@@ -7,7 +7,7 @@
     <br>
 </div>
 <div class="container-fluid" style="text-align:center;width:95%">
-    <img src="<?php echo $data[0]['cover_berita']?>" class="img-fluid" style="text-align:center" alt="Responsive image">
+    <img src="<?php echo url_serv($data[0]['cover_berita'])?>" class="img-fluid lazyload" style="text-align:center" alt="Responsive image">
 </div>
 <br>
 <div class="container-fluid text-justify" style="text-align:center;width:80%">
@@ -33,7 +33,7 @@
                 if($trk['id_berita']!=$data[0]['id_berita']){?>
                 <td>
                     <div class="card" style="width: 15rem;height: 350px;">
-                        <div id="beritaFoto" style="background-image:url(<?php echo $trk['cover_berita'];?>);height: 200px;"></div>
+                        <div id="beritaFoto" style="background-image:url(<?php echo url_serv($trk['cover_berita']);?>);height: 200px;"></div>
                         <div class="card-body">
                             <h5 class="card-title text-justify"><?php echo $trk['judul_berita'];?></h5>
                         </div>

@@ -14,7 +14,7 @@
                         <td style="width:50%">
                         <?php if(!empty($kajati)){?>
                             <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $kajati[0]['url_file']?>);height: 180px;"></div>
+                                <div id="beritaFoto" style="background-image:url(<?php echo url_serv($kajati[0]['url_file'])?>);height: 180px;"></div>
                             </div>
                             <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($kajati[0]['jabatan_struktural'])?></h4>
                             <h5 class="card-text text-center" style="font-size:13px;"><?php echo $kajati[0]['nama_struktural']?></h5>
@@ -37,7 +37,7 @@
                         <td style="width:50%">
                         <?php if(!empty($wakajati)){?>
                            <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $wakajati[0]['url_file']?>);height: 180px;"></div>
+                                <div id="beritaFoto" style="background-image:url(<?php echo url_serv($wakajati[0]['url_file'])?>);height: 180px;"></div>
                             </div>
                             <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($wakajati[0]['jabatan_struktural'])?></h4>
                             <h5 class="card-text text-center" style="font-size:13px;"><?php echo $wakajati[0]['nama_struktural']?></h5>
@@ -83,7 +83,7 @@
                         <div class="row">
                             <?php foreach ($koor as $koor) { ?>
                             <div class="col-sm col-lg-4" style="">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $koor['url_file']?>);height: 180px;"></div>
+                                <div id="beritaFoto" style="background-image:url(<?php echo url_serv($koor['url_file'])?>);height: 180px;"></div>
                                 <?php echo $koor['nama_struktural'];?>
                             </div>
                             <?php } ?>
@@ -94,7 +94,7 @@
         <td colspan="2"  style="content">
             <?php if(!empty($tu)){?>
                     <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                        <div id="beritaFoto" style="background-image:url(<?php echo $tu[0]['url_file']?>);height: 180px;"></div>
+                        <div id="beritaFoto" style="background-image:url(<?php echo url_serv($tu[0]['url_file'])?>);height: 180px;"></div>
                     </div>
                     <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($tu[0]['jabatan_struktural'])?></h4>
                     <h5 class="card-text text-center" style="font-size:13px;"><?php echo $tu[0]['nama_struktural']?></h5>
@@ -110,16 +110,20 @@
                         <td style="width:16.7%;">
                         <?php if(!empty($pembinaan)){?>
                            <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $pembinaan[0]['url_file']?>);height: 180px;"></div>
+                                <a href="<?php echo base_url('frontend/informasi/index/pembinaan');?>">
+                                     <div id="beritaFoto" style="background-image:url(<?php echo url_serv($pembinaan[0]['url_file'])?>);height: 180px;"></div>
+                                </a>
                             </div>
                             <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($pembinaan[0]['jabatan_struktural'])?></h4>
-                            <h5 class="card-text text-center" style="font-size:13px;"><?php echo $pembinaan[0]['nama_struktural']?></h5>
+                            <h5 class="card-text text-center" style="font-size:13px;"><?php echo url_serv($pembinaan[0]['nama_struktural'])?></h5>
                         <?php } ?>
                         </td>
                         <td style="width:16.7%;vertical-align: top;">
                         <?php if(!empty($intel)){?>
                            <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $intel[0]['url_file']?>);height: 180px;"></div>
+                                <a href="<?php echo base_url('frontend/informasi/index/intelijen');?>">
+                                    <div id="beritaFoto" style="background-image:url(<?php echo url_serv($intel[0]['url_file'])?>);height: 180px;"></div>
+                                </a>
                             </div>
                             <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($intel[0]['jabatan_struktural'])?></h4>
                             <h5 class="card-text text-center" style="font-size:13px;"><?php echo $intel[0]['nama_struktural']?></h5>
@@ -128,7 +132,9 @@
                         <td style="width:16.7%">
                         <?php if(!empty($pidum)){?>
                            <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $pidum[0]['url_file']?>);height: 180px;"></div>
+                                <a href="<?php echo base_url('frontend/informasi/index/pidum');?>">
+                                    <div id="beritaFoto" style="background-image:url(<?php echo url_serv($pidum[0]['url_file'])?>);height: 180px;"></div>
+                                </a>
                             </div>
                             <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($pidum[0]['jabatan_struktural'])?></h4>
                             <h5 class="card-text text-center" style="font-size:13px;"><?php echo $pidum[0]['nama_struktural']?></h5>
@@ -137,7 +143,9 @@
                         <td style="width:16.7%">
                         <?php if(!empty($pidsus)){?>
                            <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $pidsus[0]['url_file']?>);height: 180px;"></div>
+                                <a href="<?php echo base_url('frontend/informasi/index/pidsus');?>">
+                                    <div id="beritaFoto" style="background-image:url(<?php echo url_serv($pidsus[0]['url_file'])?>);height: 180px;"></div>
+                                </a>
                             </div>
                             <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($pidsus[0]['jabatan_struktural'])?></h4>
                             <h5 class="card-text text-center" style="font-size:13px;"><?php echo $pidsus[0]['nama_struktural']?></h5>
@@ -146,7 +154,9 @@
                         <td style="width:16.7%">
                         <?php if(!empty($ptun)){?>
                            <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $ptun[0]['url_file']?>);height: 180px;"></div>
+                                <a href="<?php echo base_url('frontend/informasi/index/ptun');?>">
+                                    <div id="beritaFoto" style="background-image:url(<?php echo url_serv($ptun[0]['url_file'])?>);height: 180px;"></div>
+                                </a>
                             </div>
                             <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($ptun[0]['jabatan_struktural'])?></h4>
                             <h5 class="card-text text-center" style="font-size:13px;"><?php echo $ptun[0]['nama_struktural']?></h5>
@@ -155,7 +165,9 @@
                         <td style="width:16.7%">
                         <?php if(!empty($pengawas)){?>
                            <div class="card cardJaksa" style="width: 8rem;margin: 0px auto;float: noneborder-radius: 5px;">
-                                <div id="beritaFoto" style="background-image:url(<?php echo $pengawas[0]['url_file']?>);height: 180px;"></div>
+                                <a href="<?php echo base_url('frontend/informasi/index/pengawasan');?>">
+                                    <div id="beritaFoto" style="background-image:url(<?php echo url_serv($pengawas[0]['url_file'])?>);height: 180px;"></div>
+                                </a>
                             </div>
                             <h4 class="card-text text-center" style="margin-top:10px;font-size:16px;"><?php echo ucwords($pengawas[0]['jabatan_struktural'])?></h4>
                             <h5 class="card-text text-center" style="font-size:13px;"><?php echo $pengawas[0]['nama_struktural']?></h5>

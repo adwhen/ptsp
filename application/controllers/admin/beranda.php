@@ -24,7 +24,8 @@ class Beranda extends CI_Controller {
 			'galeri' =>count($galeri),
 			'survey' =>count($survey),
 			'pengumuman' =>$this->db->get('tb_pengumuman')->result_array(),
-			'beranda' =>$this->db->get_where('tb_file',array('kat_file'=>"beranda"))->result_array()
+			'beranda' =>$this->db->get_where('tb_file',array('kat_file'=>"beranda"))->result_array(),
+			'popup' => $this->db->get_where('tb_file',array('kat_file' =>"popup"))->result_array()
 		);
 		$this->load->view('admin/snippet/template',$data);
 	}
@@ -97,6 +98,53 @@ class Beranda extends CI_Controller {
 		}
 		$this->db->delete('tb_file',$where);
 		$this->session->set_flashdata('msg', 'Foto Berhasil Dihapus');
+		redirect('admin/beranda');
+	}
+	public function pop_up(){
+		$query=$this->db->get_where('tb_file',array('kat_file'=>'popup'))->result_array();
+		foreach($query as $dt){
+			$str=explode("/",$dt['url_file']);
+			unlink('asset/gambar/beranda/'.$str[8]);
+		}
+		$this->db->delete('tb_file',array('kat_file'=>'popup'));
+		$nmfile="home_".time();
+        $config['upload_path']          = 'asset/gambar/beranda/';
+        $config['allowed_types']        = 'jpg|jpeg|png';
+        $config['max_size']             = 1048576;
+        $config['max_width']            = 10240;
+        $config['max_height']           = 7680;
+        $config['file_name']            = $nmfile;
+
+        $this->load->library('upload', $config);
+        if($this->upload->do_upload('file')){
+            $basePath=base_url('asset/gambar/beranda/'.$this->upload->file_name);
+         
+            $simpan = array(
+            	'url_file'  => $basePath,
+            	'nama_file' => $this->upload->file_name,
+            	'kat_file'	=> "popup",
+            	'ket_file'	=> "activate",
+            	'tgl_file'	=> date('Y-m-d')
+            );
+
+            $this->db->insert('tb_file',$simpan);
+            $this->session->set_flashdata('msg1', 'Pengumuman Pop-Up Berhasil Ditambahkan');
+            redirect('admin/beranda');
+        }else{
+        	$this->session->set_flashdata('msg1', 'Error dalam penambahan Foto');
+            redirect('admin/beranda');
+        }
+	}
+	public function active(){
+		$query=$this->db->get_where('tb_file',array('kat_file'=>'popup'))->result_array();
+		if ($query[0]['ket_file']=='activate') {
+			$this->db->update('tb_file',array('ket_file'=>'unactivate'),array('kat_file'=>"popup"));
+			$pesan="Pengumuman POPUP telah dimatikan";
+		}else{
+			$this->db->update('tb_file',array('ket_file'=>'activate'),array('kat_file'=>"popup"));
+			$pesan="Pengumuman POPUP telah diaktfikan";
+		}
+		$this->session->set_flashdata('msg1', $pesan);
 		redirect('admin/beranda');
 	}
 }

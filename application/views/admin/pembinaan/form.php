@@ -95,7 +95,7 @@
           <div class="row invoice-info">
             <?php echo validation_errors(); ?>
 
-            <?php  echo form_open_multipart('admin/agenda/form/'.$this->uri->segment(4),array('class'=>"form-horizontal",'method'=>'POST')); ?>
+            <?php  echo form_open_multipart('admin/pembinaan/form/'.$this->uri->segment(4),array('class'=>"form-horizontal",'method'=>'POST')); ?>
               <div class="modal-body form">
                 <input type="hidden" name="id_berita" value="<?php echo $id ?>">
                 <div class="form-group">
@@ -177,7 +177,7 @@
             <div class="row" >
               <div class="col-md-12" id="image-place">
                         <?php foreach($foto as $key){ ?>
-                        <img src="<?php echo $key['url_file'] ?>" style="height:100px;" onclick="gmbr(this);">
+                        <img src="<?php echo url_serv($key['url_file']) ?>" style="height:100px;" onclick="gmbr(this);">
                         <br>
                         <?php } ?>
                       

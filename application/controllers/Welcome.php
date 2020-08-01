@@ -3,13 +3,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	function __construct()
+	/**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/index.php/welcome
+	 *	- or -
+	 * 		http://example.com/index.php/welcome/index
+	 *	- or -
+	 * Since this controller is set as the default controller in
+	 * config/routes.php, it's displayed at http://example.com/
+	 *
+	 * So any other public methods not prefixed with an underscore will
+	 * map to /index.php/welcome/<method_name>
+	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 */
+	 function __construct()
 	{
 		 parent::__construct();
 	         $this->Mlog->log();
 		 	error_reporting(0);
 	}
-
 	public function index()
 	{
 		error_reporting(0);
@@ -35,12 +49,12 @@ class Welcome extends CI_Controller {
 			'agenda2' => $this->db->limit(4,4)->get_where('tb_berita',array('kat_berita'=>'agenda'))->result_array(),
 			'beritazi' => $this->db->limit(9)->get_where('tb_berita',array('kat_berita' => 'zi'))->result_array(),
 			'pengumuman' =>$this->db->get('tb_pengumuman')->result_array(),
-			'fotoberanda' =>$this->db->get_where('tb_file',array('kat_file'=>'beranda'))->result_array()
+			'fotoberanda' =>$this->db->get_where('tb_file',array('kat_file'=>'beranda'))->result_array(),
+			'popup' =>$this->db->get_where('tb_file',array('kat_file'=>'popup'))->result_array()
 		);
 		$this->load->view('frontend/snippet/template_home',$data);
+		$this->output->delete_cache();
+
 	}
-	public function coba()
-	{
-		echo 1;
-	}
+
 }

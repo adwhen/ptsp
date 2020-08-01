@@ -9,7 +9,7 @@
         <a href="<?php echo base_url('frontend/informasi/informasiDetail/').$dt['id_berita'];?>" class="list-group-item list-group-item-action flex-column align-items-start zoomBerita">
             <div class="row">
                 <div class="col-3">
-                    <img src="<?php echo $dt['cover_berita']?>" class="img-fluid" style="width:100%;" alt="Responsive image">
+                    <img src="<?php echo url_serv($dt['cover_berita'])?>" class="img-fluid" style="width:100%;" alt="Responsive image">
                 </div>
                 <div class="col-8">
                     <div class="row">

@@ -9,9 +9,10 @@
                     width="600" height="200" frameborder="0" style="border-radius:10px;" allowfullscreen=""
                     id="petaFooter"></iframe></center>
             <br>
-            <p style="color:#fff;text-align:center;">Padang Jati, Kec. Ratu Samban, Kota Bengkulu, Bengkulu
+            <p style="color:#fff;text-align:center;">Jl. S. Parman No 2, Padang Jati, Kec. Ratu Samban, Kota Bengkulu, Bengkulu
                 38222<br>
-                Telp (0736) 21631</p>
+                Telp dan Fax (0736) 7345695 <br>
+                Email kt.bengkulu@kejaksaan.go.id</p>
         </div>
         <div class="col-md-3 text-left" style="padding-right:25px; padding-left:25px">
             <p style="font-size:20px; "><b>Hubungi Kami</b></p>
@@ -71,7 +72,7 @@
             <div class="col-md-12 text-white text-center">
                 <p style="margin-bottom:unset; font-size:13px">Copyright © 2020 Website Resmi Kejaksaan
                     Tinggi Bengkulu. All Right Reserved.</p>
-                    <p style="margin-bottom:unset; font-size:13px">Pengunjung : <?php echo count(pengunjung()); ?></p>
+                    <p style="margin-bottom:unset; font-size:13px">Pengunjung : <?php echo count(pengunjung()) ?></p>
             </div>
         </div>
     </div>

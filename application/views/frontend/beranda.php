@@ -6,27 +6,33 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <?php if (!empty($fotoberanda)) { ?>
-                            <?php $no=1; foreach($fotoberanda as $key){ ?>
-                        <?php if($no==1){ ?>
+                            <?php $no=1; foreach($fotoberanda as $key){ 
+                                   if(substr($key['url_file'],5)==substr(base_url(),5)){
+                                        $url=$key['url_file'];
+                                    }else{
+                                        $url=str_replace("https", "http", $key['url_file']);
+                                    }
+                            ?>
+                       <?php if($no==1){ ?>
                             <div class="carousel-item active">
-                                <img class="d-block w-100 lazyload" src="<?php echo $key['url_file']  ?>">
+                                <img class="d-block w-100 lazyload" src="<?php echo $url;  ?>">
                             </div>
                         <?php }else{ ?>
                             <div class="carousel-item">
-                                <img class="d-block w-100 lazyload" src="<?php echo $key['url_file']  ?>">
+                                <img class="d-block w-100 lazyload" src="<?php echo $url;  ?>">
                             </div>
                         <?php } ?>
                      <?php $no++;} ?>
             <?php }else{ ?>
                  <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 lazyload" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="First slide">
+                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 lazyload" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Second slide">
+                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 lazyload" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Third slide">
+                        <img class="d-block w-100" src="<?php echo base_url('/asset/assets_front') ?>/img/kajatigedung.png" alt="Third slide">
                     </div>
                 </div>
             <?php } ?>
@@ -40,7 +46,7 @@
                 <br>
                 <center>
                     <a id="logoMenuAtas" class="logo"><img
-                            class="logoKajati lazyload" src="<?php echo base_url('/asset/assets_front') ?>/img/logoatas.png" style="width:430px" alt=""></a>
+                            class="logoKajati" src="<?php echo base_url('/asset/assets_front') ?>/img/logoatas.png" style="width:430px" alt=""></a>
                 </center>
                 <br><br><br>
                 <form id="w0" action="<?php echo base_url('frontend/beranda/pencarian');?>" method="post">
@@ -63,17 +69,18 @@
 
                    <a href="<?php echo base_url('frontend/survey');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-poll"></i><br>SURVEY</a>
-                    <a href="https://ptsp.kejati-bengkulu.go.id/" class="btn btn-primary text-white buttonUtama" style="font-size: 14px;"><i
+                    <a title="PELAYANAN TERPADU SATU PINTU" href="https://ptsp.kejati-bengkulu.go.id/" class="btn btn-primary text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-box-open"></i><br>PTSP</a>
-                    <a href="<?php echo base_url('frontend/galeri');?>" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-images"></i><br>GALERI</a>
-                    <a href="<?php echo base_url('frontend/pengaduan');?>" class="btn btn-info text-white buttonUtama" style="font-size: 14px;"><i
+                    <a title="PENDAMPINGAN PROYEK STRATEGIS" href="http://pps.kejati-bengkulu.go.id/login/login.php" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-shield-alt"></i><br>SIAP-PPS</a>
+                    <a title="PENGADUAN PENGAWASAN INTERNAL" href="<?php echo base_url('frontend/pengaduan');?>" class="btn btn-info text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-headset"></i><br>PENGADUAN</a>
-                            <a href="https://kejati-bengkulu.go.id/silaptipikor/" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
+                            <a title="SISTEM LAPORAN TINDAK PIDANA KORUPSI" href="https://kejati-bengkulu.go.id/silaptipikor/" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i
                             id="iconButton" class="fa fa-balance-scale"></i><br>SILAPTIPIKOR</a>
                     <a href="<?php echo base_url('frontend/berita');?>" class="btn btn-secondary text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-newspaper"></i><br>BERITA</a>
                     <a href="https://kejati-bengkulu.go.id/sicuti/" class="btn btn-success text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-calendar-check"></i><br>SICUTI</a>
-                    <a href="<?php echo base_url('frontend/struktural');?>" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-project-diagram"></i><br>STRUKTURAL</a>
-                    <a href="http://epamgal.com/login" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-gavel"></i><br>E-DUL</a>
+                     <a title="PENGAWASAN MELEKAT" href="http://siapwaskat.kejati-bengkulu.go.id/login.php" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fas fa-binoculars"></i><br>WASKAT</a> 
+                    <!--<a title="PENGAWASAN MELEKAT" href="#" class="btn btn-warning text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fas fa-binoculars"></i><br>WASKAT</a>-->
+                    <a title="DUKUNGAN INTELIJEN " href="http://epamgal.com/login" class="btn btn-danger text-white buttonUtama" style="font-size: 14px;"><i id="iconButton" class="fa fa-gavel"></i><br>E-DUL</a>
 
                 </div>
                 <br>
@@ -133,7 +140,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="text-center" style="margin-top:5px;">Jaksa Agung Republik Indonesia</h5>
-                        <img class="card-img cardJaksa lazyload" src="<?php if(!empty($fotojaksa)){echo $fotojaksa[0]['url_file'];}?>" alt="Foto belum dimasukkan">
+                        <img class="card-img cardJaksa lazyload" src="<?php if(!empty($fotojaksa)){if(substr($fotojaksa[0]['url_file'], 5)==substr(base_url(),5)){echo $fotojaksa[0]['url_file'];}else{echo str_replace("https", "http", $fotojaksa[0]['url_file']);}}?>" alt="Foto belum dimasukkan">
                         <h5 class="text-center" style="margin-top:20px;"><?php echo $perintah[0]['nama_jaksa'] ?></h5>
                     </div>
                 </div>
@@ -165,8 +172,8 @@
                         <div class="carousel-inner">
                             <?php $x=0;foreach($struktural as $str){?>
                             <div class="carousel-item <?php if($x==0){echo 'active';}?>">
-                                <img class="d-block w-100 lazyload"
-                                        src="<?php echo $str['url_file']?>" style="max-height:400px" alt="First slide">
+                                <img class="d-block w-100"
+                                         src="<?php echo url_serv($str['url_file']); ?>" style="max-height:400px" alt="First slide">
                                 <br>
                                 <h5 style="font-size:14px"><?php echo $str['jabatan_struktural']?></h5>
                                 <p><?php echo $str['nama_struktural']?></p>
@@ -201,7 +208,7 @@
                             <div class="carousel-inner">
                                 <?php $x=0; foreach($beritautama as $utama){?>
                                 <div class="carousel-item <?php if($x==0){echo 'active';}?>">
-                                    <div id="beritaFoto" style="background-image:url(<?php echo $utama['cover_berita']?>);height: 200px;"></div>
+                                    <div id="beritaFoto" style="background-image:url(<?php echo url_serv($utama['cover_berita'])?>);height: 200px;"></div>
                                     <br>
                                     <h5><?php echo $utama['judul_berita'];?></h5>
                                     <?php echo substr(strip_tags($utama['isi_berita']),0,150).' [. . .]';?>
@@ -230,7 +237,7 @@
                                 class="list-group-item list-group-item-action flex-column align-items-start zoomBerita">
                                 <div class="row">
                                     <div class="col-4">
-                                        <img style="max-height:90px" src="<?php echo $smpng['cover_berita']?>" class="img-fluid lazyload"
+                                        <img style="max-height:90px" src="<?php echo url_serv($smpng['cover_berita'])?>" class="img-fluid"
                                             style="text-align:center" alt="Responsive image">
                                     </div>
                                     <div class="col-8">
@@ -280,7 +287,7 @@
                                         <td>
                                             <div class="card" style="width: 15rem;">
                                                 <div class="card-body">
-                                                    <div id="beritaFoto" style="background-image:url(<?php echo $agd1['cover_berita']?>);height: 200px;"></div>
+                                                    <div id="beritaFoto" style="background-image:url(<?php echo url_serv($agd1['cover_berita'])?>);height: 200px;"></div>
                                                     <h5 class="text-justify" style="margin-top:20px;font-size:16px">
                                                         <?php echo $agd1['judul_berita']?></h5>
                                                     <a href="<?php echo base_url('frontend/agenda/agendaDetail/').$agd1['id_berita'];?>">Lihat Agenda</a>
@@ -303,7 +310,7 @@
                                         <td>
                                             <div class="card" style="width: 15rem;">
                                                 <div class="card-body">
-                                                    <div id="beritaFoto" style="background-image:url(<?php echo $agd2['cover_berita']?>);height: 200px;"></div>
+                                                    <div id="beritaFoto" style="background-image:url(<?php echo url_serv($agd2['cover_berita'])?>);height: 200px;"></div>
                                                     <h5 class="text-justify" style="margin-top:20px;font-size:16px">
                                                         <?php echo $agd2['judul_berita']?></h5>
                                                     <a href="<?php echo base_url('frontend/agenda/agendaDetail/').$agd2['id_berita'];?>">Lihat Agenda</a>
@@ -340,7 +347,7 @@
 <div class="container col-sm-12" id="zonaintegritas">
     <center>
         <a href="<?php echo base_url('frontend/zonaint')?>">
-            <img src="<?php echo base_url('/asset/assets_front') ?>/img/zonaintegritas3-min.png" class="cardJaksa lazyload" style="width:88%;">
+            <img src="<?php echo base_url('/asset/assets_front') ?>/img/zonaintegritas3-min.png" class="cardJaksa" style="width:88%;">
         </a>
     </center>
 </div>
@@ -373,7 +380,7 @@
                         <?php foreach($beritazi as $zi){?>
                         <div class="col-sm col-lg-4">
                             <div class="card h-100 cardJaksa">
-                                <a href="<?php echo base_url('frontend/berita/beritaDetail/').$zi['id_berita'];?>"><div id="beritaFoto" style="background-image:url(<?php echo $zi['cover_berita']?>);height: 200px;"></div></a>
+                                <a href="<?php echo base_url('frontend/berita/beritaDetail/').$zi['id_berita'];?>"><div id="beritaFoto" style="background-image:url(<?php echo url_serv($zi['cover_berita'])?>);height: 200px;"></div></a>
                             </div>
                         </div>
                         <?php }?>
@@ -385,3 +392,6 @@
 </div>
 
 <br>
+<?php if($popup[0]['ket_file']=='activate'){ $this->load->view('frontend/snippet/popup_beranda');} ?>
+
+

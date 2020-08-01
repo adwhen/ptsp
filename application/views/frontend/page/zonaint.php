@@ -13,7 +13,7 @@
         <?php foreach($data as $dt){?>
         <div class="col-sm col-lg-4">
             <div class="card h-100">
-                <div id="beritaFoto" style="background-image:url(<?php echo $dt['cover_berita'];?>);height: 200px;"></div>
+                <div id="beritaFoto" style="background-image:url(<?php echo url_serv($dt['cover_berita']);?>);height: 200px;"></div>
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $dt['judul_berita'];?></h5>
                     <?php echo substr($dt['isi_berita'],0,150).' [. . .]';?><br><br>

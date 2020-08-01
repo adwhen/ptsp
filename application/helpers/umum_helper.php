@@ -184,5 +184,12 @@
         $query=$CI->db->query('SELECT ip,date(date) as tgl FROM `log` group by ip,tgl')->result_array();
         return $query;
     }
-
+    function url_serv($url){
+        if(substr(base_url(),5)==substr($url, 5)){
+            $return =$url;
+        }else{
+            $return =str_replace("https", "http", $url);
+        }
+        return $return;
+    }
 ?>

@@ -32,6 +32,7 @@ class Survey extends CI_Controller {
 
 			$orang=array(
 				'nama_survey'=>$this->input->post('nama_survey'),
+				'nik_survey'=>$this->input->post('nik_survey'),
 				'pekerjaan_survey'=>$this->input->post('pekerjaan_survey'),
 				'jk_survey'=>$this->input->post('jk_survey'),
 				'email_survey'=>$this->input->post('email_survey'),

@@ -182,7 +182,7 @@
             <div class="row" >
               <div class="col-md-12" id="image-place">
                         <?php foreach($foto as $key){ ?>
-                        <img src="<?php echo $key['url_file'] ?>" style="height:100px;" onclick="gmbr(this);">
+                        <img src="<?php echo url_serv($key['url_file']) ?>" style="height:100px;" onclick="gmbr(this);">
                         <br>
                         <?php } ?>
                       

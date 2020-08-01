@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-6 text-left" style="padding-right:25px; padding-left:25px">
             <p style="font-size:20px; "><b>Hubungi Kami</b></p>
-            <a href="https://twitter.com/KejatiBengkulu" target="_BLANK">
+            <a href="https://twitter.com/TinggiKejaksaan" target="_BLANK">
                 <p style="font-weight:300;font-size:20px;color:black;"><i
                         style="font-size:20px;width:30px;color:#1bb4e3;margin-bottom:5px;"
                         class="fab fa-twitter"></i>@KejatiBengkulu</p>
@@ -42,10 +42,8 @@
             Jalan S. Parman, No. 2
             Bengkulu - Indonesia
             38222</p>
-            <p style="font-size:20px; "><b>Telepon</b></p>
-            <p>0736-21631</p>
-            <p style="font-size:20px; "><b>Fax</b></p>
-            <p>0736-23368</p>
+            <p style="font-size:20px; "><b>Telepon dan Fax</b></p>
+            <p>(0736) 7345695</p>
             <br>
         </div>
     </div>

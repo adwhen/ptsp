@@ -6,9 +6,9 @@
         <?php foreach($data as $dt){?>
             <div class="col-sm col-lg-4">
                 <div class="card galeriImgDiv h-100">
-                    <img class="card-img-top galeriImg" src="<?php echo $dt['url_file'];?>" alt="Card image cap">
+                    <img class="card-img-top galeriImg" src="<?php echo url_serv($dt['url_file']);?>" alt="Card image cap">
                     <div class="galeriImgBut">
-                        <div class="galeriImgTxt"><button onclick="getSrc('<?php echo $dt['url_file'];?>')" class="btn text-white" data-tooltip='Button 2'><i style="font-size:20px;margin-bottom:5px;" class="fa fa-search"></i></button></div>
+                        <div class="galeriImgTxt"><button onclick="getSrc('<?php echo url_serv($dt['url_file']);?>')" class="btn text-white" data-tooltip='Button 2'><i style="font-size:20px;margin-bottom:5px;" class="fa fa-search"></i></button></div>
                     </div>
                 </div>
             </div>

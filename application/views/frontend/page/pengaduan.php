@@ -1,3 +1,4 @@
+
 <div class="container-fluid" style="text-align:center;width:85%">
     <h3 class="text-center text-dark">PENGADUAN</h3>
     <hr class="garisJudul">
@@ -56,6 +57,10 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="card">
+                <canvas id="speedChart" width="600" height="400"></canvas>
+            </div>
         </div>
         <div class="col-sm col-lg-6">
             <br>
@@ -110,9 +115,9 @@
                     </div>
                 </div> 
                 <div class="form-group">
-                  <label class="control-label col-md-12">File</label>
+                  <label class="control-label col-md-12">File (docx/doc/pdf)</label>
                     <div class="col-md-12">
-                      <input name="file" required value="" required class="form-control" type="file">
+                      <input name="file"value="" required class="form-control" type="file">
                     </div>
                 </div>
                 <div class="form-group">
@@ -131,3 +136,75 @@
 <br>
 <br>
 <br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var speedCanvas = document.getElementById("speedChart");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var speedData = {
+  labels: [
+  <?php for($tahun=2020;$tahun<=date("Y");$tahun++){
+            for($bulan=1;$bulan<=12;$bulan++){ ?>
+                "<?php echo $tahun."-".$bulan; ?>",
+  <?php  }
+        }
+  ?>
+  ],
+  datasets: [{
+    label: "Jumlah Pengaduan",
+    data: [
+  <?php for($tahun=2020;$tahun<=date("Y");$tahun++){
+            for($bulan=1;$bulan<=12;$bulan++){ 
+                $jumlah=$this->db->query('SELECT year(date),month(date) from tb_pengaduan where year(date)="'.$tahun.'" and month(date)="'.$bulan.'" ')->num_rows();
+                if($jumlah>=0){?>
+                    "<?php echo "$jumlah"; ?>",
+  <?php
+                }else{ ?>
+                    "<?php echo "0"; ?>",
+  <?php
+                }
+            }
+        }
+  ?>
+    ],
+    lineTension: 0,
+    fill: false,
+    borderColor: 'green',
+    backgroundColor: 'transparent',
+    pointBorderColor: 'green',
+    pointBackgroundColor: 'green',
+    pointRadius: 5,
+    pointHoverRadius: 10,
+    pointHitRadius: 30,
+    pointBorderWidth: 2,
+    pointStyle: 'rectRounded'
+  }]
+};
+
+var chartOptions = {
+  legend: {
+    display: true,
+    position: 'top',
+    labels: {
+      boxWidth: 80,
+      fontColor: 'black'
+    }
+  },
+  scales: {
+        yAxes: [{
+            ticks: {
+                stepSize: 1,
+                min:0
+            }
+        }]
+    }
+};
+
+var lineChart = new Chart(speedCanvas, {
+  type: 'line',
+  data: speedData,
+  options: chartOptions
+});
+</script>

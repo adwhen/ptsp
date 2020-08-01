@@ -236,7 +236,6 @@ img {vertical-align: middle;}
   </div>
 </div>
 <div class="row">
-  <div class="col-md-3"></div>
   <div class="col-md-6">
           <!-- Custom Tabs -->
           <div class="nav-tabs-custom">
@@ -245,6 +244,7 @@ img {vertical-align: middle;}
               <li><a href="#tab_2" data-toggle="tab">Slide Home</a></li>
               <li><a href="#tab_3" data-toggle="tab">Tabel</a></li>
             </ul>
+
             <div class="tab-content">
               <center><?php echo $this->session->flashdata('msg'); ?></center>
               <div class="tab-pane active" id="tab_1">
@@ -259,8 +259,83 @@ img {vertical-align: middle;}
                     <div class="box-footer">
                       <button id="button_sandi" class="btn btn-info pull-right" type="submit">Simpan</button>
                     </div>
-                </form>
+                  </form>
+                </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="tab_2">
+                <div class="slideshow-container">
+                  <?php $jumlah=count($beranda); ?>
+                  <?php $no=1; foreach($beranda as $key){ ?>
+                    <div class="mySlides fade">
+                      <div class="numbertext"><?php echo $no++; ?> / <?php echo $jumlah; ?></div>
+                      <img src="<?php echo url_serv($key['url_file']) ?>" style="width:100%;height: 300px;">
+                      
+                    </div>
+                  <?php } ?>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  </div>
+                  <br>
+
+                  <div style="text-align:center">
+                  <?php $no=1; foreach($beranda as $key){ ?>
+                    <span class="dot" onclick="currentSlide(<?php echo $no++; ?>)"></span>  
+                  <?php } ?>
+                  </div>
               </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="tab_3">
+                <table class="table table-bordered">
+                    <tbody><tr>
+                      <th style="width: 10px">#</th>
+                      <th>Nama</th>
+                      <th style="width: 40px">Aksi</th>
+                    </tr>
+                    <?php $no=1; foreach($beranda as $key){ ?>
+                      <tr>
+                        <td><?php echo $no++; ?></td>
+                        <td><?php echo $key['nama_file']?></td>
+                        <td><a href="<?php echo base_url('admin/beranda/hapus_foto/'.$this->Mcrypt->encrypt($key['id_file'])) ?>"><button onclick="return confirm('Apakah Anda Ingin Menghapus Foto ini?')" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button></a></td>
+                      </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+          </div>
+          <!-- nav-tabs-custom -->
+  </div>
+  <div class="col-md-6">
+          <!-- Custom Tabs -->
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_1" data-toggle="tab">Pengumuman Pop-Up</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <center><?php echo $this->session->flashdata('msg1'); ?></center>
+              <div class="tab-pane active" id="tab_1">
+                <?php  echo form_open_multipart('admin/beranda/pop_up/',array('class'=>"form-horizontal",'method'=>'POST')); ?>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label" for="inputPassword3">Pop-Up</label>
+
+                      <div class="col-sm-10">
+                        <input class="form-control" name="file" type="file">
+                      </div>
+                    </div>
+                    <div class="box-footer">
+                      <button class="btn btn-info pull-right" type="submit">Simpan</button>
+                      <?php if($popup[0]['ket_file']=="activate"){ ?>
+                        <a href="<?php echo base_url('admin/beranda/active') ?>" class="btn btn-danger pull-left" type="submit">Matikan</a>
+                      <?php }else{ ?>
+                        <a href="<?php echo base_url('admin/beranda/active') ?>" class="btn btn-success pull-left" type="submit">Aktifkan</a>
+                      <?php } ?>
+                    </div>
+                  </form>
+                </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="tab_2">
                 <div class="slideshow-container">
@@ -307,7 +382,7 @@ img {vertical-align: middle;}
             <!-- /.tab-content -->
           </div>
           <!-- nav-tabs-custom -->
-        </div>
+  </div>
 </div>
 
       <!-- /.row -->

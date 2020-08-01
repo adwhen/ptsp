@@ -22,8 +22,8 @@ class Document extends CI_Controller {
 	}
 	public function tambah(){
 		$nmfile=$this->input->post('nama_file').time();
-        $config['upload_path']          = 'asset/gambar/foto/';
-        $config['allowed_types']        = 'jpg|jpeg|png';
+        $config['upload_path']          = 'asset/file/';
+        $config['allowed_types']        = 'docx|pdf|xlsx';
         $config['max_size']             = 1048576;
         $config['max_width']            = 10240;
         $config['max_height']           = 7680;
@@ -31,7 +31,7 @@ class Document extends CI_Controller {
 
         $this->load->library('upload', $config);
         if($this->upload->do_upload('file')){
-            $basePath=base_url('asset/gambar/foto/'.$this->upload->file_name);
+            $basePath=base_url('asset/file/'.$this->upload->file_name);
             $data = array(
                     'message'   => 'Data Berhasil Di Tambahkan',
                     'image'         => $basePath,
@@ -52,11 +52,12 @@ class Document extends CI_Controller {
 
             echo json_encode($data);
         }
+        redirect('admin/document');
 	}
 	public function ubah(){
 		$nmfile=$this->input->post('nama_file').time();
         $config['upload_path']          = 'asset/gambar/foto/';
-        $config['allowed_types']        = 'jpg|jpeg|png';
+        $config['allowed_types']        = 'docx|pdf|xlsx';
         $config['max_size']             = 1048576;
         $config['max_width']            = 10240;
         $config['max_height']           = 7680;
@@ -100,16 +101,16 @@ class Document extends CI_Controller {
             );
             echo json_encode($data);
         }
+
 	}
 
 	public function hapus(){
-		$decode['id_file'] = $this->encryption->decrypt($this->input->post('id_file'));
+		echo $decode['id_file'] = $this->encryption->decrypt($this->input->post('id_file'));
 		$this->db->delete('tb_file',$decode);
-		$galeri=$this->Mgaleri->ajaxtampil();
 		$data= array(
 			'message' => 'Data Berhasil di Hapus',
 			'baris'	  => $galeri
 		);
-		echo json_encode($data);
+        redirect('admin/document');
 	}
 }

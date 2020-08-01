@@ -7,7 +7,7 @@ class Visimisi extends CI_Controller {
 		 parent::__construct();
 	         $this->Mlog->log();
 		 	error_reporting(0);
-	}
+	}    
 	public function index()
 	{
 		$data=array(

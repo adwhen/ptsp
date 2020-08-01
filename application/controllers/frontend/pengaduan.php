@@ -37,11 +37,13 @@ class Pengaduan extends CI_Controller {
 				'subjek_pengaduan'=>$this->input->post('subjek'),
 				'ktg_pengaduan'=>$this->input->post('kategori'),
 				'pesan_pengaduan'=>$this->input->post('pesan'),
-				'url_file'=>$basePath
+				'url_file'=>$basePath,
+				'date'=>date("Y-m-d")
 			);
 			$this->db->insert('tb_pengaduan',$data);
+		
+		}
 			$this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Pengaduan anda berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 			redirect('frontend/pengaduan');
-		}
 	}
 }

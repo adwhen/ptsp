@@ -55,7 +55,7 @@ $this->load->view('admin/snippet/sidebar');
                 <td><?php echo $dt['nama_struktural'];?></td>
                 <td><?php echo $dt['nip_pegawai'];?></td>
                 <td><?php echo $dt['jabatan_struktural']?></td>
-                <td><img width="30px" src="<?php echo $dt['url_file'] ?>"></td>
+                <td><img width="30px" src="<?php echo url_serv($dt['url_file']) ?>"></td>
                 <td>
                   <center>
                     <div class="tooltip-demo">
